@@ -4,3 +4,5 @@ docs-src/site
 static/docs
 *.mmplugin
 protected
+
+metamodule-docs/
