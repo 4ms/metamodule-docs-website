@@ -14,12 +14,16 @@
 
    ![Main Menu](./img-240/main-menu-load.png)
 
+</div>
+<div class="grid cards" markdown>
 
 -  __2. Click on a patch__
 
 
    ![Patch Selector](./img-240/patch-sel.png)
 
+</div>
+<div class="grid cards" markdown>
 
 -  __3. Click Play icon__
 
@@ -37,6 +41,8 @@
 
    ![Main Menu](./img-240/main-menu-new.png)
 
+</div>
+<div class="grid cards" markdown>
 
 -  __2. Pick a module to add to the patch__
 
@@ -46,21 +52,31 @@
 
    ![Patch Selector](./img-240/module-list-enosc.png)
 
+</div>
+<div class="grid cards" markdown>
 
 -  __3. Click on the module__
 
    ![Patch View](./img-240/patchview-enosc.png)
 
+</div>
+<div class="grid cards" markdown>
 
 -  __4. Click the Action Menu icon__
 
    ![Module View](./img-240/enosc-action-icon.png) 
+
+</div>
+<div class="grid cards" markdown>
 
 - __5. Select Auto-Map__ 
 
       This will map physical knobs and jacks to the EnOsc's virtual knobs, switches and jacks.
 
    ![Module Action Menu](./img-240/auto-map-menu.png)
+
+</div>
+<div class="grid cards" markdown>
 
 - __6. Play!__
 
@@ -84,7 +100,19 @@
 
    ![Main Menu](./img-240/main-menu-settings.png)
 
+</div>
+<div class="grid cards" markdown>
+
 -  __2. Click Update__
+
+   ![System Menu](./img-240/settings-update.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __3. Download the firwmware to a USB drive or SD Card__
+
+      Use the [Download](../downloads) link above.
 
    ![System Menu](./img-240/settings-update.png)
 
