@@ -16,7 +16,7 @@ validation:
 
 theme:
   name: material
-  logo: img/black.png
+  logo: img/logo.png
   features:
     - navigation.instant
     - navigation.prune
