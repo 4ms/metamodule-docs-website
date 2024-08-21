@@ -43,3 +43,8 @@
 .mm-lightblue { text-decoration: underline; color: #c3ceda; }
 
 .half { width: auto; max-height: 240px; }
+
+.md-typeset .grid.cards>ul>li {
+	border-width: 0.06rem;
+	border-color: #888;
+}
