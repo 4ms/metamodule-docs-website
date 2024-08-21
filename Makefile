@@ -37,6 +37,7 @@ run: build
 # TODO: zip file locally, unzip on host
 .PHONY: production/deploy
 production/deploy: confirm 
+	mkdocs build
 	scp -r ./metamodule-docs/docs metamodule:metamodule-docs/
 	ssh -t metamodule "sudo chmod -R g+w metamodule-docs/ && sudo chmod -R g+w metamodule-docs/docs/"
 
