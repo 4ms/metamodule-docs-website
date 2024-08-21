@@ -42,5 +42,5 @@ production/deploy: confirm
 
 .PHONY: production/perm
 production/perm: confirm 
-	ssh -t metamodule "sudo chmod -R g+w metamodule-docs/ && sudo chmod -R g+w metamodule-docs/docs/"
+	ssh -t metamodule "sudo chmod -R g+w metamodule-docs/ && sudo chgrp -R metamodule-site metamodule-docs/docs/"
 	
