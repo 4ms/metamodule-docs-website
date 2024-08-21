@@ -20,13 +20,14 @@ theme:
   features:
     - navigation.instant
     - navigation.prune
-    - navigation.tabs
-    - navigation.tabs.sticky
+    # - navigation.tabs
+    # - navigation.tabs.sticky
     - navigation.tracking
     - navigation.sections
     - navigation.expand
     - toc.integrate
     - toc.follow
+    
   custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme)"
@@ -52,7 +53,7 @@ theme:
       primary: white
 
 site_url: https://metamodule.4ms.info/docs
-site_dir: ../metamodule-docs/docs
+site_dir: metamodule-docs/docs
 
 plugins:
   - search
