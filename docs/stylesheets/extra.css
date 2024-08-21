@@ -41,3 +41,5 @@
 
 
 .mm-lightblue { text-decoration: underline; color: #c3ceda; }
+
+.half { width: auto; max-height: 240px; }
