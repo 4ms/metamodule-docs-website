@@ -43,7 +43,7 @@ you can download the plugin and install it manually.
       If you have a Mac, download the x64 version for an Intel processor, or
       the arm64 version if you have a newer Apple silicon processor.
 
-   ![Download page](./img/vcv-plugin-download.png){ .half }
+   [![Download page](./img/vcv-plugin-download.png){ .half }](./img/vcv-plugin-download.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -63,7 +63,7 @@ you can download the plugin and install it manually.
       - <span style="font-size:0.8em">Linux: ~/.local/share/Rack2/</span>
 
 
-   ![Open user folder](./img/vcv-open-user-folder.png){ .half }
+   [![Open user folder](./img/vcv-open-user-folder.png){ .half }](./img/vcv-open-user-folder.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -75,7 +75,7 @@ you can download the plugin and install it manually.
     For example, on a Mac with Apple silicon, it's called `plugins-mac-arm64`, and on an Intel Mac it's `plugins-mac-x64`.
 
 
-   ![Cppying to plugin dir](./img/copy-rack-plugin.png){ .half }
+   [![Cppying to plugin dir](./img/copy-rack-plugin.png){ .half }](./img/copy-rack-plugin.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -85,7 +85,7 @@ you can download the plugin and install it manually.
     Right-click (or control-click) on any empty rack space to open the Add
     Module page and see the 4ms modules.
 
-   ![4ms Modules in VCV](./img/vcv-rack-modules.png){ .half }
+   [![4ms Modules in VCV](./img/vcv-rack-modules.png){ .half }](./img/vcv-rack-modules.png)
 
 </div>
 
@@ -107,7 +107,7 @@ you can download the plugin and install it manually.
 
       For an example patch, try [SpringsintoCaves](https://metamodule.info/dl/patches/SpringsintoCaves.vcv). Or [browse the example patches](https://metamodule.info/dl/patches/)
 
-   ![Patch in VCV](./img/vcv-patch-start.png){ .half }
+   [![Patch in VCV](./img/vcv-patch-start.png){ .half }](./img/vcv-patch-start.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -118,7 +118,7 @@ you can download the plugin and install it manually.
      of modules. Find the MetaModule Hub (search for MetaModule or browse the
      4ms brand).
 
-   ![VCV MetaModule Hub](./img/vcv-metamodule-hub.png){ .half }
+   [![VCV MetaModule Hub](./img/vcv-metamodule-hub.png){ .half }](./img/vcv-metamodule-hub.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -132,7 +132,7 @@ you can download the plugin and install it manually.
 
     You can map up to 8 virtual knobs to a single MetaModule knob! This is known as a [multi-map](using_metamodule.md#mapping-to-more-than-one-knob-multi-maps)
 
-   ![Click knobs](./img/vcv-make-mapping.png){ .half }
+   [![Click knobs](./img/vcv-make-mapping.png){ .half }](./img/vcv-make-mapping.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -152,12 +152,12 @@ you can download the plugin and install it manually.
       there to tell the MetaModule what you want to have mapped to each jack
       when you run the patch on the MetaModule.*
 
-   ![Cables from EnvVCA to MetaModule and Audio](./img/vcv-map-outjack.png){ .half }
+   [![Cables from EnvVCA to MetaModule and Audio](./img/vcv-map-outjack.png){ .half }](./img/vcv-map-outjack.png)
 
 </div>
 <div class="grid cards" markdown>
 
--  __Completed Patch:__<br><br> ![Download page](./img/vcv-patch-done.png){ .half }
+-  __Completed Patch:__<br><br> [![Download page](./img/vcv-patch-done.png){ .half }](./img/vcv-patch-done.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -173,7 +173,7 @@ you can download the plugin and install it manually.
     You can save patches in folders to keep them organized. However, the
     MetaModule will not find patches in sub-folders of folders.
 
-   ![Saving patch](./img/vcv-naming-patch.png){ .half }
+   [![Saving patch](./img/vcv-naming-patch.png){ .half }](./img/vcv-naming-patch.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -189,7 +189,9 @@ you can download the plugin and install it manually.
 
     - Enjoy!
 
-   ![Patch selector](./img/vcv-load-bouncingscales.png){ .half }<br>![Loaded patch](./img/vcv-play-bouncingscales.png){ .half }
+   [![Patch selector](./img/vcv-load-bouncingscales.png){ .half }](./img/vcv-load-bouncingscales.png)
+   <br>
+   [![Loaded patch](./img/vcv-play-bouncingscales.png){ .half }](./img/vcv-play-bouncingscales.png)
 </div>
 
 ### How to set the name or min/max range of a knob mapping
@@ -208,7 +210,7 @@ you can download the plugin and install it manually.
       Min and Max slider will be shown for each one.
 
 
-   ![VCV MetaModule Hub knob menu](./img/vcv-mapping-range.png){ .half }
+   [![VCV MetaModule Hub knob menu](./img/vcv-mapping-range.png){ .half }](./img/vcv-mapping-range.png)
 
 </div>
 
@@ -219,7 +221,7 @@ you can download the plugin and install it manually.
 
     Select "Unmap" from the menu.
 
-   ![Unmap Knob menu](./img/vcv-unmap.png){ .half }
+   [![Unmap Knob menu](./img/vcv-unmap.png){ .half }](./img/vcv-unmap.png)
 
 </div>
 
@@ -227,7 +229,9 @@ you can download the plugin and install it manually.
 ## Creating Knobsets in VCV Rack
 
 A Knob Set is a group of mappings. You can create up to eight Knob Sets in a
-MetaModule patch and switch between them on the fly. 
+MetaModule patch and switch between them on the fly when running the patch on the MetaModule.
+
+Knob Sets are a great way to control the entire patch using just the 12 on-board knobs.
 
 See [Knob Sets](using_metamodule.md#knob-sets) for more information.
 
@@ -238,27 +242,133 @@ See [Knob Sets](using_metamodule.md#knob-sets) for more information.
     Each circle chooses a Knob Set (1-8).
 
     The knob mappings for the selected Knob Set will be shown in the patch.
+    Creating, editing, and removing knob mappings will change only the current Knob Set.
 
     Mapped knobs won't change their values until you wiggle the MetaModule knobs.
 
-   ![Knob Set 2](./img/vcv-knobset-2.png){ .half }
+   [![Knob Set 2](./img/vcv-knobset-2.png){ .half }](./img/vcv-knobset-2.png)
 
 </div>
 
 ### Naming Knobsets
 
+Select a Knob Set and type a name in the box above the yellow circles.
+
+This name will be displayed on the MetaModule.
+
 
 
 ## MIDI Mapping
 
-You can map MIDI signals to virtual knobs and jacks using VCV Rack.
+### How to map MIDI notes, gates, velocity, and aftertouch
+
+VCV Rack and MetaModule support polyphonic MIDI notes, gates, velocity, and
+aftertouch. There maximum polyphony number is 16, but often you will 
+limit this to 4 - 8 when creating patches for the MetaModule.
+
+<br>
+
+In addition to polyphonic note information, you can map pitch wheel, mod
+wheel, clock, divided clock, re-trigger, start, stop, and continue.
+
+<br>
+
+Any of these MIDI signals can be mapped to virtual module jacks simply by
+connecting cables, however for MIDI signals you don't connect to the MetaModule
+directly. Instead, you connect to the built-in MIDI and SPLIT modules. The
+MetaModule recognizes these modules and scans their connections, generating
+MIDI mappings for your patch. These modules won't display when you load the
+patch onto the MetaModule, they just are used to tell the MetaModule how you
+want MIDI to be mapped. Also, these modules are fully functionaly within VCV
+Rack, so you can test how your patch works with MIDI on VCV Rack before
+transferring it to the MetaModule.
 
 
 <div class="grid cards" markdown>
--  __Right-click the virtual knob__
+-  __Add the MIDI CV Module to your VCV Rack patch__
 
-    Select "Unmap" from the menu.
+   [![MIDI CV](./img/vcv-midicv-module.png){ .half }](./img/vcv-midicv-module.png)
 
-   ![Download page](./img/vcv-unmap.png){ .half }
+</div>
 
+<div class="grid cards" markdown>
+-  __Select the number of polyphony channels__
+
+    *Polyphony is the maximum number of notes that can be played at once.*
+
+    - Right-click the MIDI-CV module to see the menu.
+
+    - Select the desired number under "Polyphony channels".
+
+
+   [![MIDI polyphonic](./img/vcv-midi-polynum.png){ .half }](./img/vcv-midi-polynum.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __Add a SPLIT module for each polyphonic MIDI parameter you want to map__
+
+     MetaModule does not support VCV Rack's polyphonic cables, so you must use
+     the SPLIT module to split the signal into monophonic cables.
+
+     You can verify the polyphony number you chose earlier: it will display on
+     the SPLIT screen.
+
+   [![SPLIT](./img/vcv-midi-split-4.png){ .half }](./img/vcv-midi-split-4.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __Create cables from the SPLIT modules to your modules__
+
+     Connect to whatever jacks you want to be MIDI mapped.
+
+     Finish your patch normally (e.g., mix the outputs and connect the mixer output to the MetaModule)
+
+   [![MIDI mappings](./img/vcv-midi-mapped-4.png){ .half }](./img/vcv-midi-mapped-4.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __Finish the patch__
+
+     Finish your patch normally (e.g., mix the outputs and connect the mixer output to the MetaModule)
+
+     Create knob mappings from the MetaModule. Multi-maps are often useful with
+     polyphonic patches (shown in the image).
+
+   [![MIDI patch done](./img/vcv-midi-4-done.png){ .half }](./img/vcv-midi-4-done.png)
+
+</div>
+
+### How to map other MIDI signals
+
+The procedure is identical to the above procedure, but since these are not
+polyphonic signals, you don't need to use a SPLIT module. Just patch directly
+from the MIDI module to the jacks you want mapped.
+
+<div class="grid cards" markdown>
+ -  You can map pitch wheel, mod wheel, clock, divided clock, re-trigger,
+    start, stop, and continue using the MIDI-CV module.
+
+
+   [![Other MIDI map](./img/vcv-midi-other-map.png){ .half }](./img/vcv-midi-other-map.png)
+</div>
+
+<div class="grid cards" markdown>
+ -  You can map MIDI notes to gates by using the MIDI-Gate module.
+
+     Map MIDI CC signals to jacks using the MIDI-CC-CV module.
+
+   [![Other MIDI map](./img/vcv-midi-gate-map.png){ .half }](./img/vcv-midi-gate-map.png)
+</div>
+<div class="grid cards" markdown>
+ -  You can map MIDI CCs to knobs using the MIDI-CC module.
+
+    Click on an empty line on the MIDI-CC module, and send a MIDI CC event.
+    Then click on a knob to create the mapping.
+
+    Notice that VCV Rack indicates a MIDI mapping with a yellow square. This
+    should not be confused with the yellow square used by Knob B of the
+    MetaModule. If in doubt, hover the mouse over the Knob B ring, and if the
+    other knob's square flashes rapidly then it's mapped the MetaModule.
+
+   [![CC MIDI map](./img/vcv-midi-knob-map.png){ .half }](./img/vcv-midi-knob-map.png)
 </div>

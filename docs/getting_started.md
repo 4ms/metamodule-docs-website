@@ -80,7 +80,9 @@
 
 - __6. Play!__
 
-       Patch Audio Outs 1 and 2 on the MetaModule to your speakers and twist the MetaModule knobs to control the sound. Patch modulation sources into the input jacks, if you wish.
+       Patch Audio Outs 1 and 2 on the MetaModule to your speakers and twist
+       the MetaModule knobs to control the sound. Patch modulation sources into
+       the input jacks, if you wish.
 
        Scroll to see the mappings, or view all of them at once in Knob Set View.
 

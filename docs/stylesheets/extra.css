@@ -50,8 +50,18 @@
 }
 
 .md-typeset li {
-	line-height: 1.0;
+	line-height: 1.4;
 }
 .md-typeset li li::marker {
 	content: '– ';
+}
+
+h2 {
+	border-bottom-width: 0.06rem;
+}
+
+h3 {
+	border-bottom-width: 0.03rem;
+	border-color: #888;
+	width: fit-content;
 }

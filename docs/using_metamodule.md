@@ -176,9 +176,10 @@ From the Knob Set page:
 
 A single physical knob can be mapped to up to eight virtual knobs. This is
 known as a "multi-map". Each virtual knob can have a different minimum and
-maximum range. This allows the MetaModule's knobs to be used as macro
-controller.
+maximum range. 
 
+As you turn the physical knob, all the mapped virtual knobs will turn. In
+this way, mulit-maps allow the MetaModule to act like a macro controller.
 
 For example, if a reverb module has separate wet and dry level knobs, you could
 map a physical knob to both of these, setting the maximum to 0% and minimum to
@@ -187,14 +188,44 @@ level will go down, and the wet level will go up, creating a Dry/Wet blend
 knob.
 
 
-Another use of multi-maps is in polyphony, by controlling the pitch, timbre, or
-envelope of all voices using a single knob.
+Another example is using multi-maps for a polyphonic patch. One physical knob can control
+all the pitch knobs of all the voices; another physical knob can control all
+the waveshape knobs; another can control all the envelope shapes, etc...
 
-Multi-maps exist with a Knob Set. So each Knob Set can have its own set of maps and multi-maps.
-
+Multi-maps exist with a Knob Set. So each Knob Set can have its own set of maps
+and multi-maps. Since there are a maximum of eight Knob Sets, and each Knob Set
+has twelve knob multi-maps, and each multi-map can have up to eight virtual
+knobs, a maximum of 768 virtual knobs can be mapped in a single MetaModule
+patch. 
 
 ### How to create a multi-map
 
 Multi-maps are created automatically if you create new knob map with a physical knob that's already mapped (in the current knob set).
+See [Creating a New Knob Mapping](using_metamodule.md#creating-a-new-knob-mapping).
+
+### How to view a multi-map
+
+Viewing any module that has a mapping that's a part of a multi-map will display that mapping normally.
+
+If you want to see all the virtual knobs that map to a specific physical knob:
+
+<div class="grid cards" markdown>
+
+-  __1. Click the knob icon to go to the Knob Set page__
+
+
+   ![Knob Set icon](./img/patch-enosc4-knobset-icon.png){ .half }
+
+</div>
+
+<div class="grid cards" markdown>
+
+-  __2. Multi-maps are shown with a scroll bar under the knob__
+
+      Scroll left and right to view all the mapped knobs.
+
+   ![Multi-map](./img/knobset-multimap.png){ .half }
+
+</div>
 
 

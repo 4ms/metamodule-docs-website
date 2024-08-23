@@ -67,5 +67,30 @@ the plugin normally after startup.
 
   ![Plugins Found](./img/plugins-autoload.png){ .half }
 
+</div>
+
+
+## Viewing the modules in a plugin
+
+<div class="grid cards" markdown>
+
+-  __1. Click New Patch from the Main Menu__
+
+     Alternatively, you can click the `+` icon on an existing patch.
+
+    
+  ![New Patch](./img/main-menu-new.png){ .half }
+
+</div>
+
+<div class="grid cards" markdown>
+
+-  __2. Click the name of the plugin, then browse the modules__
+
+    Click on any module to view it without the roller menu.
+
+    If you click a second time, the module will be added to the current patch.
+
+  ![Airwindows modules](./img/airwindows-module-list.png){ .half }
 
 </div>
