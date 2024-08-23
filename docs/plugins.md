@@ -1,6 +1,6 @@
 # Plugins
 
-## Loading Plugins
+## Installing Plugins
 
 <div class="grid cards" markdown>
 
