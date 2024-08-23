@@ -1,0 +1,43 @@
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 1.0em;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details {
+  border-color: #888888;
+}
+
+.md-typeset .tip>.admonition-title,
+.md-typeset .tip>summary {
+  background-color: #888;
+}
+
+.md-typeset .tip>.admonition-title:before, 
+.md-typeset .tip>summary:before {
+  background-color: #000;
+}
+
+.circlenum {
+	font-weight: bold;
+	float: left;
+	width: 30px;
+	height: 30px;
+	align-items: center;
+	text-align: center;
+	border-radius: 50%;
+	padding: 2px;
+	margin: 2px;
+}
+
+.whitenum { background: white; color: black; border-color: black; border-width: 1px; }
+.rednum { background: red; color: black; }
+.orangenum { background: orange; color: black; }
+.yellownum { background: yellow; color: black; }
+.greennum { background: lime; color: black; }
+.cyannum { background: cyan; color: black; }
+.bluenum { background: blue; color: white; }
+.purplenum { background: purple; color: white; }
+
+
+.mm-lightblue { text-decoration: underline; color: #c3ceda; }

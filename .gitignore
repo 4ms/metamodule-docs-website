@@ -1,0 +1,6 @@
+embedded/filesystem/assets/css/styles.css
+tmp
+docs-src/site
+static/docs
+*.mmplugin
+protected
