@@ -10,7 +10,7 @@
     *VCV Rack is owned and maintained by VCV and is not affiliated with 4ms Company.*
 
 
-You can create patches on your computer in VCV Rack and play them on the MetaModule. This is the preferred workflow for complex patches involving lots of modules, patch cables and/oor mappings.
+You can create patches on your computer in VCV Rack and play them on the MetaModule. This is the preferred workflow for complex patches involving lots of modules, patch cables and/or mappings.
 
 ## Installing the 4ms modules into VCV Rack
 
@@ -226,7 +226,7 @@ you can download the plugin and install it manually.
 </div>
 
 
-## Creating Knobsets in VCV Rack
+## Creating Knob Set in VCV Rack
 
 A Knob Set is a group of mappings. You can create up to eight Knob Sets in a
 MetaModule patch and switch between them on the fly when running the patch on the MetaModule.
@@ -235,7 +235,7 @@ Knob Sets are a great way to control the entire patch using just the 12 on-board
 
 See [Knob Sets](using_metamodule.md#knob-sets) for more information.
 
-### Selecting a Knobset
+### Selecting a Knob Set
 <div class="grid cards" markdown>
 -  __Click one of the yellow circles on the MetaModule Hub__
 
@@ -250,7 +250,7 @@ See [Knob Sets](using_metamodule.md#knob-sets) for more information.
 
 </div>
 
-### Naming Knobsets
+### Naming Knob Set
 
 Select a Knob Set and type a name in the box above the yellow circles.
 

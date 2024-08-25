@@ -4,9 +4,9 @@
 
 <div class="grid cards" markdown>
 
--  __1. Click Knob icon in button bar__
+-  __1. Click the Knob icon in the button bar__
 
-   ![Patch View](./img/patch-view-knobset-icon.png){ .half }
+   [![Patch View](./img/patch-view-knobset-icon.png){ .half }](./img/patch-view-knobset-icon.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -19,14 +19,14 @@
 
       Click `Jacks` to view jack mappings
 
-   ![Patch View](./img/knobset-karplus-jackicon.png){ .half }
+   [![Patch View](./img/knobset-karplus-jackicon.png){ .half }](./img/knobset-karplus-jackicon.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __3. Jack mappings are shown__
 
-   ![Patch View](./img/jackmap-karplus.png){ .half }
+   [![Patch View](./img/jackmap-karplus.png){ .half }](./img/jackmap-karplus.png)
 
 </div>
 
@@ -42,7 +42,7 @@
 
 -  A patch can have up to eight Knob Sets, but only one Knob Set can be active at a time.
 
--  A single physical knob can be mapped to up to 8 virtual knobs in a Knob Set. See [Multi-maps]
+-  A single physical knob can be mapped to up to 8 virtual knobs in a Knob Set. See [Multi-maps](#mapping-to-more-than-one-knob-multi-maps)
 
 ## How to Use a Different Knob Set
 
@@ -55,7 +55,7 @@ From the Knob Set page:
 
       If there is only one Knob Set in the patch, the >> button will not appear.
 
-   ![Knob Set](./img/knobset-karplus.png){ .half }
+   [![Knob Set](./img/knobset-karplus.png){ .half }](./img/knobset-karplus.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -65,7 +65,7 @@ From the Knob Set page:
      Now the physical knobs will control the parameters mapped in the new Knob
      Set.
 
-   ![Knob Set](./img/knobset-use.png){ .half }
+   [![Knob Set](./img/knobset-use.png){ .half }](./img/knobset-use.png)
 
 
 </div>
@@ -89,45 +89,66 @@ The Back button's color will always indicate the Knob Set number:
 <div style="clear:both"></div>
 
 
+## Creating a new Knob Set
+
+You can create a new knob set in several ways:
+
+ -  With VCV Rack, when you make the patch. See [Creating Knob Sets](using_rack.html#creating-knobsets-in-vcv-rack)
+
+ -  By clicking `(new knobset)` when you creating a new knob mapping (see next section)
+
+ -  By selecting `Auto-map into new knobset` from the module [Action menu](#auto-map-in-new-knob-set).
+
+ Note: While Knob Sets can have a name, currently the only way to provide a
+ name is when you create the patch with VCV Rack. Future firmware release will
+ allow editing the name from within the MetaModule
+
 
 ---
 
-## Creating a new Knob Mapping
+## Creating a new Knob Mapping or MIDI CC Mapping
 
 From the Patch View page:
 
 <div class="grid cards" markdown>
 
--  __1. Open a module and click on a control__
+-  __1. Open a module and click a control__
 
-   ![Knob Set](./img/plaits-freq-knob.png){ .half }
+   [![Knob Set](./img/plaits-freq-knob.png){ .half }](./img/plaits-freq-knob.png)
 
 </div>
 <div class="grid cards" markdown>
 
--  __2. Click on a knob set with no mappings__
+-  __2. Click on a Knob Set that doesn't already have a mapping__
 
-   ![Knob Set](./img/plaits-mapping-pane.png){ .half }
+    If you want to create a new Knob Set, click `(new knobset)`
+
+    If you want to map a MIDI CC to this knob, click `MIDI`
+
+   [![Knob Set](./img/plaits-mapping-pane.png){ .half }](./img/plaits-mapping-pane.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __3. Wiggle the knob you want to map to__
 
-   ![Knob Set](./img/plaits-mapping-add.png){ .half }
+    If you're mapping MIDI CC, then send MIDI CC messages
+
+   [![Knob Set](./img/plaits-mapping-add.png){ .half }](./img/plaits-mapping-add.png)
 
 </div>
 <div class="grid cards" markdown>
 
--  __4. Click OK and it's mapped!__
+-  __4. Click OK. It's mapped!__
 
-     Turning knob A on the MetaModule will turn the VCO's Frequency knob.
+     If you want to adjust the minimum and maximum values of the mapping, or
+     give the mapping a name, see [Edit a Knob
+     Mapping](#editting-a-knob-mapping).
 
-     If you want to adjust the minimum and maxium values of the mapping, or give your mapping a name, see [Edit a Knob Mapping](#editting-a-knob-mapping).
-
-   ![Knob Set](./img/plaits-mapping-done.png){ .half }
+   [![Knob Set](./img/plaits-mapping-done.png){ .half }](./img/plaits-mapping-done.png)
 
 </div>
+
 
 ---
 
@@ -140,33 +161,38 @@ From the Knob Set page:
 
 -  __1. Click on a mapping...__
 
-   ![Knob Set](./img/knobset-karplus-knobA.png){ .half }
+   [![Knob Set](./img/knobset-karplus-knobA.png){ .half }](./img/knobset-karplus-knobA.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __2. ... to go to the Knob View page__
 
-   ![Knob View](./img/knobview.png){ .half }
+   [![Knob View](./img/knobview.png){ .half }](./img/knobview.png)
 
 </div>
 <div class="grid cards" markdown>
 
--  __3. Click on Min or Max to change the range__
+-  __3. Click on MIN or MAX to change the range__
 
-     This changes the minimum and maximum positions of the the virtual knob as you turn the physical knob.
-     You can even set the maximum to be less than the minimum, 
+     When the physical knob is all the way down, the virtual knob will be set
+     to the MIN value. Likewise, when the physical knob is all the way up, the
+     virtual knob will be at the MAX value.
 
-   ![Knob View Min](./img/knobview-min.png){ .half }
+     If you set MAX to be less than the MIN, the virtual knob will turn the
+     opposite direction as the physical knob.
+
+   [![Knob View Min](./img/knobview-min.png){ .half }](./img/knobview-min.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __4. Click on the knob name to type an alias__
 
-     An alias is a name you pick for a knob mapping. If this is a multi-map, then the alias will apply to all mappings within the multi-map.
+     An alias is a name you pick for a knob mapping. If this is a multi-map,
+     then the alias will apply to all mappings within the multi-map.
 
-   ![Knob View Name](./img/knobview-name.png){ .half }
+   [![Knob View Name](./img/knobview-name.png){ .half }](./img/knobview-name.png)
 
 </div>
 
@@ -175,24 +201,22 @@ From the Knob Set page:
 ## Mapping to more than one knob (Multi-maps)
 
 A single physical knob can be mapped to up to eight virtual knobs. This is
-known as a "multi-map". Each virtual knob can have a different minimum and
-maximum range. 
-
-As you turn the physical knob, all the mapped virtual knobs will turn. In
-this way, mulit-maps allow the MetaModule to act like a macro controller.
+known as a "multi-map". As you turn the physical knob, all the mapped virtual
+knobs will turn. Each virtual knob can have different minimum and maximum
+values. In this way, mulit-maps allow the MetaModule to act like a macro
+controller.
 
 For example, if a reverb module has separate wet and dry level knobs, you could
-map a physical knob to both of these, setting the maximum to 0% and minimum to
-100% for the dry level knob. Then as you turn the physical knob up, the dry
-level will go down, and the wet level will go up, creating a Dry/Wet blend
-knob.
+map a physical knob to both of these. Then you could set the MIN and MAX values
+such that as you turn the physical knob up, the dry level will go down, and the
+wet level will go up, creating a crossfade between the dry and wet signals.
 
 
-Another example is using multi-maps for a polyphonic patch. One physical knob can control
-all the pitch knobs of all the voices; another physical knob can control all
-the waveshape knobs; another can control all the envelope shapes, etc...
+Another example is using multi-maps in a polyphonic patch. One physical knob
+can control the pitch knobs of all the voices; another physical knob can
+control the waveshape knobs; another can control the envelope shapes, etc...
 
-Multi-maps exist with a Knob Set. So each Knob Set can have its own set of maps
+Multi-maps exist within a Knob Set. So each Knob Set can have its own set of maps
 and multi-maps. Since there are a maximum of eight Knob Sets, and each Knob Set
 has twelve knob multi-maps, and each multi-map can have up to eight virtual
 knobs, a maximum of 768 virtual knobs can be mapped in a single MetaModule
@@ -214,7 +238,7 @@ If you want to see all the virtual knobs that map to a specific physical knob:
 -  __1. Click the knob icon to go to the Knob Set page__
 
 
-   ![Knob Set icon](./img/patch-enosc4-knobset-icon.png){ .half }
+   [![Knob Set icon](./img/patch-enosc4-knobset-icon.png){ .half }](./img/patch-enosc4-knobset-icon.png)
 
 </div>
 
@@ -224,8 +248,114 @@ If you want to see all the virtual knobs that map to a specific physical knob:
 
       Scroll left and right to view all the mapped knobs.
 
-   ![Multi-map](./img/knobset-multimap.png){ .half }
+   [![Multi-map](./img/knobset-multimap.png){ .half }](./img/knobset-multimap.png)
 
 </div>
 
+---
+
+## How to Patch Cables
+
+There are two types of cables in the MetaModule: cables between virtual modules
+(also called internal cables), and cables that go to the physical panel jacks
+(also called Jack Mappings)
+
+*Note: While VCV Rack supports polyphonic cables, only monophonic cables are
+supported on the current version of the MetaModule*
+
+### Patching cables between modules
+
+<div class="grid cards" markdown>
+
+-  __1. Click on a jack, and click New Cable__
+
+      You can start a cable from the input or output. If the jack is already
+      patched, then the new cable will "stack" on top of the existing cable
+      (thus acting like a passive mult)
+
+      If this is the first cable you're creating this session, a pop-up will
+      give you instructions. Read them and click OK.
+
+   [![New cable start](./img/new-cable-start.png){ .half }](./img/new-cable-start.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __2. Navigate to the jack you want to connect to__
+
+     - Find the module you want to patch to, and click on it. 
+
+     - Then scroll to the jack you want to patch to, and click on it.
+
+     Only valid jacks will be shown. You cannot connect multiple outputs to to
+     an input. 
+
+     If you want to cancel making a cable, click "Cancel Cable" or press the
+     Back button from the Patch View page.
+
+   [![New Cable dest](./img/new-cable-dest.png){ .half }](./img/new-cable-dest.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __3. Done!__
+
+     *Note: Keep in mind that the physical panel Input jacks are treated like
+     outputs. This makes sense if you consider that they send signals to
+     virtual modules. Therefore, if a jack is patched to a panel Input jack,
+     then it cannot be patched to another output jack. You must disconnect the
+     jack from the panel before patching to another output jack.*
+
+   [![New Cable done](./img/new-cable-done.png){ .half }](./img/new-cable-done.png)
+
+</div>
+
+### Patching to a panel jack
+
+Patching a virtual module jack to a panel jack is how you map the physical jacks on the
+MetaModule to virtual module jacks.
+
+<div class="grid cards" markdown>
+-  __1. Click on a jack, and click New Panel Cable__
+
+    If the jack is already connected to a panel jack, then this button will not
+    be displayed.
+
+   [![New panel cable](./img/new-panel-cable.png){ .half }](./img/new-panel-cable.png)
+</div>
+<div class="grid cards" markdown>
+-  __2. Select a panel jack and click Connect__
+
+     The drop-down menu will indicate if any panel jacks are already connected:
+
+       - Connecting to a panel Out jack that's already connected to something else will disconnect the existing cable.
+
+       - Connecting to a panel In jack that's already connected to something else will stack on top of the existing cable.
+
+   [![New panel cable popup](./img/new-panel-cable-popup.png){ .half }](./img/new-panel-cable-popup.png)
+</div>
+
+
+
+
+
+---
+
+## Module Display Settings Menu
+
+TODO
+
+---
+
+## Module Action Menu
+
+[TODO]
+
+### Auto-map
+
+### Auto-map in new Knob Set
+
+### Randomize
+
+### Delete
+
+---
 
