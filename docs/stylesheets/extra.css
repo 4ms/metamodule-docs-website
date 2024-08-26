@@ -65,3 +65,16 @@ h3 {
 	border-color: #888;
 	width: fit-content;
 }
+
+@media (max-width: 768px) {
+  .sm-sm {
+	font-size:0.85rem;
+	padding-right:10px;
+  }
+}
+@media (max-width: 640px) {
+  .sm-hide {
+    display: none;
+  }
+}
+
