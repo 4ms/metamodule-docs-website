@@ -14,23 +14,14 @@ You can use most or all of modules from the following built-in brands:
 
  - 4ms <span style="font-size:0.8em">all modules</span>
  - Befaco <span style="font-size:0.8em">all except 
-   NoisePlethora, 
    Muxlicer, 
    Midi Thing2, 
    Octaves, 
    Burst, 
    Voltio</span>
- - HetrickCV <span style="font-size:0.8em">all except
-   RandomGates,
-   Rotator,
-   Rungler,
-   PhasorMixer,
-   Comparator,
-   DataCompander,
-   Delta
- </span>
+ - HetrickCV <span style="font-size:0.8em">all modules</span>
  - Audible Instruments. <span style="font-size:0.8em">Clones of the
-   Mutable Instruments hardware; known as Cloned Instruments on the
+   Mutable Instruments hardware, known as "Cloned Instruments" on the
    MetaModule.</span>
  - NonlinearCircuits <span style="font-size:0.8em">all</span>
  - Scanner Darkly, aka Eightfold. <span style="font-size:0.8em">only SDOrcasHeartV2 module</span>
