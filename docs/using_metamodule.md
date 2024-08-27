@@ -334,20 +334,14 @@ MetaModule to virtual module jacks.
 </div>
 
 
-
-
-
 ---
 
-## Module Display Settings Menu
-
-TODO
+More documentation coming!
 
 ---
 
 ## Module Action Menu
 
-[TODO]
 
 ### Auto-map
 
@@ -358,4 +352,21 @@ TODO
 ### Delete
 
 ---
+
+## Module Display Settings Menu
+
+---
+
+## Patch View Display Settings Menu
+
+---
+
+## Patch Name and Description
+
+
+---
+
+## Patch File Menu
+
+
 
