@@ -14,7 +14,6 @@ You can use most or all of modules from the following built-in brands:
 
  - 4ms <span style="font-size:0.8em">all modules</span>
  - Befaco <span style="font-size:0.8em">all except 
-   Muxlicer, 
    Midi Thing2, 
    Octaves, 
    Burst, 
@@ -25,7 +24,7 @@ You can use most or all of modules from the following built-in brands:
    MetaModule.</span>
  - NonlinearCircuits <span style="font-size:0.8em">all</span>
  - Scanner Darkly, aka Eightfold. <span style="font-size:0.8em">only SDOrcasHeartV2 module</span>
- - Valley <span style="font-size:0.8em">only Plateau, uGraph, and Topograph are built-in, other modules are plugins</span>
+ - Valley <span style="font-size:0.8em">Plateau, uGraph, and Topograph are built-in. Feline, Interzone, and Amalgam are in the Valley plugin</span>
 
 
 In addition to these, you can use more modules by downloading and [installing plugins](plugins.md).
