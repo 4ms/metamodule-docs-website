@@ -6,14 +6,14 @@
 
 -  __1. Click `Settings` in the Main Menu__
 
-   ![Main Menu](./img/main-menu-settings.png){ .half }
+   [![Main Menu](./img/main-menu-settings.png){ .half }](./img/main-menu-settings.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __2. Click `Plugins`__
 
-   ![System Menu](./img/settings-plugins.png){ .half }
+   [![System Menu](./img/settings-plugins.png){ .half }](./img/settings-plugins.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -26,7 +26,7 @@
       can put them in the root directory, or in a folder called
       `metamodule-plugins`
 
-   ![USB Drive contents](./img/macos-plugins-disk.png){ .half }
+   [![USB Drive contents](./img/macos-plugins-disk.png){ .half }](./img/macos-plugins-disk.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -35,7 +35,7 @@
 
       Click a plugin to load it.
 
-  ![Plugins Found](./img/plugins-found.png){ .half }
+  [![Plugins Found](./img/plugins-found.png){ .half }](./img/plugins-found.png)
 
 </div>
 
@@ -54,7 +54,7 @@ the plugin normally after startup.
 
       If the plugin is not yet loaded, then follow the [instructions above](#loading-plugins). 
 
-  ![Plugins Found](./img/plugins-loaded.png){ .half }
+  [![Plugins Found](./img/plugins-loaded.png){ .half }](./img/plugins-loaded.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -65,7 +65,7 @@ the plugin normally after startup.
 
       Note: The wrong version may get loaded if you have different versions of the same plugin on an SD Card and a USB Drive, or different versions in the `metamodule-plugins/` folder and in the root directory.
 
-  ![Plugins Found](./img/plugins-autoload.png){ .half }
+  [![Plugins Found](./img/plugins-autoload.png){ .half }](./img/plugins-autoload.png)
 
 </div>
 
@@ -79,7 +79,7 @@ the plugin normally after startup.
      Alternatively, you can click the `+` icon on an existing patch.
 
     
-  ![New Patch](./img/main-menu-new.png){ .half }
+  [![New Patch](./img/main-menu-new.png){ .half }](./img/main-menu-new.png)
 
 </div>
 
@@ -91,6 +91,6 @@ the plugin normally after startup.
 
     If you click a second time, the module will be added to the current patch.
 
-  ![Airwindows modules](./img/airwindows-module-list.png){ .half }
+  [![Airwindows modules](./img/airwindows-module-list.png){ .half }](./img/airwindows-module-list.png)
 
 </div>

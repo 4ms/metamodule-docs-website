@@ -12,7 +12,7 @@
 
 -  __1. Click `Load Patch` in the Main Menu__
 
-   ![Main Menu](./img/main-menu-load.png){ .half }
+   [![Main Menu](./img/main-menu-load.png){ .half }](./img/main-menu-load.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -20,14 +20,14 @@
 -  __2. Click on a patch__
 
 
-   ![Patch Selector](./img/patch-sel.png){ .half }
+   [![Patch Selector](./img/patch-sel.png){ .half }](./img/patch-sel.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __3. Click Play icon__
 
-   ![Patch View](./img/patch-view-karplus.png){ .half }
+   [![Patch View](./img/patch-view-karplus.png){ .half }](./img/patch-view-karplus.png)
 
 </div>
 
@@ -39,7 +39,7 @@
 
 -  __1. Click `New Patch` in the Main Menu__
 
-   ![Main Menu](./img/main-menu-new.png){ .half }
+   [![Main Menu](./img/main-menu-new.png){ .half }](./img/main-menu-new.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -50,21 +50,21 @@
 
       Click once to view just the panel, then click again to add it.
 
-   ![Patch Selector](./img/module-list-enosc.png){ .half }
+   [![Patch Selector](./img/module-list-enosc.png){ .half }](./img/module-list-enosc.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __3. Click on the module__
 
-   ![Patch View](./img/patchview-enosc.png){ .half }
+   [![Patch View](./img/patchview-enosc.png){ .half }](./img/patchview-enosc.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __4. Click the Action Menu icon__
 
-   ![Module View](./img/enosc-action-icon.png){ .half } 
+   [![Module View](./img/enosc-action-icon.png){ .half } ](./img/enosc-action-icon.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -73,7 +73,7 @@
 
       This will map physical knobs and jacks to the EnOsc's virtual knobs, switches and jacks.
 
-   ![Module Action Menu](./img/auto-map-menu.png){ .half }
+   [![Module Action Menu](./img/auto-map-menu.png){ .half }](./img/auto-map-menu.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -88,7 +88,7 @@
 
        You can add more modules by clicking the `+` icon in the button bar, and repeat from step 2.
 
-   ![Mapped EnOsc](./img/enosc-mapped.png){ .half }
+   [![Mapped EnOsc](./img/enosc-mapped.png){ .half }](./img/enosc-mapped.png)
 
 </div>
 
@@ -100,14 +100,14 @@
 
 -  __1. Click `Settings` in the Main Menu__
 
-   ![Main Menu](./img/main-menu-settings.png){ .half }
+   [![Main Menu](./img/main-menu-settings.png){ .half }](./img/main-menu-settings.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __2. Click Update__
 
-   ![System Menu](./img/settings-update.png){ .half }
+   [![System Menu](./img/settings-update.png){ .half }](./img/settings-update.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -118,7 +118,7 @@
 
       Then save the `metamodule-firmware` folder on your drive.
 
-   ![USB Drive contents](./img/macos-firmware-disk.png){ .half }
+   [![USB Drive contents](./img/macos-firmware-disk.png){ .half }](./img/macos-firmware-disk.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -131,6 +131,6 @@
 
       It takes about a minute.
 
-  ![Update Firmwware button](./img/firmware-update-button.png){ .half }
+  [![Update Firmwware button](./img/firmware-update-button.png){ .half }](./img/firmware-update-button.png)
 
 </div>
