@@ -7,7 +7,6 @@ Clone the repo and set up a python venv (the first time):
 ```
 git clone .../metamodule-docs
 cd metamodule-docs
-cd docs-src
 python3 -m venv pyenv
 source pyenv/bin/activate
 pip install -r requirements.txt
@@ -22,7 +21,7 @@ deactivate
 From now on when you want to serve or build the site:
 
 ```
-cd docs-src
+cd metamodule-docs
 source pyenv/bin/activate
 
 # To serve it at localhost:8000

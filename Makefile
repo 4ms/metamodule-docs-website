@@ -23,13 +23,15 @@ no-dirty:
 .PHONY: build
 build:
 # Include additional build steps, like TypeScript, SCSS or Tailwind compilation here...
-	cd docs-src && mkdocs build 
+	mkdocs build 
 
 ## run: run the  application
 .PHONY: run
 run: build
-	cd docs-src && mkdocs serve
+	mkdocs serve
 
+.PHONY: serve
+serve: run
 
 ## production/deploy: deploy the application to production
 #production/deploy: confirm tidy audit no-dirty
