@@ -6,6 +6,18 @@
 
 ---
 
+## Connect the power cable
+
+<div class="grid cards" markdown>
+-  __Attach the power cable to the MetaModule, red stripe down__
+
+    - The other end of the cable connects to your Eurorack power supply.
+
+   [![Power Cable](./img/power-header.jpg){ .half }](./img/power-header.jpg)
+</div>
+
+---
+
 ## How to Play a Patch
 
 <div class="grid cards" markdown>
