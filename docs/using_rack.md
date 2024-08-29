@@ -17,33 +17,23 @@ You can create patches on your computer in VCV Rack and play them on the MetaMod
 Before you can use VCV Rack to create patches for your MetaModule, you need to
 install the 4ms modules into VCV Rack on your computer.
 
-### How to install from the VCV Rack Library (preferred method)
-
-<div class="grid cards" markdown>
-
--  __Coming soon!__
-
-
-</div>
+!!! tip "Notice"
+    __Normally, you would install the 4ms modules using the VCV Rack Library. However, at this time the 4ms modules are still being processed into the Library. So please install manually for now (see below)__
 
 ### How to install manually
 
-If you need the latest version before it's available in the VCV Rack Library,
-you can download the plugin and install it manually.
+<!--If you need the latest version before it's available in the VCV Rack Library,
+you can download the plugin and install it manually.-->
 
 <div class="grid cards" markdown>
 
--  __1. Download the latest version__
+-  __1. Download the plugin__ 
 
-      Click the [Download](../downloads) link above.
-
-      Scroll down to the *VCV Rack Modules* section.
-
-      Click to download the version for the type of computer you have. 
-      If you have a Mac, download the x64 version for an Intel processor, or
-      the arm64 version if you have a newer Apple silicon processor.
-
-   [![Download page](./img/vcv-plugin-download.png){ .half }](./img/vcv-plugin-download.png)
+      From the [Downloads](../downloads){ target="blank" } page, click to
+      download the plugin for the type of computer you have. If you have a Mac,
+      make sure to download the x64 version for an Intel processor, or the arm64
+      version for a newer Apple silicon processor.
+<!--   [![Download page](./img/vcv-plugin-download.png){ .half }](./img/vcv-plugin-download.png) -->
 
 </div>
 <div class="grid cards" markdown>
