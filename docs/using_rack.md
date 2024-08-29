@@ -164,7 +164,12 @@ you can download the plugin and install it manually.-->
 
     You can also give it a description or patch notes in the box below.
 
-    Click the red Save button.
+    Click the red SAVE button.
+
+    This will create a file with the `.yml` extension.
+
+    _Note: VCV Rack patch files end in `.vcv` and cannot be read by the
+    MetaModule._
 
     Save the file on a USB drive or microSD Card.
     You can save patches in folders to keep them organized. However, the
