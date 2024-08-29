@@ -1,14 +1,17 @@
 # Using Metamodule with Rack
 
-!!! tip "What is VCV Rack?"
-    [VCV Rack](https://vcvrack.com/) is a "Virtual Eurorack Studio" that runs
-    on a Mac, Windows, or Linux computer. There are thousands of free modules
-    available, making it one of the most popular virtual modular platforms.
-    There is a free open-source version, and a paid Pro version.
+__What is VCV Rack?__
 
-    &nbsp;
-    *VCV Rack is owned and maintained by VCV and is not affiliated with 4ms Company.*
+[VCV Rack](https://vcvrack.com/) is a "Virtual Eurorack Studio" that runs
+on a Mac, Windows, or Linux computer. There are thousands of free modules
+available, making it one of the most popular virtual modular platforms.
+There is a free open-source version, and a paid Pro version.
 
+&nbsp;
+*VCV Rack is owned and maintained by VCV and is not affiliated with 4ms Company.*
+
+
+&nbsp;
 
 You can create patches on your computer in VCV Rack and play them on the MetaModule. This is the preferred workflow for complex patches involving lots of modules, patch cables and/or mappings.
 
@@ -18,7 +21,9 @@ Before you can use VCV Rack to create patches for your MetaModule, you need to
 install the 4ms modules into VCV Rack on your computer.
 
 !!! tip "Notice"
-    __Normally, you would install the 4ms modules using the VCV Rack Library. However, at this time the 4ms modules are still being processed into the Library. So please install manually for now (see below)__
+    __Normally, you would install the 4ms modules using the VCV Rack Library.
+    However, at this time the 4ms modules are still being processed into the
+    Library. So please install manually for now (instructions are below).__
 
 ### How to install manually
 
@@ -33,6 +38,8 @@ you can download the plugin and install it manually.-->
       download the plugin for the type of computer you have. If you have a Mac,
       make sure to download the x64 version for an Intel processor, or the arm64
       version for a newer Apple silicon processor.
+
+
 <!--   [![Download page](./img/vcv-plugin-download.png){ .half }](./img/vcv-plugin-download.png) -->
 
 </div>
