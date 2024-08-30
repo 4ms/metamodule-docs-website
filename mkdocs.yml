@@ -5,6 +5,7 @@ nav:
   - Using the MetaModule with VCV Rack: using_rack.md
   - Using Plugins: plugins.md
   - FAQ: faq.md
+  - Tech Specs: specs.md
 site_description: >-
   MetaModule documentation
 
