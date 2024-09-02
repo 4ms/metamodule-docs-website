@@ -10,4 +10,6 @@
 
 -  __[Using Plugins](./plugins.md)__
 
+-  __[Technical Specs](./specs.md)__
+
 </div>

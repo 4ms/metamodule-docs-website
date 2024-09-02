@@ -36,12 +36,12 @@ serve: run
 ## production/deploy: deploy the application to production
 #production/deploy: confirm tidy audit no-dirty
 
-# TODO: zip file locally, unzip on host
 .PHONY: production/deploy
 production/deploy: confirm 
 	mkdocs build
-	scp -r ./metamodule-docs/docs metamodule:metamodule-docs/
-	ssh -t metamodule "sudo chmod -R g+w metamodule-docs/ && sudo chmod -R g+w metamodule-docs/docs/"
+	tar -czvf /tmp/metamodule-docs.tar.gz -C ./metamodule-docs docs
+	rsync -avP -e ssh /tmp/metamodule-docs.tar.gz metamodule:/tmp
+	ssh -t metamodule "/srv/deploy-docs.sh"
 
 .PHONY: production/perm
 production/perm: confirm 
