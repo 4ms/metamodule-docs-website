@@ -9,8 +9,10 @@
     - 280mA typical with USB 3.0 thumb drive attached
     - With common USB MIDI controllers attached:
         - 275mA with Arturia MicroLab
-        - 280mA with Arturia MiniLab
+        - 280mA with Arturia MiniLab 2
+        - 290mA with Arturia MiniLab 3 
         - 290mA with Keith McMillen QuNexus
+        - 300mA with Novation Launch Control XL
         - 360mA with Arturia Beat Step Pro
         - 495mA theoretical maximum with USB MIDI controller connected
 
