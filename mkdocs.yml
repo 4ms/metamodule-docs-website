@@ -31,7 +31,7 @@ theme:
     - navigation.tracking
     - navigation.sections
     - navigation.expand
-    - toc.integrate
+    #- toc.integrate
     - toc.follow
     
   custom_dir: overrides
