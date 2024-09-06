@@ -52,7 +52,7 @@ the plugin normally after startup.
 
 -  __1. Click a plugin name under `PLUGINS LOADED`__
 
-      If the plugin is not yet loaded, then follow the [instructions above](#loading-plugins). 
+      If the plugin is not yet loaded, then follow the [instructions above](#installing-plugins). 
 
   [![Plugins Found](./img/plugins-loaded.png){ .half }](./img/plugins-loaded.png)
 

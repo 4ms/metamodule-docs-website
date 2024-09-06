@@ -228,7 +228,7 @@ you can download the plugin and install it manually.-->
 </div>
 
 
-## Creating Knob Set in VCV Rack
+## Creating Knob Sets in VCV Rack
 
 A Knob Set is a group of mappings. You can create up to eight Knob Sets in a
 MetaModule patch and switch between them on the fly when running the patch on the MetaModule.
