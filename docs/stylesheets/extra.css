@@ -56,6 +56,14 @@
 	content: '– ';
 }
 
+.md-typeset h1,.md-typeset h2 {
+	font-weight: 600;
+}
+
+.md-typeset h3 {
+	font-weight: 500;
+}
+
 h2 {
 	border-bottom-width: 0.06rem;
 }

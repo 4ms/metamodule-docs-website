@@ -1,4 +1,4 @@
-# Using the MetaModule
+# Using the MetaModule: Knobs, Jacks, MIDI, and Cables
 
 ## How to View Knob and Jack Mappings
 
@@ -97,7 +97,8 @@ You can create a new knob set in several ways:
 
  -  By clicking `(new knobset)` when you creating a new knob mapping (see next section)
 
- -  By selecting `Auto-map into new knobset` from the module [Action menu](#auto-map-in-new-knob-set).
+ -  By selecting `Auto-map knobs (new Knob Set)` from the module [Action
+    menu](#auto-map-in-new-knob-set).
 
  Note: While Knob Sets can have a name, currently the only way to provide a
  name is when you create the patch with VCV Rack. Future firmware release will
@@ -300,9 +301,9 @@ supported on the current version of the MetaModule*
 
      *Note: Keep in mind that the physical panel Input jacks are treated like
      outputs. This makes sense if you consider that they send signals to
-     virtual modules. Therefore, if a jack is patched to a panel Input jack,
-     then it cannot be patched to another output jack. You must disconnect the
-     jack from the panel before patching to another output jack.*
+     virtual modules. Therefore, if a panel Input (i.e. In 1-6 or GateIn 1-2)
+     is patched to a virtual input jack, then you cannot patch another output to the
+     same virtual input jack (because only one output can drive an input).*
 
    [![New Cable done](./img/new-cable-done.png){ .half }](./img/new-cable-done.png)
 
@@ -333,40 +334,90 @@ MetaModule to virtual module jacks.
    [![New panel cable popup](./img/new-panel-cable-popup.png){ .half }](./img/new-panel-cable-popup.png)
 </div>
 
+### Patching to MIDI
 
----
+You can patch MIDI signals to input jacks.
 
-More documentation coming!
+Note: at this time, you cannot send MIDI out from the MetaModule, there is no
+CV->MIDI functionality.
 
----
+<div class="grid cards" markdown>
+-  __1. Click on an input jack, and click New MIDI Map__
 
-## Module Action Menu
+    If the jack is already connected to a panel jack, then this button will not
+    be displayed.
+
+   [![New MIDI Map](./img/enosc-midi-map.png){ .half }](./img/enosc-midi-map.png)
+</div>
+<div class="grid cards" markdown>
+-  __2. Select a MIDI signal__
+
+    Choose from:
+
+    - Note events (keyboard): select Pitch (key number), Gate (note on/off), Velocity,
+      Aftertouch, or Retrigger (multiple note-on). Also select
+      the polyphony channel. The maximum polyphony channel of all the MIDI
+      mappings in the entire patch determines how MIDI note events are parsed.
+
+    - CC: Continuous CV scaled to 0V to 10V. Select a CC number, or send a CC
+      event to "learn" it.
+
+    - Pitch Wheel
+
+    - Gate on Note: fires a gate whenever a particular note is pressed. Select
+      a note or play a note live to "learn" it.
+
+    - Clock: Select the raw MIDI clock (24PPQN) or a divided version of that.
+
+    - Transport: Sends a gate for Start, Stop, and Continue events.
+
+   [![MIDI maps](./img/midi-map-top.png){ .half }](./img/midi-map-top.png)
+</div>
+<div class="grid cards" markdown>
+-  __3. Click Map to create the mapping__
+
+   [![MIDI maps](./img/midi-map-pw.png){ .half }](./img/midi-map-pw.png)
+</div>
 
 
-### Auto-map
 
-### Auto-map in new Knob Set
+### Disconnecting a cable (Unpatching or removing a cable)
 
-### Randomize
+<div class="grid cards" markdown>
+-  __1. Click on a jack, and then click Disconnect__
 
-### Delete
+     This will disconnect all cables to this jack.
 
----
+     For stacked cables (one output going to multiple inputs):
 
-## Module Display Settings Menu
+     - If the selected jack is an output, then all stacked cables will be removed.
 
----
+     - If the selected jack is an input, then only the stacked cables that connect to this jack will be removed.
 
-## Patch View Display Settings Menu
+   [![Disconnect cable](./img/disconnect-cable.png){ .half }](./img/disconnect-cable.png)
+</div>
 
----
+### Following a Cable
 
-## Patch Name and Description
+You can "follow" a cable to trace the connections between modules.
 
+<div class="grid cards" markdown>
+-  __1. Click on a jack, and then click on an item in "Connected To:"__
 
----
+     You will be taken to the jack on the other module.
 
-## Patch File Menu
+     Clicking on a Panel connection does nothing.
 
+   [![Click on connecting jack](./img/connecting-jack.png){ .half }](./img/connecting-jack.png)
+</div>
+<div class="grid cards" markdown>
+-  __2. Module and jack on the other end of the cable will be shown__
 
+     You can repeat the process to trace all connections on a jack.
 
+     Pressing the Back button will re-trace your steps, first going to the
+     module's list of controls and jacks, and then going back to the previously
+     viewed module.
+
+   [![Other end of connecting jack](./img/connecting-jack-end.png){ .half }](./img/connecting-jack-end.png)
+</div>

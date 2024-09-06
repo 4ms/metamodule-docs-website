@@ -13,17 +13,13 @@ Many modules are built into the MetaModule, meaning you can use them right out o
 You can use most or all of modules from the following built-in brands:
 
  - 4ms <span style="font-size:0.8em">all modules</span>
- - Befaco <span style="font-size:0.8em">all except 
-   Midi Thing2, 
-   Octaves, 
-   Burst, 
-   Voltio</span>
+ - Befaco <span style="font-size:0.8em">all except Midi Thing2</span>
  - HetrickCV <span style="font-size:0.8em">all modules</span>
  - Audible Instruments. <span style="font-size:0.8em">Clones of the
    Mutable Instruments hardware, known as "Cloned Instruments" on the
    MetaModule.</span>
- - NonlinearCircuits <span style="font-size:0.8em">all</span>
- - Scanner Darkly, aka Eightfold. <span style="font-size:0.8em">only SDOrcasHeartV2 module</span>
+ - NonlinearCircuits <span style="font-size:0.8em">all modules</span>
+ - Scanner Darkly, aka Eightfold. <span style="font-size:0.8em">SDOrcasHeartV2 module</span>
  - Valley <span style="font-size:0.8em">Plateau, uGraph, and Topograph are built-in. Feline, Interzone, and Amalgam are in the Valley plugin</span>
 
 
