@@ -219,7 +219,7 @@ you can download the plugin and install it manually.-->
 ### How to remove a knob mapping
 
 <div class="grid cards" markdown>
--  __Right-click the virtual knob__
+-  __Right-click the MetaModule Hub knob or the virtual module knob__
 
     Select "Unmap" from the menu.
 
