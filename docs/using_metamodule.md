@@ -199,6 +199,28 @@ From the Knob Set page:
 
 ---
 
+## Changing a Knob Set name
+
+
+From the Knob Set page:
+
+<div class="grid cards" markdown>
+
+-  __1. Click on the knob set name...__
+
+   [![Knob Set name](./img/knobset-name.png){ .half }](./img/knobset-name.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __2. Type a new name__
+
+   [![Edit Knob Set name](./img/edit-knobset-name.png){ .half }](./img/edit-knobset-name.png)
+
+</div>
+
+---
+
 ## Mapping to more than one knob (Multi-maps)
 
 A single physical knob can be mapped to up to eight virtual knobs. This is

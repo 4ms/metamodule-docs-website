@@ -44,6 +44,12 @@
 
 .half { width: auto; max-height: 240px; }
 
+.img-412 { width: auto; max-height: 412px; }
+.img-550 { width: auto; max-height: 550px; }
+
+.img-472 { width: auto; max-height: 472px; }
+.img-630 { width: auto; max-height: 630px; }
+
 .md-typeset .grid.cards>ul>li {
 	border-width: 0.06rem;
 	border-color: #888;
@@ -63,6 +69,10 @@
 .md-typeset h3 {
 	font-weight: 500;
 }
+
+.md-typeset .grid.cards>ol>li:focus-within, .md-typeset .grid.cards>ol>li:hover, .md-typeset .grid.cards>ul>li:focus-within, .md-typeset .grid.cards>ul>li:hover, .md-typeset .grid>.card:focus-within, .md-typeset .grid>.card:hover {
+    border-color: #888;
+    box-shadow: none;
 
 h2 {
 	border-bottom-width: 0.06rem;

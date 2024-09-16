@@ -6,7 +6,7 @@ nav:
   - Using VCV Rack: using_rack.md
   - Using Plugins: plugins.md
   - Module Action menu: action_menu.md
-  - Settings: module_patch_settings.md
+  - Patch/Module Settings: module_patch_settings.md
   - FAQ: faq.md
   - Tech Specs: specs.md
 site_description: >-
