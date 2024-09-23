@@ -20,64 +20,41 @@ You can create patches on your computer in VCV Rack and play them on the MetaMod
 Before you can use VCV Rack to create patches for your MetaModule, you need to
 install the 4ms modules into VCV Rack on your computer.
 
-!!! tip "Notice"
-    __Normally, you would install the 4ms modules using the VCV Rack Library.
-    However, at this time the 4ms modules are still being processed into the
-    Library. So please install manually for now (instructions are below).__
-
-### How to install manually
-
-<!--If you need the latest version before it's available in the VCV Rack Library,
-you can download the plugin and install it manually.-->
-
 <div class="grid cards" markdown>
 
--  __1. Download the plugin__ 
+-  __1. Install from VCV Rack Library__
 
-      From the [Downloads](../downloads){ target="blank" } page, click to
-      download the plugin for the type of computer you have. If you have a Mac,
-      make sure to download the x64 version for an Intel processor, or the arm64
-      version for a newer Apple silicon processor.
+      Go to the 4ms Company page of the [VCV Rack Library](https://library.vcvrack.com/4msCompany)
+
+   [![VCV Library](./img/vcv-library-webpage.png){ .half }](./img/vcv-library-webpage.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __2. Click Subscribe__
+
+      Click "Subscribe" to add all 4ms modules to your account. Subscribing
+      will also tell the VCV Rack program to check for updates as we release
+      bug fixes and new modules. 
+
+      Alternatively, you may could click "Add All", which will add all modules that
+      exist at the current time, but you will not be notified when future
+      modules are added.
 
 
-<!--   [![Download page](./img/vcv-plugin-download.png){ .half }](./img/vcv-plugin-download.png) -->
+      The VCV Rack Library requires you to create a free account.
+
+   [![VCV Library Subscribe](./img/vcv-library-subscribe.png){ .half }](./img/vcv-library-subscribe.png)
 
 </div>
 <div class="grid cards" markdown>
 
--  __2. Find your VCV Rack User Folder__
+-  __3. Quit and re-launch VCV Rack__ 
 
-      From the VCV Rack program, select "Open user folder" 
-      from the _Help_ menu.
+    Make sure you are logged into your account from the VCV Rack Program (Library menu).
 
-      A folder called "Rack2" will open on your screen.
+    If there is an item called `4ms Company` in the Library menu, click it to install the updated 4ms plugin.
 
-      <span style="font-size: 0.8em">
-      Alternatively, you can open the folder manually:</span>
-
-      - <span style="font-size:0.8em">MacOS: ~/Library/Application Support/Rack2/</span>
-      - <span style="font-size:0.8em">Windows: C:\Users\<username>\AppData\Local\Rack2\</span>
-      - <span style="font-size:0.8em">Linux: ~/.local/share/Rack2/</span>
-
-
-   [![Open user folder](./img/vcv-open-user-folder.png){ .half }](./img/vcv-open-user-folder.png)
-
-</div>
-<div class="grid cards" markdown>
-
--  __3. Put the downloaded file into the plugin directory__ 
-
-    The folder is named after they type of computer and OS you have, but always starts with `plugins-`
-
-    For example, on a Mac with Apple silicon, it's called `plugins-mac-arm64`, and on an Intel Mac it's `plugins-mac-x64`.
-
-
-   [![Cppying to plugin dir](./img/copy-rack-plugin.png){ .half }](./img/copy-rack-plugin.png)
-
-</div>
-<div class="grid cards" markdown>
-
--  __4. Quit and re-launch VCV Rack__ 
+    Restart VCV Rack (quit and re-open).
 
     Right-click (or control-click) on any empty rack space to open the Add
     Module page and see the 4ms modules.
@@ -85,6 +62,13 @@ you can download the plugin and install it manually.-->
    [![4ms Modules in VCV](./img/vcv-rack-modules.png){ .half }](./img/vcv-rack-modules.png)
 
 </div>
+
+
+### How to install manually
+
+There is normally not any reason to install plugins manually. However, if you were asked by Support to 
+try a special version, or are beta-testing, then [here is the procedure to do a manual installation](rack_manual_install.md).
+
 
 
 ## Creating patches
@@ -226,7 +210,6 @@ you can download the plugin and install it manually.-->
    [![Unmap Knob menu](./img/vcv-unmap.png){ .half }](./img/vcv-unmap.png)
 
 </div>
-
 
 ## Creating Knob Sets in VCV Rack
 
@@ -374,3 +357,15 @@ from the MIDI module to the jacks you want mapped.
 
    [![CC MIDI map](./img/vcv-midi-knob-map.png){ .half }](./img/vcv-midi-knob-map.png)
 </div>
+
+## Tip: Favorite the MetaModule-compatible modules:
+
+If you have trouble remembering which modules can be run on the MetaModule, one way to keep track of this is
+to mark all compatible modules as "Favorite" in VCV Rack.
+
+User `tenofswords` created a python script to do this automatically for you:
+[4ms-MetaModule-Scripts](https://github.com/gregornoriskin/4MS-MetaModule-Scripts)
+
+Running this requires some basic knowledge of using python scripts. Some discussion is here:
+[MetaModule Forum: MetaModule Tag in Rack to Identify Supported Modules](https://forum.4ms.info/t/metamodule-tag-in-rack-to-identify-supported-modules/69/32)
+
