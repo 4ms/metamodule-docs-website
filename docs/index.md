@@ -16,6 +16,8 @@
 
 - __[Patch/Module Settings](module_patch_settings.md)__
 
+- __[Versions and Compatibility](versions.md)__
+
 - __[FAQ](faq.md)__
 
 - __[Technical Specs](./specs.md)__
