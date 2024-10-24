@@ -8,6 +8,7 @@ nav:
   - Module Action menu: action_menu.md
   - Patch/Module Settings: module_patch_settings.md
   - Versions and Compatibility: versions.md
+  - Troubleshooting: troubleshooting.md
   - FAQ: faq.md
   - Tech Specs: specs.md
 site_description: >-

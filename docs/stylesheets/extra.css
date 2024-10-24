@@ -96,3 +96,8 @@ h3 {
   }
 }
 
+ol, menu {
+  list-style-type: decimal;
+  margin: 0;
+  padding: 0;
+}
