@@ -93,26 +93,83 @@ Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaM
 <div class="grid cards" markdown>
 -   __You're connected!__
 
-
     In the browser, navigate to the drive (and optionally, a subfolder) where you want to put a patch.
 
-    Click the Upload button and select a .yml patch file to transfer. 
+    Click the Upload button and select a .yml patch file to transfer, or drag and drop it. 
 
     When the progress bar is complete, the patch file can be played on your MetaModule!
+
+-   [![Drag and Drop file](./img/browser-drag-drop.png){ .half }](./img/browser-drag-drop.png)
 </div>
 
 After connecting to a Wi-Fi network, you can choose to delete the ESP BLE Provisioning app. However, if you
 anticipate needing to change Wi-Fi networks, you may want to leave it installed. 
+
+
+## Using the Wi-Fi Expander with VCV Rack
+
+<div class="grid cards" markdown>
+-   __1. Install the 4ms plugin for VCV Rack, version 2.0.9 or later__
+
+    You can update or install from the VCV Rack Library when v2.0.9 is available.
+
+    Or download from the [Github
+    Releases](https://github.com/4ms/4ms-vcv/releases/tag/vcv-v2.0.9) and then
+    [follow these instructions to install
+    manually](https://metamodule.info/docs/rack_manual_install.html)
+    
+</div>
+<div class="grid cards" markdown>
+-   __2. Enter the Wi-Fi Expander's address into the VCV Rack MetaModule hub__
+    
+    Right-click on the MetaModule panel.
+
+    From the menu, select "Set Wi-Fi Expander address".
+
+    Enter the address you found by going to Settings > Info on the MetaModule
+    (see above).
+
+-   [![VCV: Select Wi-Fi URL](./img/vcv-wifi-url.png){ .half }](./img/vcv-wifi-url.png)
+</div>
+<div class="grid cards" markdown>
+-   __3. Select the volume you want to transfer to__
+     
+     Right-click on the MetaModule in VCV Rack and choose a volume
+     from the "Wi-Fi sends to:" submenu.
+
+     Note that the Internal drive has very limited space (2MB max),
+     so it's recommended to store patches on USB or Card if possible. 
+
+    Note: sending to sub-folders is not yet supported. Use a web browser if you
+    need to do that.
+
+-   [![VCV: Select Wi-Fi volume](./img/vcv-wifi-vol.png){ .half }](./img/vcv-wifi-vol.png)
+</div>
+<div class="grid cards" markdown>
+-   __4. Click the Wi-Fi button to transfer a patch__
+      
+      If you hover the cursor over the button, the Wi-Fi settings
+      will display in the main text box.
+
+      After clicking, the top text box will display "Sent patch file"
+      or "Failed to send patch".
+
+-   [![VCV: Click Wi-Fi button](./img/vcv-wifi-button.png){ .half }](./img/vcv-wifi-button.png)
+</div>
+
+----
 
 ## Changing Wi-Fi networks
 
 Power on with the button held down. Release it when it turns red. The light will turn off and then turn light blue.
 You can then perform the [steps at the top of this page](#connecting-to-a-wi-fi-network-provisioning).
 
-## Troubleshooting
+----
+
+## Wi-Fi Expander Troubleshooting
 
 - Cannot get the ESP BLE Provisioning app to see the Wi-Fi Expander module:
-    - Did you disable Secure Communication?
+    - Did you disable Secure Communication in the app settings?
     - Did you erase the prefix text "PROV" and replace it with "4MS"?
     - Did you give the app permission to use the camera?
       Even though the Wi-Fi Expander doesn't have a QR code, the app will
@@ -132,3 +189,26 @@ You can then perform the [steps at the top of this page](#connecting-to-a-wi-fi-
       Make sure whatever Wi-Fi network you entered into the ESP BLE app is the 
       same as the network your computer is connected to.
 
+- I don't have a Wi-Fi button on my VCV Rack MetaModule hub
+    - You need to install the 4ms plugin v2.0.9 or later
+
+- I can't send a patch over Wi-Fi using VCV Rack
+    - Verify the IP address is correct: compare it carefully with what's
+      displayed on the MetaModule Settings > Info page. Don't forget to type
+      the "http://" at the start.
+
+    - Try typing the IP address into a browser to make sure you have the right address
+
+    - Your computer has to be on the same Wi-Fi network as the MetaModule Wi-Fi Expander.
+
+    - Are you trying to transfer to a volume (Card or USB) that's not inserted
+      into the MetaModule? Go to Load Patch on the MetaModule and make sure the
+      volume you're trying to transfer to is actually detected.
+
+    - If you are transferring to the Internal drive, it's possible you ran out
+      of space. Delete some patches.
+
+    - There is a limit of 1MB for patch files transferred to USB or Card, and
+      256kB for the Internal drive. Most modules store very little (only a few
+      bytes, if anything) but some modules store 64kB or more. Try saving the
+      .yml patch file to your computer and then looking at how large it is.
