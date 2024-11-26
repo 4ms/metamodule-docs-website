@@ -111,12 +111,7 @@ anticipate needing to change Wi-Fi networks, you may want to leave it installed.
 <div class="grid cards" markdown>
 -   __1. Install the 4ms plugin for VCV Rack, version 2.0.9 or later__
 
-    You can update or install from the VCV Rack Library when v2.0.9 is available.
-
-    Or download from the [Github
-    Releases](https://github.com/4ms/4ms-vcv/releases/tag/vcv-v2.0.9) and then
-    [follow these instructions to install
-    manually](https://metamodule.info/docs/rack_manual_install.html)
+    Update or install from the [VCV Rack Library](https://library.vcvrack.com/4msCompany)
     
 </div>
 <div class="grid cards" markdown>
@@ -159,16 +154,44 @@ anticipate needing to change Wi-Fi networks, you may want to leave it installed.
 
 ----
 
-## Changing Wi-Fi networks
+## Changing Wi-Fi networks or Resetting the Wi-Fi Expander
 
 Power on with the button held down. Release it when it turns red. The light will turn off and then turn light blue.
 You can then perform the [steps at the top of this page](#connecting-to-a-wi-fi-network-provisioning).
 
 ----
 
+## Light Colors
+
+The Wi-Fi Expander shows its status with a colored button light:
+
+- Red: The Expander has not been told what Wi-Fi network to connect to, or
+  there is an internal error. Reset the Wi-Fi Expander (see above section).
+
+- Light Blue: The Expander cannot find the Wi-Fi network. Check if other
+  devices can see the network, and that the signal strength is high where the
+  Wi-Fi Expander is mounted. Make sure there is a clear line-of-sight from the
+  Wi-Fi Expander to the Wi-Fi router.
+
+- Green: The Expander is connected to a Wi-Fi network.
+
+----
+
+## Updating Wi-Fi Expander Firmware
+
+The Wi-Fi Expander firmware will be updated whenever you update the MetaModule
+firmware and a Wi-Fi Expander is connected via the 8-pin cable.
+
+All MetaModule firmware releases starting with v1.4 contain the Wi-Fi Expander
+firmware. If you do not have the Wi-Fi Expander connected when you update the
+MetaModule firmware, then the updater will skip the Wi-Fi Expander updates and
+just update the MetaModule.
+
+----
+
 ## Wi-Fi Expander Troubleshooting
 
-- Cannot get the ESP BLE Provisioning app to see the Wi-Fi Expander module:
+- _Cannot get the ESP BLE Provisioning app to see the Wi-Fi Expander module_
     - Did you disable Secure Communication in the app settings?
     - Did you erase the prefix text "PROV" and replace it with "4MS"?
     - Did you give the app permission to use the camera?
@@ -176,23 +199,30 @@ You can then perform the [steps at the top of this page](#connecting-to-a-wi-fi-
       still not function unless you give it permission to use the camera.
     - Did you give the app permission to use Bluetooth?
        - Go to your phone's settings and verify it has Bluetooth and camera permissions
+    - Try resetting the Wi-Fi Expander: 
+       - Hold down the button while powering on. Release the button when it turns red.
+       - Re-provision the Wi-Fi Expander by following the [steps at the top of this page](#connecting-to-a-wi-fi-network-provisioning).
 
 
-- Cannot see my hotspot in the list of Wi-Fi networks:
+- _Cannot see my hotspot in the list of Wi-Fi networks_
     - If you are creating a personal Wi-Fi network (aka "hotspot"),
       then it's possible you will need to run the ESP BLE Provisioning app on a
       different device. The app may not be able to see the hotspot network
       created on the same device that it's running on.
+    - Make sure you are trying to connect to a 2.4GHz network. Networks that
+      are 5GHz will not work with the Wi-Fi Expander.
 
-- My browser won't load the Wi-Fi Expander's page
+- _My browser won't load the Wi-Fi Expander's page_
     - Your computer must be on the same network as the Wi-Fi expander. 
       Make sure whatever Wi-Fi network you entered into the ESP BLE app is the 
       same as the network your computer is connected to.
+    - Check the Wi-Fi Expander's light is green. If it's blue or red, then the Wi-Fi
+       Expander is not connected to the network.
 
-- I don't have a Wi-Fi button on my VCV Rack MetaModule hub
-    - You need to install the 4ms plugin v2.0.9 or later
+- _I don't have a Wi-Fi button on my VCV Rack MetaModule hub_
+    - You need to install the 4ms plugin for VCV Rack v2.0.9 or later
 
-- I can't send a patch over Wi-Fi using VCV Rack
+- _I can't send a patch over Wi-Fi using VCV Rack_
     - Verify the IP address is correct: compare it carefully with what's
       displayed on the MetaModule Settings > Info page. Don't forget to type
       the "http://" at the start.
@@ -202,7 +232,7 @@ You can then perform the [steps at the top of this page](#connecting-to-a-wi-fi-
     - Your computer has to be on the same Wi-Fi network as the MetaModule Wi-Fi Expander.
 
     - Are you trying to transfer to a volume (Card or USB) that's not inserted
-      into the MetaModule? Go to Load Patch on the MetaModule and make sure the
+      into the MetaModule? Go to `Load Patch` on the MetaModule and make sure the
       volume you're trying to transfer to is actually detected.
 
     - If you are transferring to the Internal drive, it's possible you ran out
@@ -212,3 +242,10 @@ You can then perform the [steps at the top of this page](#connecting-to-a-wi-fi-
       256kB for the Internal drive. Most modules store very little (only a few
       bytes, if anything) but some modules store 64kB or more. Try saving the
       .yml patch file to your computer and then looking at how large it is.
+
+- _Other problems_
+
+    - Make sure you are using the latest MetaModule firmware and Wi-Fi Expander
+      firmware. Updating the MetaModule firmware while the Wi-Fi Expander is
+      connected via the 8-pin cable will update both the MetaModule and the
+     Wi-Fi Expander.
