@@ -22,7 +22,7 @@ Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaM
     - iOS: [App Store](https://apps.apple.com/us/app/esp-ble-provisioning/id1473590141)
     - Android: [Google Play Store](https://play.google.com/store/apps/details?id=com.espressif.provble&hl=en_US)
 
--   ![ESP BLE Provisioning app](./img/wifi-ble-app-icon.png){ .half }
+   ![ESP BLE Provisioning app](./img/wifi-ble-app-icon.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __2. Open to ESP BLE Provisioning app__
@@ -35,39 +35,39 @@ Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaM
 </div>
 <div class="grid cards" markdown>
 -   __3. Tap the gear icon (upper-left) on iOS or the three dots (upper-right) on Android__
-    
+
     This will open the settings page.
 
--   ![ESP BLE Gear](./img/esp-ble-gear.png){ .half }
+   ![ESP BLE Gear](./img/esp-ble-gear.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __4. Turn off Encrypted Communication__
-    
--   ![ESP BLE Settings](./img/esp-ble-settings.png){ .half }
+
+   ![ESP BLE Settings](./img/esp-ble-settings.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __5. Tap "Provision Device"__
-    
--   ![ESP BLE Provision](./img/esp-ble-provbut.png){ .half }
+
+   ![ESP BLE Provision](./img/esp-ble-provbut.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __6. Tap "I don't have a QR code"__
-    
--   ![ESP BLE QR Code button](./img/esp-ble-qrbut.png){ .half }
+
+   ![ESP BLE QR Code button](./img/esp-ble-qrbut.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __7. In the PREFIX box, remove the text “PROV_” (if present), and type “4MS”__
 
      On Android, tap “Change” first.
-    
--   ![ESP BLE prefix](./img/esp-ble-prefix.png){ .half }
+
+   ![ESP BLE prefix](./img/esp-ble-prefix.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __8. Tap the Refresh icon or “Scan Again”__
 
     Then tap the 4MS device that appears
 
--   ![ESP BLE scan](./img/esp-ble-refresh.png){ .half }
+   ![ESP BLE scan](./img/esp-ble-refresh.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __9. Select your Wi-Fi network from the list__
@@ -81,14 +81,14 @@ Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaM
 
     Look for the Wi-Fi IP address
 
--   ![Settings Wifi IP](./img/settings-info-wifi-ip.png){ .half }
+   ![Settings Wifi IP](./img/settings-info-wifi-ip.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __11. On your computer, open a browser window and type in the IP address__
 
     Hint: the IP address starts with `http://`, not with `https://`
 
--   ![Browser Wifi IP](./img/browser-ip.png){ .half }
+   ![Browser Wifi IP](./img/browser-ip.png){ .half }
 </div>
 <div class="grid cards" markdown>
 -   __You're connected!__
@@ -99,7 +99,7 @@ Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaM
 
     When the progress bar is complete, the patch file can be played on your MetaModule!
 
--   [![Drag and Drop file](./img/browser-drag-drop.png){ .half }](./img/browser-drag-drop.png)
+   [![Drag and Drop file](./img/browser-drag-drop.png){ .half }](./img/browser-drag-drop.png)
 </div>
 
 After connecting to a Wi-Fi network, you can choose to delete the ESP BLE Provisioning app. However, if you
@@ -124,7 +124,7 @@ anticipate needing to change Wi-Fi networks, you may want to leave it installed.
     Enter the address you found by going to Settings > Info on the MetaModule
     (see above).
 
--   [![VCV: Select Wi-Fi URL](./img/vcv-wifi-url.png){ .half }](./img/vcv-wifi-url.png)
+   [![VCV: Select Wi-Fi URL](./img/vcv-wifi-url.png){ .half }](./img/vcv-wifi-url.png)
 </div>
 <div class="grid cards" markdown>
 -   __3. Select the volume you want to transfer to__
@@ -138,7 +138,7 @@ anticipate needing to change Wi-Fi networks, you may want to leave it installed.
     Note: sending to sub-folders is not yet supported. Use a web browser if you
     need to do that.
 
--   [![VCV: Select Wi-Fi volume](./img/vcv-wifi-vol.png){ .half }](./img/vcv-wifi-vol.png)
+   [![VCV: Select Wi-Fi volume](./img/vcv-wifi-vol.png){ .half }](./img/vcv-wifi-vol.png)
 </div>
 <div class="grid cards" markdown>
 -   __4. Click the Wi-Fi button to transfer a patch__
@@ -149,7 +149,7 @@ anticipate needing to change Wi-Fi networks, you may want to leave it installed.
       After clicking, the top text box will display "Sent patch file"
       or "Failed to send patch".
 
--   [![VCV: Click Wi-Fi button](./img/vcv-wifi-button.png){ .half }](./img/vcv-wifi-button.png)
+   [![VCV: Click Wi-Fi button](./img/vcv-wifi-button.png){ .half }](./img/vcv-wifi-button.png)
 </div>
 
 ----
