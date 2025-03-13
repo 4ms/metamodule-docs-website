@@ -9,6 +9,7 @@ nav:
   - Patch/Module Settings: module_patch_settings.md
   - Expanders:
      - Wifi Expander: wifi.md
+     - MetaAIO (Audio/CV Expander): meta-aio.md
   - Help:
      - Troubleshooting: troubleshooting.md
      - FAQ: faq.md
