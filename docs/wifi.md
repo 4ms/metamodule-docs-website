@@ -212,16 +212,6 @@ just update the MetaModule.
     - Make sure you are trying to connect to a 2.4GHz network. Networks that
       are 5GHz will not work with the Wi-Fi Expander.
 
-- _My browser won't load the Wi-Fi Expander's page_
-    - Your computer must be on the same network as the Wi-Fi expander. 
-      Make sure whatever Wi-Fi network you entered into the ESP BLE app is the 
-      same as the network your computer is connected to.
-    - Check the Wi-Fi Expander's light is green. If it's blue or red, then the Wi-Fi
-       Expander is not connected to the network.
-
-- _I don't have a Wi-Fi button on my VCV Rack MetaModule hub_
-    - You need to install the 4ms plugin for VCV Rack v2.0.9 or later
-
 - _I can't send a patch over Wi-Fi using VCV Rack_
     - Verify the IP address is correct: compare it carefully with what's
       displayed on the MetaModule Settings > Info page. Don't forget to type
@@ -242,6 +232,26 @@ just update the MetaModule.
       256kB for the Internal drive. Most modules store very little (only a few
       bytes, if anything) but some modules store 64kB or more. Try saving the
       .yml patch file to your computer and then looking at how large it is.
+
+    - Check your system permissions and see if VCV Rack has permission to access
+      the local network. For MacOS 15, it's in the Systrem Preferences >
+      Privacy&Security > Local Network > VCV Rack (and your preferred web
+      browser): [![MacOS permissions for VCV Rack](./img/wifi-macos-permissions.png){ .img-412 }](./img/wifi-macos-permissions.png)
+
+- _My browser won't load the Wi-Fi Expander's page_
+    - Your computer must be on the same network as the Wi-Fi expander. 
+      Make sure whatever Wi-Fi network you entered into the ESP BLE app is the 
+      same as the network your computer is connected to.
+
+    - Check the Wi-Fi Expander's light is green. If it's blue or red, then the Wi-Fi
+       Expander is not connected to the network.
+
+    - Check your system permissions and see if your web browser has permission to access
+      the local network. See image above for an example in MacOS 15.
+
+
+- _I don't have a Wi-Fi button on my VCV Rack MetaModule hub_
+    - You need to install the 4ms plugin for VCV Rack v2.0.9 or later
 
 - _Other problems_
 
