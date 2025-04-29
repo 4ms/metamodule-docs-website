@@ -84,15 +84,28 @@ h3 {
 	width: fit-content;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .sm-sm {
 	font-size:0.85rem;
 	padding-right:10px;
   }
 }
+
 @media (max-width: 640px) {
   .sm-hide {
     display: none;
+  }
+}
+
+@media (min-width:100em) {
+  .sm-sm {
+    font-size:100%
+  }
+}
+
+@media (min-width:125em) {
+  .sm-sm {
+    font-size:100%
   }
 }
 
