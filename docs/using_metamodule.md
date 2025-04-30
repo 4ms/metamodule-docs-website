@@ -107,7 +107,7 @@ You can create a new knob set in several ways:
 
 ---
 
-## Creating a new Knob Mapping or MIDI CC Mapping
+## Creating a new Knob Mapping or MIDI CC/Note Mapping
 
 From the Patch View page:
 
@@ -133,7 +133,7 @@ From the Patch View page:
 
 -  __3. Wiggle the knob you want to map to__
 
-    If you're mapping MIDI CC, then send MIDI CC messages
+    If you're mapping with MIDI, then send MIDI CC or MIDI Notes
 
    [![Knob Set](./img/plaits-mapping-add.png){ .half }](./img/plaits-mapping-add.png)
 

@@ -151,7 +151,7 @@ Note: if you are upgrading firmware and plugins at the same time, always
 upgrade the firmware first. This is because it's possible that the new plugins
 will need the new firwmare in order to run. An easy way to make sure you're
 doing it right is to copy the new plugins and firmware onto a disk (SD card or
-USB). Then power up with all disks removed so that the auto-loader does not
+USB). Then power up with all disks removed so that the plugin pre-loader does not
 load any plugins. Then insert the disk and upgrade firmware normally. Finally,
-reboot with the disk still in and the auto-loader will load the new plugins.
+reboot with the disk inserted.
 
