@@ -1,6 +1,6 @@
 # Troubleshooting startup issues
 
-Normally you should update firmware by following [these instructions](getting_started.md#updating-firmware).
+Normally you should update firmware by following [these instructions](getting_started.md#how-to-update-firmware).
 
 However, sometimes something goes wrong and the module will not start up properly. In that case, there is a way
 to install updated firmware using a USB cable.
