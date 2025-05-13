@@ -20,7 +20,7 @@ supported on the current version of the MetaModule*
       (thus acting like a passive mult)
 
       If this is the first cable you're creating this session, a pop-up will
-      give you instructions. Read them and click OK.
+      remind you of how to patch a cable. Read them and click OK.
 
    [![New cable start](./img/new-cable-start.png){ .half }](./img/new-cable-start.png)
 
@@ -79,12 +79,12 @@ MetaModule to virtual module jacks.
    [![New panel cable popup](./img/new-panel-cable-popup.png){ .half }](./img/new-panel-cable-popup.png)
 </div>
 
-### Patching to MIDI
+### MIDI Input
 
-You can patch MIDI signals to input jacks.
+You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or using a MIDI-CV module.
 
-Note: at this time, you cannot send MIDI out from the MetaModule, there is no
-CV->MIDI functionality.
+
+#### Patching MIDI Input to jacks
 
 <div class="grid cards" markdown>
 -  __1. Click on an input jack, and click New MIDI Map__
@@ -116,6 +116,8 @@ CV->MIDI functionality.
 
     - Transport: Sends a gate for Start, Stop, and Continue events.
 
+    - Channel: Select "All Channels" or a choose a particular MIDI channel to respond to.
+
    [![MIDI maps](./img/midi-map-top.png){ .half }](./img/midi-map-top.png)
 </div>
 <div class="grid cards" markdown>
@@ -124,7 +126,43 @@ CV->MIDI functionality.
    [![MIDI maps](./img/midi-map-pw.png){ .half }](./img/midi-map-pw.png)
 </div>
 
+#### Using a MIDI input module
+<div class="grid cards" markdown>
+-  __1. Add the RackCore MIDIToCVInterface module__
 
+   [![MIDI to CV module](./img/rackcore-midi-cv-module.png){ .half }](./img/rackcore-midi-cv-module.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __2. Patch the jack(s) corresponding to the MIDI signal(s) you want to use__
+
+   [![MIDI to CV module](./img/rackcore-midi-cv-jack.png){ .half }](./img/rackcore-midi-cv-jack.png)
+
+</div>
+
+### Patching Outputs to MIDI
+
+To support MIDI Output as a MIDI Host, the MetaModule has the CV-MIDI module
+in the RackCore brand.
+
+Third-party plugin modules that produce MIDI Output should work, as well.
+
+Note that the MetaModule always acts as a MIDI Host, and never as a MIDI Device.
+
+<div class="grid cards" markdown>
+-  __1. Add the RackCore CV-MIDI module__
+
+   [![CV-MIDI module](./img/rackcore-cv-midi-module.png){ .half }](./img/rackcore-cv-midi-module.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __2. Patch the CV and gate signals you wish output as MIDI__
+
+     A log of MIDI events will appear on the module's screen.
+
+   [![CV-MIDI module](./img/rackcore-cv-midi-jacks.png){ .half }](./img/rackcore-cv-midi-jacks.png)
+
+</div>
 
 ### Disconnecting a cable (Unpatching or removing a cable)
 

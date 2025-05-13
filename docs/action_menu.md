@@ -36,6 +36,29 @@ This randomizes the value of all parameters. Note that in VCV Rack, modules can
 exclude particular parameters from being randomized. This is not present in
 MetaModule, but will be added in a future update.
 
+### Initialize
+
+This initializes or resets the module. Different modules may interpret this
+differently, but typically this sets all knobs, switches, etc to their basic
+states.
+
+This action does not remove any mappings or cables, but otherwise resets the
+module to the same state it was in when you first added it to the patch.
+
+### Presets
+
+Clicking this will let you browse all factory presets for the module. If no presets
+are found, then this option will be disabled.
+
+Note that in the current MetaModule firmware, loading user-created presets is
+not supported. Users who are familiar with the command line could add a preset
+to a plugin file like this:
+
+    tar -xf PluginName.mmplugin
+    cp 01_my_preset.vcvm PluginName/presets/ModuleName/
+    tar -cf PluginName.mmplugin PluginName/
+
+
 ### Delete
 
 Delete the module from the patch, removing all cables and mappings. This cannot

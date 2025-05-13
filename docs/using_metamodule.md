@@ -182,7 +182,7 @@ You can map MIDI CC or MIDI Note Gates to parameters such as knobs, buttons, swi
 The parameter value is always updated immediately when a MIDI message is received, regardless
 of the current [Knob Catchup]() mode.
 
-On the [Edit Mapping](#editting-a-midi-mapping-midi-channel-and-triggate-mode)
+On the [Edit Mapping](#editting-the-midi-channel-of-a-midi-mapping)
 page, each MIDI mapping can be set to respond to all MIDI channels, or just a
 particular MIDI channel.
 
@@ -193,12 +193,12 @@ they do for panel knob mappings. For MIDI CC mappings, this means a CC value of
 only be on or off, so the parameter will be set to the MIN or MAX slider value.
 Additionally, for MIDI Note Gate mappings you can enable Toggle mode to make the
 parameter change value each time a note is played. See [MIDI Note toggle
-mode](#midi-note-toggle-mode)
+mode](#midi-note-gate-toggle-mode)
 
 
 Note that while you can only map MIDI CC and Note Gates to parameters, you can
 map any MIDI message to input jacks: see [Patching To
-MIDI](using_metamodule_jacks.html#patching-to-midi).
+MIDI](using_metamodule_jacks.md#midi-input).
 
 
 ---
@@ -340,7 +340,7 @@ patch.
 ### How to create a multi-map
 
 Multi-maps are created automatically if you create new knob map with a physical knob that's already mapped (in the current knob set).
-See [Creating a New Knob Mapping](using_metamodule.md#creating-a-new-knob-mapping-or-midi-cc-mapping).
+See [Creating a New Knob Mapping](using_metamodule.md#creating-a-new-knob-mapping-or-midi-mapping).
 
 ### How to view a multi-map
 

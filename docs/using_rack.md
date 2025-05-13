@@ -103,10 +103,11 @@ try a special version, or are beta-testing, then [here is the procedure to do a 
 
 </div>
 <div class="grid cards" markdown>
--  __3. Map Knobs__
+-  __3. Create Knob Mappings__
 
-    - First, click the colored ring around any knob on the MetaModule Hub. 
-    - Then, click on the knob, button, switch, or slider you want to map to.
+    First, click the colored ring around any knob on the MetaModule Hub. 
+
+    Then click on the knob, button, switch, or slider you want to map to.
 
     *Tip: if you're zoomed out, it might be hard to click the colored ring.
     Shift+click anywhere on the knob itself also works.*
@@ -117,11 +118,11 @@ try a special version, or are beta-testing, then [here is the procedure to do a 
 
 </div>
 <div class="grid cards" markdown>
--  __4. Map Jacks__
+-  __4. Create Jack mappings__
 
-      - Map jacks of a virtual module to the MetaModule by patching cables.
+      - Jacks can be mapped by patching cables to the MetaModule.
 
-        - For example, if you want signal on the output jack of a VCA module to
+          For example, if you want signal on the output jack of a VCA module to
           come out of the physical MetaModule's Out 1 jack, then drag a cable
           between those two jacks. 
 
@@ -245,6 +246,11 @@ This name will be displayed on the MetaModule.
 
 ## MIDI Mapping
 
+When making patches in VCV Rack, it's usually most convenient to use the VCV MIDI modules to 
+create MIDI mappings. You also can make MIDI Mappings using the MetaModule itself, see
+[MIDI Input](using_metamodule_jacks.md#midi-input) for details.
+
+
 ### How to map MIDI notes, gates, velocity, and aftertouch
 
 VCV Rack and MetaModule support polyphonic MIDI notes, gates, velocity, and
@@ -330,19 +336,19 @@ polyphonic signals, you don't need to use a SPLIT module. Just patch directly
 from the MIDI module to the jacks you want mapped.
 
 <div class="grid cards" markdown>
- -  You can map pitch wheel, mod wheel, clock, divided clock, re-trigger,
-    start, stop, and continue using the MIDI-CV module.
+ -  You can map Pitch Wheel, Mod Wheel, Clock, Divided Clock, Re-trigger,
+    Start, Stop, and Continue using the MIDI-CV module.
 
+     &nbsp;
 
    [![Other MIDI map](./img/vcv-midi-other-map.png){ .half }](./img/vcv-midi-other-map.png)
 </div>
-
 <div class="grid cards" markdown>
  -  You can map MIDI notes to gates by using the MIDI-Gate module.
 
      Map MIDI CC signals to jacks using the MIDI-CC-CV module.
 
-   [![Other MIDI map](./img/vcv-midi-gate-map.png){ .half }](./img/vcv-midi-gate-map.png)
+   [![MIDI Gate map](./img/vcv-midi-gate-map.png){ .half }](./img/vcv-midi-gate-map.png)
 </div>
 <div class="grid cards" markdown>
  -  You can map MIDI CCs to knobs using the MIDI-CC module.
