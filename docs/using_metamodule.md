@@ -44,7 +44,7 @@
 
 -  A single physical knob can be mapped to up to 8 virtual knobs in a Knob Set. See [Multi-maps](#mapping-to-more-than-one-knob-multi-maps)
 
-## How to Use a Different Knob Set
+### How to Use a Different Knob Set
 
 
 From the Knob Set page:
@@ -72,7 +72,7 @@ From the Knob Set page:
 
 ### **Knob Set Shortcut**
 
-A fast way to change Knobs Sets is to hold down the Back button and turn the encoder.
+A fast way to change Knobs Sets is to __hold down the Back button and turn the encoder__.
 
 A pop-up will tell you the name of the Knob Set that was just made active.
 
@@ -89,7 +89,7 @@ The Back button's color will always indicate the Knob Set number:
 <div style="clear:both"></div>
 
 
-## Creating a new Knob Set
+### Creating a new Knob Set
 
 You can create a new knob set in several ways:
 
@@ -100,14 +100,34 @@ You can create a new knob set in several ways:
  -  By selecting `Auto-map knobs (new Knob Set)` from the module [Action
     menu](action_menu.md#auto-map-knobs-new-knob-set).
 
- Note: While Knob Sets can have a name, currently the only way to provide a
- name is when you create the patch with VCV Rack. Future firmware release will
- allow editing the name from within the MetaModule
+
+
+### Changing a Knob Set name
+
+
+From the Knob Set page:
+
+<div class="grid cards" markdown>
+
+-  __1. Click on the knob set name__
+
+   [![Knob Set name](./img/knobset-name.png){ .half }](./img/knobset-name.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __2. Type a new name__
+     
+     Click the check mark to save your changes, or press the Back button to cancel.
+
+   [![Edit Knob Set name](./img/edit-knobset-name.png){ .half }](./img/edit-knobset-name.png)
+
+</div>
 
 
 ---
 
-## Creating a new Knob Mapping or MIDI CC/Note Mapping
+## Creating a new Knob Mapping or MIDI Mapping
 
 From the Patch View page:
 
@@ -124,18 +144,22 @@ From the Patch View page:
 
     If you want to create a new Knob Set, click `(new knobset)`
 
-    If you want to map a MIDI CC to this knob, click `MIDI`
+    If you want to map a MIDI CC or Note to this knob, click `MIDI`
 
-   [![Knob Set](./img/plaits-mapping-pane.png){ .half }](./img/plaits-mapping-pane.png)
+   [![Mapping Pane](./img/plaits-mapping-pane.png){ .half }](./img/plaits-mapping-pane.png)
 
 </div>
 <div class="grid cards" markdown>
 
 -  __3. Wiggle the knob you want to map to__
 
-    If you're mapping with MIDI, then send MIDI CC or MIDI Notes
+    If you're mapping MIDI, then send a MIDI Note or CC message.
+    You may select a MIDI Channel if you wish.
 
-   [![Knob Set](./img/plaits-mapping-add.png){ .half }](./img/plaits-mapping-add.png)
+   Knob:
+   [![Add Mapping](./img/plaits-mapping-add.png){ .half }](./img/plaits-mapping-add.png)
+   MIDI:
+   [![Add Mapping](./img/midi-mapping-add.png){ .half }](./img/midi-mapping-add.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -146,9 +170,35 @@ From the Patch View page:
      give the mapping a name, see [Edit a Knob
      Mapping](#editting-a-knob-mapping).
 
-   [![Knob Set](./img/plaits-mapping-done.png){ .half }](./img/plaits-mapping-done.png)
+   [![Mapping Done](./img/plaits-mapping-done.png){ .half }](./img/plaits-mapping-done.png)
 
 </div>
+
+
+### How MIDI param mappings work
+
+You can map MIDI CC or MIDI Note Gates to parameters such as knobs, buttons, switches, etc. 
+
+The parameter value is always updated immediately when a MIDI message is received, regardless
+of the current [Knob Catchup]() mode.
+
+On the [Edit Mapping](#editting-a-midi-mapping-midi-channel-and-triggate-mode)
+page, each MIDI mapping can be set to respond to all MIDI channels, or just a
+particular MIDI channel.
+
+The MIN and MAX sliders determine the range of the mapping in the same way that
+they do for panel knob mappings. For MIDI CC mappings, this means a CC value of
+0 will set the parameter to the value set by the MIN slider, and a CC value of
+127 sets it to the MAX slider's value. For MIDI Note Gate mappings, the note can
+only be on or off, so the parameter will be set to the MIN or MAX slider value.
+Additionally, for MIDI Note Gate mappings you can enable Toggle mode to make the
+parameter change value each time a note is played. See [MIDI Note toggle
+mode](#midi-note-toggle-mode)
+
+
+Note that while you can only map MIDI CC and Note Gates to parameters, you can
+map any MIDI message to input jacks: see [Patching To
+MIDI](using_metamodule_jacks.html#patching-to-midi).
 
 
 ---
@@ -183,7 +233,7 @@ From the Knob Set page:
      If you set MAX to be less than the MIN, the virtual knob will turn the
      opposite direction as the physical knob.
 
-   [![Knob View Min](./img/knobview-min.png){ .half }](./img/knobview-min.png)
+   [![Knob View MIN](./img/knobview-min.png){ .half }](./img/knobview-min.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -199,25 +249,67 @@ From the Knob Set page:
 
 ---
 
-## Changing a Knob Set name
+## Editting the MIDI Channel of a MIDI Mapping
 
 
-From the Knob Set page:
+From the Module View page:
 
 <div class="grid cards" markdown>
 
--  __1. Click on the knob set name...__
+-  __1. Click on the mapped control__
 
-   [![Knob Set name](./img/knobset-name.png){ .half }](./img/knobset-name.png)
+   [![Module View MIDI Mapped control](./img/module-view-mapping-pane-midi.png){ .half }](./img/module-view-mapping-pane-midi.png)
 
 </div>
 <div class="grid cards" markdown>
 
--  __2. Type a new name__
+-  __2. Click on the MIDI mapping__
 
-   [![Edit Knob Set name](./img/edit-knobset-name.png){ .half }](./img/edit-knobset-name.png)
+   [![Module View MIDI Mapping](./img/module-view-midi-map.png){ .half }](./img/module-view-midi-map.png)
 
 </div>
+<div class="grid cards" markdown>
+
+-  __3. Adjust the MIDI Channel__
+
+     You may adjust the MIN/MAX sliders and the mapping name in the same way that
+     you do so for normal knob mappings.
+
+     For MIDI Note Gate mappings, you may also change the Toggle mode (see below).
+
+   [![Edit MIDI Mapping](./img/midi-map-channel.png){ .half }](./img/midi-map-channel.png)
+
+</div>
+
+### MIDI Note Gate Toggle mode
+
+When you map a MIDI Note Gate to a parameter, you have two options:
+
+<div class="grid cards" markdown>
+-  __MIDI Note Gate: Toggle Enabled__
+
+     Each time a matching Note On message is received, the parameter will
+     toggle between the values set by the MIN and MAX sliders. Note Off
+     messages are ignored. This makes the parameter value toggle each time you
+     play the MIDI Note. 
+
+     _Technical note:_ In case the param has changed value since the last MIDI
+     Note message, the MetaModule will set the value to MIN or MAX based on
+     which one the current value is __farther__ from.
+
+   [![MIDI Note Toggle On](./img/midi-map-toggle-on.png){ .half }](./img/midi-map-toggle-on.png)
+</div>
+<div class="grid cards" markdown>
+-  __MIDI Note Gate: Toggle Disabled__
+
+     When a Note On message for that note is received, the param's
+     value will be set to the value of the MAX slider. When a Note Off message
+     is received, the param will be set to the MIN slider's value.
+
+   [![MIDI Note Toggle Off](./img/midi-map-toggle-off.png){ .half }](./img/midi-map-toggle-off.png)
+</div>
+
+
 
 ---
 
