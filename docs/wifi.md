@@ -191,28 +191,34 @@ just update the MetaModule.
 
 ## Wi-Fi Expander Troubleshooting
 
-- _Cannot get the ESP BLE Provisioning app to see the Wi-Fi Expander module_
+- __Cannot get the ESP BLE Provisioning app to see the Wi-Fi Expander module__
+
     - Did you disable Secure Communication in the app settings?
+
     - Did you erase the prefix text "PROV" and replace it with "4MS"?
     - Did you give the app permission to use the camera?
       Even though the Wi-Fi Expander doesn't have a QR code, the app will
       still not function unless you give it permission to use the camera.
-    - Did you give the app permission to use Bluetooth?
-       - Go to your phone's settings and verify it has Bluetooth and camera permissions
-    - Try resetting the Wi-Fi Expander: 
-       - Hold down the button while powering on. Release the button when it turns red.
-       - Re-provision the Wi-Fi Expander by following the [steps at the top of this page](#connecting-to-a-wi-fi-network-provisioning).
 
+    - Did you give the app permission to use Bluetooth? Go to your phone's
+      settings and verify it has Bluetooth and camera permissions
 
-- _Cannot see my hotspot in the list of Wi-Fi networks_
+    - Try resetting the Wi-Fi Expander by holding down the button while
+      powering on. Release the button when it turns red. Re-provision the Wi-Fi
+      Expander by following the [steps at the top of this
+      page](#connecting-to-a-wi-fi-network-provisioning).
+
+- __Cannot see my hotspot in the list of Wi-Fi networks__
+
     - If you are creating a personal Wi-Fi network (aka "hotspot"),
       then it's possible you will need to run the ESP BLE Provisioning app on a
       different device. The app may not be able to see the hotspot network
       created on the same device that it's running on.
+
     - Make sure you are trying to connect to a 2.4GHz network. Networks that
       are 5GHz will not work with the Wi-Fi Expander.
 
-- _I can't send a patch over Wi-Fi using VCV Rack_
+- __Cannot send a patch over Wi-Fi using VCV Rack__
     - Verify the IP address is correct: compare it carefully with what's
       displayed on the MetaModule Settings > Info page. Don't forget to type
       the "http://" at the start.
@@ -234,11 +240,11 @@ just update the MetaModule.
       .yml patch file to your computer and then looking at how large it is.
 
     - Check your system permissions and see if VCV Rack has permission to access
-      the local network. For MacOS 15, it's in the Systrem Preferences >
+      the local network. For MacOS 15, it's in the System Preferences >
       Privacy&Security > Local Network > VCV Rack (and your preferred web
       browser): [![MacOS permissions for VCV Rack](./img/wifi-macos-permissions.png){ .img-412 }](./img/wifi-macos-permissions.png)
 
-- _My browser won't load the Wi-Fi Expander's page_
+- __My browser won't load the Wi-Fi Expander's page__
     - Your computer must be on the same network as the Wi-Fi expander. 
       Make sure whatever Wi-Fi network you entered into the ESP BLE app is the 
       same as the network your computer is connected to.
@@ -249,13 +255,22 @@ just update the MetaModule.
     - Check your system permissions and see if your web browser has permission to access
       the local network. See image above for an example in MacOS 15.
 
+    - Eject the USB drive and/or microSD card and refresh the browser. If it connects
+      now, then the issue may be that one of your disks contains too many files
+      and the directory transfer is stalling out on the network. This is a known 
+      issue and the workaround is to reduce the number of files on all mounted disks.
 
-- _I don't have a Wi-Fi button on my VCV Rack MetaModule hub_
+
+- __I don't have a Wi-Fi button on my VCV Rack MetaModule hub__
+
     - You need to install the 4ms plugin for VCV Rack v2.0.9 or later
 
-- _Other problems_
+    - Make sure to quit and re-open VCV Rack after upgrading.
+
+- __Other problems__
 
     - Make sure you are using the latest MetaModule firmware and Wi-Fi Expander
       firmware. Updating the MetaModule firmware while the Wi-Fi Expander is
-      connected via the 8-pin cable will update both the MetaModule and the
-     Wi-Fi Expander.
+      connected via the 8-pin cable will update both the MetaModule and the Wi-Fi Expander.
+
+    - Use the latest version of the 4ms VCV Rack plugin.

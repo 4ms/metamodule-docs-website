@@ -12,7 +12,7 @@ These menus control how mappings and cables are drawn when viewing modules and t
 
     [![Patch View Gear icon](./img/patch-view-gear-icon.png){ .half }](./img/patch-view-gear-icon.png)
 
--   [![Patch View Settings Menu](./img/patchview-settings.png){ .img-472 }](./img/patchview-settings.png)
+-   [![Patch View Settings Menu](./img/patchview-settings.png){ .img-567 }](./img/patchview-settings.png)
 </div>
 <div class="grid cards" markdown>
 -   __Module View display settings:__
@@ -21,13 +21,33 @@ These menus control how mappings and cables are drawn when viewing modules and t
 
     [![Module Action Menu icon](./img/mv-settings-icon.png){ .half }](./img/mv-settings-icon.png)
 
--    [![Module View Settings Menu](./img/mv-settings-all.png){ .img-412 }](./img/mv-settings-all.png)
+-    [![Module View Settings Menu](./img/mv-settings-all.png){ .img-511 }](./img/mv-settings-all.png)
 
 </div>
 
-### Control Maps
+### Graphics
 
-These options set how control mappings (knob, switch, and button maps) are displayed.
+These options control how graphic screens on modules are displayed. The term
+"graphic screen" is a loose term that refers to any element on the module that's
+drawn dynamically (besides knobs, sliders, buttons, switches, lights, and text
+displays). This may refer to anything from waveform or BPM displays, to static
+portions of the faceplate that the module designer chose to draw with vector
+commands, to text under knobs that may change in different modes.
+
+- __Draw Screens__: toggles whether to draw graphic screens on modules.
+If you have issues with the module responding slowly to the rotary encoder and
+Back button, then try disabling screens or adjusting the Update Rate.
+
+- __Update Rate__: When screens are enabled, you can throttle the frame rate
+with this option. When set to the maximum value (fully to the right), each
+graphic screen in the patch will be updated in turn, one graphic screen per 60Hz refresh.
+Each click of the slider to the left updates screens half as often (i.e. one
+screen per 30Hz refresh, then 15Hz refresh, etc..)
+
+
+### Maps
+
+These options set how control mappings (knob, switch, and button maps) are displayed:
 
 - __Show Control Maps__: toggles whether to hide or show a colored ring around
   controls that are mapped. The color corresponds to the panel knob it's mapped
@@ -38,9 +58,8 @@ These options set how control mappings (knob, switch, and button maps) are displ
 - __Flash When Moved__: Whether to flash the colored ring when its panel knob
   is moved. This can be turned on even if Show Control Maps is off.
 
-### Panel Jack Maps
 
-These options set how jack mappings to the panel are displayed.
+These options set how jack mappings to the panel are displayed:
 
 - __Show Panel Jack Maps__: toggles whether to hide or show a colored circle on 
   jacks that are mapped to the panel. The color corresponds to the panel jack
@@ -49,18 +68,17 @@ These options set how jack mappings to the panel are displayed.
 - __Opacity__: How opaque or transparent to draw the circles. If Opacity is
   more than about 40%, the number of the jack will be drawn inside the circle.
 
-### Always Show Maps
 
-Enabling this option will hide control and jack maps when you are viewing a
-patch while a different patch is playing (or paused).
-This option is disabled if both Show Control Maps and Show Panel Jack Maps are off.
+This option refers to both control mappings and jack mappings:
 
-### Show On All Modules
+- __Always Show Maps__: Enabling this option will hide control and jack maps
+  when you are viewing a patch while a different patch is playing (or paused).
+  This option is disabled if both Show Control Maps and Show Panel Jack Maps
+  are off.
 
-(Patch View only)
-When this option is enabled, maps will be drawn on all modules in the patch.
-When this is disabled, maps will be drawn on only the module that's currently 
-focussed. 
+- __Show on All Modules__: (Patch View only) When this option is enabled, maps
+  will be drawn on all modules in the patch. When this is disabled, maps will
+  be drawn on only the module that's currently focussed. 
 This option is disabled if both Show Control Maps and Show Panel Jack Maps are off.
 
 ### Cables
@@ -91,16 +109,15 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 -   [![Patch View Info icon](./img/patchview-info-icon.png){ .half }](./img/patchview-info-icon.png)
 </div>
 <div class="grid cards" markdown>
--   The patch name, description, MIDI polyphony channels (if MIDI notes are mapped) are shown.
+-   The patch name, file name, description, MIDI polyphony channels (if MIDI
+    notes are mapped) are shown.
 
     
 -   [![Patch View Description](./img/patch-description.png){ .half }](./img/patch-description.png)
 </div>
 <div class="grid cards" markdown>
--   Click Edit to edit the patch name or description.
+-   Click Edit to edit the description.
    
-    Note that the patch name can be different than the file name.
-
 -   [![Patch View Description Edit](./img/patch-description-edit.png){ .half }](./img/patch-description-edit.png)
 </div>
 
@@ -113,13 +130,12 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 
     The Patch File Menu is opened by clicking the file/disk icon when viewing a patch.
 
-    While focused on the file icon the file name will be shown (note, this may be
-    different than the patch name).
+    While focused on the file icon the file path will be shown.
 
 -   [![Patch View Disk icon](./img/patch-view-file-icon.png){ .half }](./img/patch-view-file-icon.png)
 </div>
 <div class="grid cards" markdown>
--   Save, Duplicate (Save As), Revert, or Delete
+-   Save, Duplicate, Move/Rename, Reload (or Revert), Delete
 
     
 -   [![File Menu](./img/file-menu.png){ .half }](./img/file-menu.png)
@@ -147,20 +163,24 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 -   [![Duplicate](./img/duplicate-file.png){ .half }](./img/duplicate-file.png)
 </div>
 <div class="grid cards" markdown>
--   __Revert__: Revert all changes to the patch file
+-   __Revert__ (or __Reload__): Revert all changes to the patch file
   
-    This will re-load the patch file from disk, losing all changes.
-    It cannot be un-done.
+    This will reload the patch file from disk, losing all changes.
+    It cannot be undone.
 
     If you ejected the disk that the patch file lives on, then the patch
     cannot be reverted since the original file cannot be loaded.
+
+    This option will appear as "Reload" when you have not made any modifications
+    to the patch, and "Revert" when you have modified the patch. The resulting
+    action is the same (reloading the file from disk).
 
 </div>
 <div class="grid cards" markdown>
 -   __Delete__: Delete the patch file
   
     This will delete the patch file from disk.
-    It cannot be un-done.
+    It cannot be undone.
 
     If you ejected the disk that the patch file lives on, then the patch
     cannot be reverted since the original file cannot be loaded.
