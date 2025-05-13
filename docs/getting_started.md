@@ -153,5 +153,5 @@ will need the new firwmare in order to run. An easy way to make sure you're
 doing it right is to copy the new plugins and firmware onto a disk (SD card or
 USB). Then power up with all disks removed so that the plugin pre-loader does not
 load any plugins. Then insert the disk and upgrade firmware normally. Finally,
-reboot with the disk inserted.
+reboot with the disk still inserted. 
 
