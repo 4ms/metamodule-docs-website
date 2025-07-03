@@ -200,6 +200,52 @@ Note that while you can only map MIDI CC and Note Gates to parameters, you can
 map any MIDI message to input jacks: see [Patching To
 MIDI](using_metamodule_jacks.md#midi-input).
 
+--
+
+## MIDI Feedback
+
+MIDI Feedback, also known as "bi-directional MIDI", is a feature that allows a
+MIDI controller to stay in sync with the MetaModule. When this is enabled, the
+MetaModule will send MIDI CC, pitch wheel, and Note on/off messages back to the
+controller whenever a parameter changes value. When a patch is loaded, the MetaModule
+will send the value of all MIDI-mapped parameters.
+If the MIDI controller supports MIDI Feedback, then it will update its display
+or internal state with the new value.
+
+For example, if you map a CC to the Pitch knob of your VCO, then
+when you load that patch, a feedback-aware MIDI controller will jump to the
+current value of the pitch, perhaps by displaying this value on a screen or
+even by turning a motorized knob like the Roto-Control does.
+
+As you play the patch, if you adjust the VCO's pitch knob manually (using the
+Adjust button) or by mapping a panel knob to the Pitch knob, then the MIDI
+controller will stay in sync with these new parameter values.
+Also, say the module happens to have advanced features such as scale quantization,
+such that when you select a scale the Pitch knob jumps to the closest note.
+The MetaModule will still keep the MIDI controller in sync even if the Pitch knob
+changed indirectly (e.g. because you selected a new quantization scale or a new
+preset).
+
+If you need to re-send all MIDI-mapped values to the controller, for example if you 
+reset the controller after loading the patch, simply pause and unpause the patch 
+playback. This will send the current value of all MIDI-mapped parameters.
+
+
+<div class="grid cards" markdown>
+
+-  __To enable or disable MIDI Feedback, check the box in Settings > Prefs > MIDI:__
+
+     By default, MIDI Feedback is enabled starting in firmware v2.0.9.
+
+   [![MIDI Feedback Enabled](./img/midi-feedback.png){ .half }](./img/midi-feedback.png)
+
+</div>
+
+
+
+
+
+
 
 ---
 
