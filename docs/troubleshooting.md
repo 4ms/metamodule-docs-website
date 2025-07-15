@@ -11,6 +11,13 @@ to install updated firmware using a USB cable.
 1. Download the latest firmware release and unzip the it. Look inside the metamodule-firmware folder. You should see a file called main.uimg.
 
 2. Connect a USB cable from a computer to the module. It must be a USB cable capable of transmitting data, not just a charging cable.
+     - If at any point in the process a window opens on your computer asking if
+       you wish to allow the USB device to connect, click "Allow" or "OK". If you
+       accidentally ignore this message or click Cancel or No, then try 
+       unplugging and replugging the cable to make the message pop up again. If
+       that doesn't work, you may need to go into your computer's settings to
+       allow it. As a last resort, restarting your computer might be the solution.
+     
 
 3. Power cycle the module while holding down the rotary encoder.
 
@@ -19,6 +26,12 @@ to install updated firmware using a USB cable.
 5. Open Chrome browser (other browsers will not work). Go to this web page: [Web DFU](https://devanlai.github.io/webdfu/dfu-util/)
 
 6. Click Connect, and then select “STM Device in DFU Mode”.
+     - Do NOT click the Vendor ID (hex) field. Leave that alone: it will
+       automatically populate itself once you select the correct device.
+     - If you click Connect and don't see "STM Device in DFU Mode" in the
+       pop-up window, then try unplugging the USB cable and re-plugging it in.
+     - If you still don't see "STM Device in DFU Mode" then see the note in
+       step 2 about telling your OS to allow the USB connection.
 
 7. Click “Choose File” and select the main.uimg file you just downloaded.
 
