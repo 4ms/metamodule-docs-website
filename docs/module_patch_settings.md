@@ -177,6 +177,20 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 
 </div>
 <div class="grid cards" markdown>
+-   __Startup Patch__
+  
+    Select this menu item to toggle whether the patch is the startup patch.
+
+    When the MetaModule is powered up, the startup patch will be loaded
+    and played after plugins are pre-loaded.
+
+    If you don't want to have a startup patch, uncheck this.
+
+    You can see what patch is the startup patch, and/or disable any patch
+    from playing at startup in the [Preferences](preferences.md).
+
+</div>
+<div class="grid cards" markdown>
 -   __Delete__: Delete the patch file
   
     This will delete the patch file from disk.
@@ -186,3 +200,8 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
     cannot be reverted since the original file cannot be loaded.
 
 </div>
+
+### File Names:
+The legal characters for file names are:
+0-9 A-Z ! # $ % & ' ( ) - @ ^ _ `` { } ~ + , ; = [ ] and extended characters \x80 to \xFF and U+000080 to U+10FFFF
+White spaces and dots can be placed anywhere in the path name except end of the name. Trailing white spaces and dots are ignored.

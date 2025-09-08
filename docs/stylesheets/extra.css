@@ -44,6 +44,8 @@
 
 .half { width: auto; max-height: 240px; }
 
+.wide-240 { width: 240px; }
+
 .img-550 { width: auto; max-height: 550px; }
 
 .img-511 { width: auto; max-height: 511px; }
