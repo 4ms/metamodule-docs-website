@@ -135,10 +135,10 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 -   [![Patch View Disk icon](./img/patch-view-file-icon.png){ .half }](./img/patch-view-file-icon.png)
 </div>
 <div class="grid cards" markdown>
--   Save, Duplicate, Move/Rename, Reload (or Revert), Delete
+-   Save, Duplicate, Move/Rename, Reload (or Revert), Startup Patch, Delete
 
     
--   [![File Menu](./img/file-menu.png){ .half }](./img/file-menu.png)
+-   [![File Menu](./img/file-menu-2.1.png){ .half }](./img/file-menu-2.1.png)
 </div>
 <div class="grid cards" markdown>
 -   __Save__: save the patch file
@@ -154,11 +154,19 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 <div class="grid cards" markdown>
 -   __Duplicate__: save a copy of the patch
 
-    Clicking this will bring up a window where you can change the patch name and/or disk or sub-folder.
+    Clicking this will bring up a window where you can set the patch name and/or disk or sub-folder
+    of the new patch file.
 
     The new patch file will be opened after the old one is duplicated, but if the old one was playing, 
-    it will still be playing.
+    the old one will still be playing.
 
+    
+-   [![Duplicate](./img/duplicate-file.png){ .half }](./img/duplicate-file.png)
+</div>
+<div class="grid cards" markdown>
+-   __Move/Rename__: change name or location of a patch
+
+    Clicking this will bring up a window where you can change the patch name and/or disk or sub-folder.
     
 -   [![Duplicate](./img/duplicate-file.png){ .half }](./img/duplicate-file.png)
 </div>

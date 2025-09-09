@@ -18,11 +18,15 @@
 
 -  __Audio Settings__
 
-     Sample Rate: 24000, 36000, 48000, or 96000. Higher values are generally better quality but use more CPU.
+     **Sample Rate:** 24000, 36000, 48000, or 96000. Higher values are generally better quality but use more CPU.
   
-     Block Size: 16, 32, 64, 128, 256, 512. Lower values result in less latency. Some modules may only work with higher values. Sometimes higher values are more efficient, using less CPU (varies per module and patch).
+     **Block Size:** 16, 32, 64, 128, 256, 512. Lower values result in less
+     latency. Some modules may only work with higher values. Sometimes higher
+     values are more efficient, using less CPU (varies per module and patch).
   
-     Overrun Retries: 
+     **Overrun Retries:** If a patch takes too long to render a block of audio, there will be an
+     audio glitch. This setting selects the number of audio glitches you're willing to tolerate
+     in a one second period before the patch is stopped.
   
    [![Audio Settings](./img/prefs-audio-settings.png){ .wide-240 }](./img/prefs-audio-settings.png)
 
@@ -30,6 +34,13 @@
 <div class="grid cards" markdown>
 
 -  __Screensaver__
+     
+     The screen will turn black if no controls are moved for a specified amount
+     of time. The audio will not be changed. Signals on the jacks and MIDI will
+     not wake the screen up. 
+
+     Optionally, you can enable or disable if turning knobs will wake the
+     screen up.
 
    [![Sceensaver Prefs](./img/prefs-screensaver.png){ .wide-240 }](./img/prefs-screensaver.png)
 
@@ -38,12 +49,43 @@
 
 -  __Knob Catchup Mode__
 
+     When you load a patch or change Knob Sets, the physical knobs might not be in the same position
+     as the virtual knobs they're mapped to. Each Knob Catchup Mode does something different to handle
+     this situation:
+
+       - **Track if knob moves:** This jumps the virtual knob's value as soon as you turn the physical knob.
+       - **Track when equal:** The virtual knob will start tracking the physical knob when they are equal.
+       - **Linear Fade:** The virtual knob will always change in the same direction as you turn the physical knob,
+       but it might by larger or smaller amounts.
+
+
+
    [![Knob Catchup Mode Prefs](./img/prefs-knob-catchup.png){ .wide-240 }](./img/prefs-knob-catchup.png)
 
 </div>
+   In **Track when equal** mode, there is an additional option to allow
+   jumping out-of-range parameters. This is a rare situation that can occur
+   if a knob or switch is mapped in two different knob sets with different
+   min/max ranges, or is manually adjusted outside of the mapping's min/max
+   range. If the virtual knob's value is set to a position that's outside
+   of the min/max range of the current knob set, then checking this option
+   will allow the virtual knob to start tracking when the physical knob is
+   moved as close as possible. Otherwise if this is not checked, the
+   virtual knob will not be accessible from the current knobset. If you are
+   unsure, we recommend checking this option.
 <div class="grid cards" markdown>
 
 -  __Patch File__
+
+     **Startup Patch:** the patch that's played when the module first starts up.
+     If this checkbox is checked then the patch shown below will be played.
+     You can change the Startup Patch by going to a patch and selecting "Startup Patch"
+     in the File menu. See [Patch File Menu](module_patch_settings.md#patch-file-menu)
+
+     **Max Open Patches:** The maximum number of patches that are allowed to be open
+     at one time. Opening additional patches will automatically close the oldest
+     patch that doesn't have unsaved changes. If all open patches have unsaved 
+     changes then a warning will pop up, asking you to close some patches.
 
    [![Patch File Prefs](./img/prefs-patchfile.png){ .wide-240 }](./img/prefs-patchfile.png)
 
@@ -51,6 +93,15 @@
 <div class="grid cards" markdown>
 
 -  __MIDI__
+
+    MIDI Feedback is a feature that sends the value of MIDI-mapped knobs back to the MIDI controller.
+    This allows the controller to stay in sync with the patch when you load patches, change knob sets,
+    and when modules change their own parameter values (for example loading a scale preset on a module).
+
+    Enabling this is usually safe, but if you notice strange behavior from your MIDI controller, try
+    disabling this. 
+
+    See [MIDI Feedback](using_metamodule.md#midi-feedback)
 
    [![MIDI Prefs](./img/prefs-midi.png){ .wide-240 }](./img/prefs-midi.png)
 

@@ -16,6 +16,8 @@
 
 - __[Patch/Module Settings](module_patch_settings.md)__
 
+- __[Preferences](preferences.md)__
+
 - __[Troubleshooting](troubleshooting.md)__
 
 - __[FAQ](faq.md)__

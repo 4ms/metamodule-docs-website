@@ -7,6 +7,7 @@ nav:
   - Using Plugins: plugins.md
   - Module Action menu: action_menu.md
   - Patch/Module Settings: module_patch_settings.md
+  - Preferences: preferences.md
   - Expanders:
      - Wifi Expander: wifi.md
      - MetaAIO (Audio/CV Expander): meta-aio.md
