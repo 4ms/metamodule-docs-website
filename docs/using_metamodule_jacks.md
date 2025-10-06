@@ -79,6 +79,36 @@ MetaModule to virtual module jacks.
    [![New panel cable popup](./img/new-panel-cable-popup.png){ .half }](./img/new-panel-cable-popup.png)
 </div>
 
+### **Quick Assign Jacks**
+
+You can quickly patch a virtual jack to a panel jack by pressing and turning the rotary encoder.
+This is a fast way to assign a lot of jacks to the panel.
+
+<div class="grid cards" markdown>
+
+-  __1. Scroll to the jack you want to map__
+
+   [![DLD Jack](./img/dld-jack.png){ .half }](./img/dld-jack.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __2. Press and turn the rotary__ 
+
+     Each click of the rotary will select a different available panel jack.
+
+     Release the rotary when you see the jack you want.
+
+     You can remove the jack assignment by holding down the rotary and tapping the Back button.
+
+   [![DLD Jack assigned](./img/dld-jack-assigned.png){ .half }](./img/dld-jack-assigned.png)
+
+</div>
+
+See more shortcuts on the [Shortcuts](shortcuts.md) page.
+
+
+
 ### MIDI Input
 
 You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or using a MIDI-CV module.

@@ -284,6 +284,8 @@ You can quickly remove all mappings to a parameter in the current knobset.
 
 </div>
 
+See more shortcuts on the [Shortcuts](shortcuts.md) page.
+
 ---
 
 ## MIDI Feedback

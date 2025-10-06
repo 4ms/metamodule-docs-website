@@ -59,6 +59,11 @@ to a plugin file like this:
     tar -cf PluginName.mmplugin PluginName/
 
 
+### MIDI Assign
+
+This enables MIDI Assign mode, which allows you to quickly map params to MIDI CC or MIDI Note gate on/off
+events. See [Quick Assign Jacks](using_metamodule_jacks.md#quick-assign-jacks)
+
 ### Delete
 
 Delete the module from the patch, removing all cables and mappings. This cannot
