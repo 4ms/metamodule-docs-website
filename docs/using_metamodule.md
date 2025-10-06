@@ -88,6 +88,8 @@ The Back button's color will always indicate the Knob Set number:
 <div class="circlenum purplenum"><p>8</p></div>
 <div style="clear:both"></div>
 
+See more shortcuts on the [Shortcuts](shortcuts.md) page.
+
 
 ### Creating a new Knob Set
 
@@ -156,6 +158,8 @@ From the Patch View page:
     If you're mapping MIDI, then send a MIDI Note or CC message.
     You may select a MIDI Channel if you wish.
 
+    If you're mapping to a button on the MetaButtons expander, then press the button.
+
    Knob:
    [![Add Mapping](./img/plaits-mapping-add.png){ .half }](./img/plaits-mapping-add.png)
    MIDI:
@@ -173,7 +177,6 @@ From the Patch View page:
    [![Mapping Done](./img/plaits-mapping-done.png){ .half }](./img/plaits-mapping-done.png)
 
 </div>
-
 
 ### How MIDI param mappings work
 
@@ -200,7 +203,88 @@ Note that while you can only map MIDI CC and Note Gates to parameters, you can
 map any MIDI message to input jacks: see [Patching To
 MIDI](using_metamodule_jacks.md#midi-input).
 
---
+
+### **Quick Map Shortcut**
+
+You can quickly map params by pressing and holding the rotary encoder while wiggling a knob (or pressing a button
+on the MetaButtons expander). This is a fast way to map a lot of parameters.
+
+<div class="grid cards" markdown>
+
+-  __1. Scroll to the parameter you want to map__
+
+   [![Djembe Pitch Knob](./img/djembe-pitch-knob.png){ .half }](./img/djembe-pitch-knob.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __2. Press and hold the rotary while wiggling a knob__
+
+     Release the rotary when you see the knob name appear.
+
+     The knob will be instantly mapped.
+
+     You can remove the mapping by holding down the rotary and tapping the Back button.
+
+   [![Djembe Pitch Knob mapped](./img/djembe-pitch-knob-mapped.png){ .half }](./img/djembe-pitch-knob-mapped.png)
+
+</div>
+
+
+Note that the mapping will be created in the currently active knobset, and will replace any existing non-MIDI mapping. 
+Use the [Knob Set Shortcut] in conjunction with this shortcut if you want to create mappings in multiple knob sets.
+
+### **Quick MIDI Map Shortcut**
+
+You can quickly create MIDI CC or Note on/off mappings with MIDI Assign mode.
+
+<div class="grid cards" markdown>
+
+-  __1. Enable MIDI Assign mode in the module action menu__
+
+   [![MIDI assign enabled](./img/enable-midi-assign.png){ .half }](./img/enable-midi-assign.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __2. Scroll to the parameter you want to map__
+
+   [![Djembe Sharpness Knob](./img/djembe-sharp-knob.png){ .half }](./img/djembe-sharp-knob.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __3. Press and hold the rotary while sending a MIDI CC or Note__
+
+     Release the rotary when you see the MIDI event appear.
+
+     The parameter will be instantly mapped.
+
+     You can remove the mapping by holding down the rotary and tapping the Back button.
+
+   [![Djembe Sharpness Knob mapped](./img/djembe-sharp-knob-mapped-cc17.png){ .half }](./img/djembe-sharp-knob-mapped-cc17.png)
+
+</div>
+
+Turn off MIDI Assign mode when you're done, or it will automatically turn off when you open a different patch.
+
+See more shortcuts on the [Shortcuts](shortcuts.md) page.
+
+### **Remove a mapping shortcut**
+
+You can quickly remove all mappings to a parameter in the current knobset. 
+
+<div class="grid cards" markdown>
+
+-  __1. Scroll to the parameter with the mapping you want to remove__
+
+     Press and hold the rotary, and then tap the Back button. Release the rotary.
+
+   [![Djembe Sharpness Knob](./img/djembe-sharp-knob.png){ .half }](./img/djembe-sharp-knob.png)
+
+</div>
+
+---
 
 ## MIDI Feedback
 
