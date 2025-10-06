@@ -8,11 +8,18 @@
 
       Use the [Plugins](../plugins) link above.
 
-      Save each `.mmplugin` file to the USB or microSD card. You 
-      can put them in the root directory, or in a folder called
-      `metamodule-plugins`
+      Click "Download All" at the top. Unzip the "all_plugins.zip" file.
 
-      Insert the drive into the MetaModule
+      Copy the `metamodule-plugins` folder to the USB drive or microSD card. 
+
+      If you want to just install particular plugins, download them individually,
+      and copy the `.mmplugin` file to the `metamodule-plugins` folder on 
+      your USB drive or microSD card.
+
+      You also can put the .mmplugin files in the root directory of the USB
+      drive or microSD card.
+
+      Insert the drive into the MetaModule.
 
    [![USB Drive contents](./img/macos-plugins-disk.png){ .half }](./img/macos-plugins-disk.png)
 
