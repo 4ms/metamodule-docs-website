@@ -207,7 +207,9 @@ on the MetaButtons expander). This is a fast way to map a lot of parameters.
 
 
 Note that the mapping will be created in the currently active knobset, and will replace any existing non-MIDI mapping. 
-Use the [Knob Set Shortcut] in conjunction with this shortcut if you want to create mappings in multiple knob sets.
+Use the [Knob Set Shortcut](shortcuts.md) in conjunction with this shortcut if you want to create mappings in multiple knob sets.
+
+If you want to quickly map MIDI events to parameters, see [Shortcuts](shortcuts.md)
 
 ### **Remove a mapping shortcut**
 
@@ -224,9 +226,6 @@ You can quickly remove all mappings to a parameter in the current knobset.
 </div>
 
 See more shortcuts on the [Shortcuts](shortcuts.md) page.
-
----
-
 
 
 ---
@@ -274,7 +273,6 @@ From the Knob Set page:
    [![Knob View Name](./img/knobview-name.png){ .half }](./img/knobview-name.png)
 
 </div>
-
 
 ---
 
