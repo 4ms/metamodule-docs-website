@@ -8,6 +8,8 @@
 
 -  __[Using Jacks, MIDI, Cables](./using_metamodule_jacks.md)__
 
+-  __[Shortcuts](./shortcuts.md)__
+
 -  __[MetaModule with VCV Rack](./using_rack.md)__
 
 -  __[Using Plugins](./plugins.md)__

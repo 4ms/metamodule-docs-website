@@ -118,3 +118,26 @@ You can quickly remove all mappings in the current knobset or panel jack assignm
    [![Djembe Sharpness Knob](./img/djembe-sharp-knob.png){ .half }](./img/djembe-sharp-knob.png)
 
 </div>
+
+### **Quick adjust a parameter**
+
+You can quickly adjust the value of a knob, switch or button by pushing and turning the encoder while selecting that parameter.
+This is a fast way to change any parameter in a patch without needing to have a mapping.
+
+
+<div class="grid cards" markdown>
+
+-  __1. Scroll to the parameter you want to adjust__
+
+   [![QCD Div/Mult](./img/qcd-divmult.png){ .half }](./img/qcd-divmult.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __2. Push down on the rotary encoder while turning it__
+
+    The current value will be displayed as you adjust it.
+
+   [![QCD Div/Mult quick adjust](./img/qcd-divmult-quick-adjust.png){ .half }](./img/qcd-divmult-quick-adjust.png)
+
+</div>
