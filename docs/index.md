@@ -6,7 +6,9 @@
 
 -  __[Using Knobs](./using_metamodule.md)__
 
--  __[Using Jacks, MIDI, Cables](./using_metamodule_jacks.md)__
+-  __[Using Jacks and Cables](./using_metamodule_jacks.md)__
+
+-  __[Using MIDI](./using_metamodule_midi.md)__
 
 -  __[Shortcuts](./shortcuts.md)__
 

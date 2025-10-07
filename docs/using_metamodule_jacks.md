@@ -1,4 +1,4 @@
-# Using the MetaModule: Jacks, MIDI, and Cables
+# Using the MetaModule: Jacks and Cables
 
 ## How to Patch Cables
 
@@ -79,7 +79,7 @@ MetaModule to virtual module jacks.
    [![New panel cable popup](./img/new-panel-cable-popup.png){ .half }](./img/new-panel-cable-popup.png)
 </div>
 
-### **Quick Assign Jacks**
+### Quick Assign Jacks
 
 You can quickly patch a virtual jack to a panel jack by pressing and turning the rotary encoder.
 This is a fast way to assign a lot of jacks to the panel.
@@ -108,91 +108,44 @@ This is a fast way to assign a lot of jacks to the panel.
 See more shortcuts on the [Shortcuts](shortcuts.md) page.
 
 
+### Creating or editing a Jack Alias
 
-### MIDI Input
-
-You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or using a MIDI-CV module.
-
-
-#### Patching MIDI Input to jacks
+You can provide a custom name for a panel jack mapping.
 
 <div class="grid cards" markdown>
--  __1. Click on an input jack, and click New MIDI Map__
 
-    If the jack is already connected to a panel jack, then this button will not
-    be displayed.
+-  __Create or edit an alias__
 
-   [![New MIDI Map](./img/enosc-midi-map.png){ .half }](./img/enosc-midi-map.png)
-</div>
-<div class="grid cards" markdown>
--  __2. Select a MIDI signal__
+    Click on the jack, then click on the panel jack mapping in the "Connected To:" box.
 
-    Choose from:
+    Jack aliases are saved with the patch, and are shown on the Jacks page.
 
-    - Note events (keyboard): select Pitch (key number), Gate (note on/off), Velocity,
-      Aftertouch, or Retrigger (multiple note-on). Also select
-      the polyphony channel. The maximum polyphony channel of all the MIDI
-      mappings in the entire patch determines how MIDI note events are parsed.
-
-    - CC: Continuous CV scaled to 0V to 10V. Select a CC number, or send a CC
-      event to "learn" it.
-
-    - Pitch Wheel
-
-    - Gate on Note: fires a gate whenever a particular note is pressed. Select
-      a note or play a note live to "learn" it.
-
-    - Clock: Select the raw MIDI clock (24PPQN) or a divided version of that.
-
-    - Transport: Sends a gate for Start, Stop, and Continue events.
-
-    - Channel: Select "All Channels" or a choose a particular MIDI channel to respond to.
-
-   [![MIDI maps](./img/midi-map-top.png){ .half }](./img/midi-map-top.png)
-</div>
-<div class="grid cards" markdown>
--  __3. Click Map to create the mapping__
-
-   [![MIDI maps](./img/midi-map-pw.png){ .half }](./img/midi-map-pw.png)
-</div>
-
-#### Using a MIDI input module
-<div class="grid cards" markdown>
--  __1. Add the RackCore MIDIToCVInterface module__
-
-   [![MIDI to CV module](./img/rackcore-midi-cv-module.png){ .half }](./img/rackcore-midi-cv-module.png)
-
-</div>
-<div class="grid cards" markdown>
--  __2. Patch the jack(s) corresponding to the MIDI signal(s) you want to use__
-
-   [![MIDI to CV module](./img/rackcore-midi-cv-jack.png){ .half }](./img/rackcore-midi-cv-jack.png)
+   [![Edit Jack Mapping](./img/jack-alias-edit.png){ .half }](./img/jack-alias-edit.png)
 
 </div>
 
-### Patching Outputs to MIDI
+You can also create and edit jack aliases in VCV Rack in the context menu for the MetaModule.
 
-To support MIDI Output as a MIDI Host, the MetaModule has the CV-MIDI module
-in the RackCore brand.
-
-Third-party plugin modules that produce MIDI Output should work, as well.
-
-Note that the MetaModule always acts as a MIDI Host, and never as a MIDI Device.
+### Viewing all panel jack mappings
 
 <div class="grid cards" markdown>
--  __1. Add the RackCore CV-MIDI module__
 
-   [![CV-MIDI module](./img/rackcore-cv-midi-module.png){ .half }](./img/rackcore-cv-midi-module.png)
+-  __1. Click the Jacks button on the Knob Sets page__
+
+    The Knob Sets page is opened by clicking the Knob icon at the top of the patch.
+
+   [![Jack List](./img/jacks-button.png){ .half }](./img/jacks-button.png)
 
 </div>
 <div class="grid cards" markdown>
--  __2. Patch the CV and gate signals you wish output as MIDI__
 
-     A log of MIDI events will appear on the module's screen.
+-  __2. All jack mappings are shown__ 
 
-   [![CV-MIDI module](./img/rackcore-cv-midi-jacks.png){ .half }](./img/rackcore-cv-midi-jacks.png)
+     
+   [![Jack list](./img/jack-alias-list.png){ .half }](./img/jack-alias-list.png)
 
 </div>
+
 
 ### Disconnecting a cable (Unpatching or removing a cable)
 

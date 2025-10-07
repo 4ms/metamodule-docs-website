@@ -178,31 +178,6 @@ From the Patch View page:
 
 </div>
 
-### How MIDI param mappings work
-
-You can map MIDI CC or MIDI Note Gates to parameters such as knobs, buttons, switches, etc. 
-
-The parameter value is always updated immediately when a MIDI message is received, regardless
-of the current [Knob Catchup]() mode.
-
-On the [Edit Mapping](#editting-the-midi-channel-of-a-midi-mapping)
-page, each MIDI mapping can be set to respond to all MIDI channels, or just a
-particular MIDI channel.
-
-The MIN and MAX sliders determine the range of the mapping in the same way that
-they do for panel knob mappings. For MIDI CC mappings, this means a CC value of
-0 will set the parameter to the value set by the MIN slider, and a CC value of
-127 sets it to the MAX slider's value. For MIDI Note Gate mappings, the note can
-only be on or off, so the parameter will be set to the MIN or MAX slider value.
-Additionally, for MIDI Note Gate mappings you can enable Toggle mode to make the
-parameter change value each time a note is played. See [MIDI Note toggle
-mode](#midi-note-gate-toggle-mode)
-
-
-Note that while you can only map MIDI CC and Note Gates to parameters, you can
-map any MIDI message to input jacks: see [Patching To
-MIDI](using_metamodule_jacks.md#midi-input).
-
 
 ### **Quick Map Shortcut**
 
@@ -234,42 +209,6 @@ on the MetaButtons expander). This is a fast way to map a lot of parameters.
 Note that the mapping will be created in the currently active knobset, and will replace any existing non-MIDI mapping. 
 Use the [Knob Set Shortcut] in conjunction with this shortcut if you want to create mappings in multiple knob sets.
 
-### **Quick MIDI Map Shortcut**
-
-You can quickly create MIDI CC or Note on/off mappings with MIDI Assign mode.
-
-<div class="grid cards" markdown>
-
--  __1. Enable MIDI Assign mode in the module action menu__
-
-   [![MIDI assign enabled](./img/enable-midi-assign.png){ .half }](./img/enable-midi-assign.png)
-
-</div>
-<div class="grid cards" markdown>
-
--  __2. Scroll to the parameter you want to map__
-
-   [![Djembe Sharpness Knob](./img/djembe-sharp-knob.png){ .half }](./img/djembe-sharp-knob.png)
-
-</div>
-<div class="grid cards" markdown>
-
--  __3. Press and hold the rotary while sending a MIDI CC or Note__
-
-     Release the rotary when you see the MIDI event appear.
-
-     The parameter will be instantly mapped.
-
-     You can remove the mapping by holding down the rotary and tapping the Back button.
-
-   [![Djembe Sharpness Knob mapped](./img/djembe-sharp-knob-mapped-cc17.png){ .half }](./img/djembe-sharp-knob-mapped-cc17.png)
-
-</div>
-
-Turn off MIDI Assign mode when you're done, or it will automatically turn off when you open a different patch.
-
-See more shortcuts on the [Shortcuts](shortcuts.md) page.
-
 ### **Remove a mapping shortcut**
 
 You can quickly remove all mappings to a parameter in the current knobset. 
@@ -287,49 +226,6 @@ You can quickly remove all mappings to a parameter in the current knobset.
 See more shortcuts on the [Shortcuts](shortcuts.md) page.
 
 ---
-
-## MIDI Feedback
-
-MIDI Feedback, also known as "bi-directional MIDI", is a feature that allows a
-MIDI controller to stay in sync with the MetaModule. When this is enabled, the
-MetaModule will send MIDI CC, pitch wheel, and Note on/off messages back to the
-controller whenever a parameter changes value. When a patch is loaded, the MetaModule
-will send the value of all MIDI-mapped parameters.
-If the MIDI controller supports MIDI Feedback, then it will update its display
-or internal state with the new value.
-
-For example, if you map a CC to the Pitch knob of your VCO, then
-when you load that patch, a feedback-aware MIDI controller will jump to the
-current value of the pitch, perhaps by displaying this value on a screen or
-even by turning a motorized knob like the Roto-Control does.
-
-As you play the patch, if you adjust the VCO's pitch knob manually (using the
-Adjust button) or by mapping a panel knob to the Pitch knob, then the MIDI
-controller will stay in sync with these new parameter values.
-Also, say the module happens to have advanced features such as scale quantization,
-such that when you select a scale the Pitch knob jumps to the closest note.
-The MetaModule will still keep the MIDI controller in sync even if the Pitch knob
-changed indirectly (e.g. because you selected a new quantization scale or a new
-preset).
-
-If you need to re-send all MIDI-mapped values to the controller, for example if you 
-reset the controller after loading the patch, simply pause and unpause the patch 
-playback. This will send the current value of all MIDI-mapped parameters.
-
-
-<div class="grid cards" markdown>
-
--  __To enable or disable MIDI Feedback, check the box in Settings > Prefs > MIDI:__
-
-     By default, MIDI Feedback is enabled starting in firmware v2.0.9.
-
-   [![MIDI Feedback Enabled](./img/midi-feedback.png){ .half }](./img/midi-feedback.png)
-
-</div>
-
-
-
-
 
 
 
@@ -378,69 +274,6 @@ From the Knob Set page:
    [![Knob View Name](./img/knobview-name.png){ .half }](./img/knobview-name.png)
 
 </div>
-
----
-
-## Editting the MIDI Channel of a MIDI Mapping
-
-
-From the Module View page:
-
-<div class="grid cards" markdown>
-
--  __1. Click on the mapped control__
-
-   [![Module View MIDI Mapped control](./img/module-view-mapping-pane-midi.png){ .half }](./img/module-view-mapping-pane-midi.png)
-
-</div>
-<div class="grid cards" markdown>
-
--  __2. Click on the MIDI mapping__
-
-   [![Module View MIDI Mapping](./img/module-view-midi-map.png){ .half }](./img/module-view-midi-map.png)
-
-</div>
-<div class="grid cards" markdown>
-
--  __3. Adjust the MIDI Channel__
-
-     You may adjust the MIN/MAX sliders and the mapping name in the same way that
-     you do so for normal knob mappings.
-
-     For MIDI Note Gate mappings, you may also change the Toggle mode (see below).
-
-   [![Edit MIDI Mapping](./img/midi-map-channel.png){ .half }](./img/midi-map-channel.png)
-
-</div>
-
-### MIDI Note Gate Toggle mode
-
-When you map a MIDI Note Gate to a parameter, you have two options:
-
-<div class="grid cards" markdown>
--  __MIDI Note Gate: Toggle Enabled__
-
-     Each time a matching Note On message is received, the parameter will
-     toggle between the values set by the MIN and MAX sliders. Note Off
-     messages are ignored. This makes the parameter value toggle each time you
-     play the MIDI Note. 
-
-     _Technical note:_ In case the param has changed value since the last MIDI
-     Note message, the MetaModule will set the value to MIN or MAX based on
-     which one the current value is __farther__ from.
-
-   [![MIDI Note Toggle On](./img/midi-map-toggle-on.png){ .half }](./img/midi-map-toggle-on.png)
-</div>
-<div class="grid cards" markdown>
--  __MIDI Note Gate: Toggle Disabled__
-
-     When a Note On message for that note is received, the param's
-     value will be set to the value of the MAX slider. When a Note Off message
-     is received, the param will be set to the MIN slider's value.
-
-   [![MIDI Note Toggle Off](./img/midi-map-toggle-off.png){ .half }](./img/midi-map-toggle-off.png)
-</div>
-
 
 
 ---

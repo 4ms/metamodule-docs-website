@@ -2,7 +2,8 @@ site_name: MetaModule Manual
 nav:
   - Getting Started: getting_started.md
   - Using Knobs: using_metamodule.md
-  - Using Jacks, MIDI, Cables: using_metamodule_jacks.md
+  - Using Jacks and Cables: using_metamodule_jacks.md
+  - Using MIDI: using_metamodule_midi.md
   - Shortcuts: shortcuts.md
   - Using VCV Rack: using_rack.md
   - Using Plugins: plugins.md

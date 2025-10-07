@@ -129,6 +129,9 @@ try a special version, or are beta-testing, then [here is the procedure to do a 
       - If you want to also listen to that output, use two cables (Tip:
         Cmd+drag on Mac or Ctl+drag on Windows/Linux to create a new cable on top)
       
+
+      - Give the jack a unique name by right-clicking and entering a name in the Alias box.
+
       *The MetaModule Hub does not send any signals out, or do anything to the
       signals that you send in. The cables connected to it are just
       there to tell the MetaModule what you want to have mapped to each jack
