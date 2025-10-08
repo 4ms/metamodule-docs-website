@@ -1,4 +1,4 @@
-# Using Metamodule with Rack
+# Using MetaModule with Rack
 
 __What is VCV Rack?__
 
@@ -36,7 +36,7 @@ install the 4ms modules into VCV Rack on your computer.
       will also tell the VCV Rack program to check for updates as we release
       bug fixes and new modules. 
 
-      Alternatively, you may could click "Add All", which will add all modules that
+      Alternatively, you could click "Add All", which will add all modules that
       exist at the current time, but you will not be notified when future
       modules are added.
 
@@ -79,7 +79,7 @@ try a special version, or are beta-testing, then [here is the procedure to do a 
 
       Add modules, patch them together, and set knobs and switches like you would do on
       a hardware Eurorack system. If you need help using VCV Rack, there are
-      many video tutorials on Youtube. Use the VCV Audio module to listen to
+      many video tutorials on YouTube. Use the VCV Audio module to listen to
       your work as you patch.
 
       All modules from 4ms are compatible with the MetaModule, plus about 800 more!
@@ -250,14 +250,14 @@ This name will be displayed on the MetaModule.
 ## MIDI Mapping
 
 When making patches in VCV Rack, it's usually most convenient to use the VCV MIDI modules to 
-create MIDI mappings. You also can make MIDI Mappings using the MetaModule itself, see
-[MIDI Input](using_metamodule_jacks.md#midi-input) for details.
+create MIDI mappings. You also can make MIDI mappings using the MetaModule itself; see
+[MIDI Input Jacks](using_metamodule_jacks.md#midi-input-jacks) for details.
 
 
 ### How to map MIDI notes, gates, velocity, and aftertouch
 
 VCV Rack and MetaModule support polyphonic MIDI notes, gates, velocity, and
-aftertouch. There maximum polyphony number is 16, but often you will 
+aftertouch. The maximum polyphony number is 16, but often you will 
 limit this to 4 - 8 when creating patches for the MetaModule.
 
 <br>
@@ -273,7 +273,7 @@ directly. Instead, you connect to the built-in MIDI and SPLIT modules. The
 MetaModule recognizes these modules and scans their connections, generating
 MIDI mappings for your patch. These modules won't display when you load the
 patch onto the MetaModule, they just are used to tell the MetaModule how you
-want MIDI to be mapped. Also, these modules are fully functionaly within VCV
+want MIDI to be mapped. Also, these modules are fully functional within VCV
 Rack, so you can test how your patch works with MIDI on VCV Rack before
 transferring it to the MetaModule.
 
@@ -339,7 +339,7 @@ polyphonic signals, you don't need to use a SPLIT module. Just patch directly
 from the MIDI module to the jacks you want mapped.
 
 <div class="grid cards" markdown>
- -  You can map Pitch Wheel, Mod Wheel, Clock, Divided Clock, Re-trigger,
+ -  You can map Pitch Wheel, Mod Wheel, Clock, Divided Clock, Retrigger,
     Start, Stop, and Continue using the MIDI-CV module.
 
      &nbsp;
@@ -362,7 +362,7 @@ from the MIDI module to the jacks you want mapped.
     Notice that VCV Rack indicates a MIDI mapping with a yellow square. This
     should not be confused with the yellow square used by Knob B of the
     MetaModule. If in doubt, hover the mouse over the Knob B ring, and if the
-    other knob's square flashes rapidly then it's mapped the MetaModule.
+    other knob's square flashes rapidly then it's mapped to the MetaModule.
 
    [![CC MIDI map](./img/vcv-midi-knob-map.png){ .half }](./img/vcv-midi-knob-map.png)
 </div>
@@ -377,4 +377,3 @@ User `tenofswords` created a python script to do this automatically for you:
 
 Running this requires some basic knowledge of using python scripts. Some discussion is here:
 [MetaModule Forum: MetaModule Tag in Rack to Identify Supported Modules](https://forum.4ms.info/t/metamodule-tag-in-rack-to-identify-supported-modules/69/32)
-

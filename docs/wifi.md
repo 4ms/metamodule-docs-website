@@ -1,13 +1,13 @@
 # Wi-Fi Expander
 
-## Getting Setup
+## Getting Set Up
 
-Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaModule/Wifi-QSG.pdf)
+Read the PDF version here: [Wi‑Fi Quick Start](https://4mscompany.com/media/MetaModule/Wifi-QSG.pdf)
 
 ### Connect to MetaModule
 
 1. Power off your system.
-2. Connect one end of the included 8-pin cable to the header labelled 
+2. Connect one end of the included 8-pin cable to the header labeled 
     "WiFi" on the MetaModule, and the other end to the 8-pin header on 
     the Wi-Fi Expander. 
 3. Make sure the red stripe is up on both ends of the cable. 
@@ -25,7 +25,7 @@ Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaM
    ![ESP BLE Provisioning app](./img/wifi-ble-app-icon.png){ .half }
 </div>
 <div class="grid cards" markdown>
--   __2. Open to ESP BLE Provisioning app__
+-   __2. Open the ESP BLE Provisioning app__
 
     At some point the app will ask for permission to use the 
     camera and/or Bluetooth. Click "OK" or "Allow".
@@ -95,7 +95,7 @@ Read the PDF version here: [Wifi Quick Start](https://4mscompany.com/media/MetaM
 
     In the browser, navigate to the drive (and optionally, a subfolder) where you want to put a patch.
 
-    Click the Upload button and select a .yml patch file to transfer, or drag and drop it. 
+    Click the Upload button and select a `.yml` patch file to transfer, or drag and drop it. 
 
     When the progress bar is complete, the patch file can be played on your MetaModule!
 
@@ -132,7 +132,7 @@ anticipate needing to change Wi-Fi networks, you may want to leave it installed.
      Right-click on the MetaModule in VCV Rack and choose a volume
      from the "Wi-Fi sends to:" submenu.
 
-     Note that the Internal drive has very limited space (2MB max),
+Note that the Internal drive has very limited space (2 MB max),
      so it's recommended to store patches on USB or Card if possible. 
 
     Note: sending to sub-folders is not yet supported. Use a web browser if you

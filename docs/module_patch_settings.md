@@ -78,7 +78,7 @@ This option refers to both control mappings and jack mappings:
 
 - __Show on All Modules__: (Patch View only) When this option is enabled, maps
   will be drawn on all modules in the patch. When this is disabled, maps will
-  be drawn on only the module that's currently focussed. 
+  be drawn on only the module that's currently focused. 
 This option is disabled if both Show Control Maps and Show Panel Jack Maps are off.
 
 ### Cables

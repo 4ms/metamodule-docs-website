@@ -8,7 +8,7 @@ to install updated firmware using a USB cable.
 
 ## USB DFU Bootloader
 
-1. Download the latest firmware release and unzip the it. Look inside the metamodule-firmware folder. You should see a file called main.uimg.
+1. Download the latest firmware release and unzip it. Look inside the metamodule-firmware folder. You should see a file called main.uimg.
 
 2. Connect a USB cable from a computer to the module. It must be a USB cable capable of transmitting data, not just a charging cable.
      - If at any point in the process a window opens on your computer asking if
@@ -94,9 +94,9 @@ It requires an SD Card which will be formatted. The SD Card must be at least
 13. Go to `Settings > Update` on the MetaModule, and follow the update procedure
     normally. Make sure you still have the rescue SD Card inserted into the
     MetaModule, and that you don't have a USB drive inserted. The rescue SD
-    Card contains a firmare update folder that has the bootloaders. Do not
+    card contains a firmware update folder that has the bootloaders. Do not
     replace this with another version, or change it in any way. The goal of
-    this step is to re-install the bootloaders from the rescue SD Card's into
+    this step is to re-install the bootloaders from the rescue SD card into
     the MetaModule's internal memory. 
 
 14. When the firmware update is complete, power off the MetaModule.
@@ -114,7 +114,6 @@ It requires an SD Card which will be formatted. The SD Card must be at least
 18. Your MetaModule is now in fully working order. If there is a newer firmware
     available, you can download it from [MetaModule
     Downloads](https://metamodule.info/downloads) and update normally.
-
 
 
 

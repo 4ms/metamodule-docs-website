@@ -17,7 +17,7 @@
 
       Turn some physical knobs and watch the knobs on the screen turn (the patch must be playing).
 
-      Click `Jacks` to view jack mappings
+      Click `Jacks` to view jack mappings.
 
    [![Patch View](./img/knobset-karplus-jackicon.png){ .half }](./img/knobset-karplus-jackicon.png)
 
@@ -72,7 +72,7 @@ From the Knob Set page:
 
 ### **Knob Set Shortcut**
 
-A fast way to change Knobs Sets is to __hold down the Back button and turn the encoder__.
+A fast way to change Knob Sets is to __hold down the Back button and turn the encoder__.
 
 A pop-up will tell you the name of the Knob Set that was just made active.
 
@@ -97,7 +97,7 @@ You can create a new knob set in several ways:
 
  -  With VCV Rack, when you make the patch. See [Creating Knob Sets in VCV Rack](using_rack.md#creating-knob-sets-in-vcv-rack)
 
- -  By clicking `(new knobset)` when you creating a new knob mapping (see next section)
+ -  By clicking `(new knobset)` when you're creating a new knob mapping (see next section)
 
  -  By selecting `Auto-map knobs (new Knob Set)` from the module [Action
     menu](action_menu.md#auto-map-knobs-new-knob-set).
@@ -172,7 +172,7 @@ From the Patch View page:
 
      If you want to adjust the minimum and maximum values of the mapping, or
      give the mapping a name, see [Edit a Knob
-     Mapping](#editting-a-knob-mapping).
+     Mapping](#editing-a-knob-mapping).
 
    [![Mapping Done](./img/plaits-mapping-done.png){ .half }](./img/plaits-mapping-done.png)
 
@@ -206,14 +206,14 @@ on the MetaButtons expander). This is a fast way to map a lot of parameters.
 </div>
 
 
-Note that the mapping will be created in the currently active knobset, and will replace any existing non-MIDI mapping. 
+Note that the mapping will be created in the currently active Knob Set, and will replace any existing non-MIDI mapping. 
 Use the [Knob Set Shortcut](shortcuts.md) in conjunction with this shortcut if you want to create mappings in multiple knob sets.
 
 If you want to quickly map MIDI events to parameters, see [Shortcuts](shortcuts.md)
 
 ### **Remove a mapping shortcut**
 
-You can quickly remove all mappings to a parameter in the current knobset. 
+You can quickly remove all mappings to a parameter in the current Knob Set. 
 
 <div class="grid cards" markdown>
 
@@ -230,7 +230,7 @@ See more shortcuts on the [Shortcuts](shortcuts.md) page.
 
 ---
 
-## Editting a Knob Mapping
+## Editing a Knob Mapping
 
 
 From the Knob Set page:
@@ -281,7 +281,7 @@ From the Knob Set page:
 A single physical knob can be mapped to up to eight virtual knobs. This is
 known as a "multi-map". As you turn the physical knob, all the mapped virtual
 knobs will turn. Each virtual knob can have different minimum and maximum
-values. In this way, mulit-maps allow the MetaModule to act like a macro
+values. In this way, multi-maps allow the MetaModule to act like a macro
 controller.
 
 For example, if a reverb module has separate wet and dry level knobs, you could
@@ -329,4 +329,3 @@ If you want to see all the virtual knobs that map to a specific physical knob:
    [![Multi-map](./img/knobset-multimap.png){ .half }](./img/knobset-multimap.png)
 
 </div>
-

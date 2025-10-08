@@ -20,7 +20,7 @@ supported on the current version of the MetaModule*
       (thus acting like a passive mult)
 
       If this is the first cable you're creating this session, a pop-up will
-      remind you of how to patch a cable. Read them and click OK.
+      remind you of how to patch a cable. Read it and click OK.
 
    [![New cable start](./img/new-cable-start.png){ .half }](./img/new-cable-start.png)
 
@@ -32,7 +32,7 @@ supported on the current version of the MetaModule*
 
      - Then scroll to the jack you want to patch to, and click on it.
 
-     Only valid jacks will be shown. You cannot connect multiple outputs to to
+     Only valid jacks will be shown. You cannot connect multiple outputs to
      an input. 
 
      If you want to cancel making a cable, click "Cancel Cable" or press the

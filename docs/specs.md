@@ -13,7 +13,7 @@
         - 290mA with Arturia MiniLab 3 
         - 290mA with Keith McMillen QuNexus
         - 300mA with Novation Launch Control XL
-        - 360mA with Arturia Beat Step Pro
+        - 360mA with Arturia BeatStep Pro
         - 495mA theoretical maximum with USB MIDI controller connected
 
 - -12V: 24mA
@@ -36,4 +36,3 @@
 - microSD Card Slot
     - Compatible with all standard speed classes: C2, C4, C6, C10, U1, U3. 
     - Uses UHS-I bus, but compatible with UHS-II bus cards
-

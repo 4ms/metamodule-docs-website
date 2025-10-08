@@ -4,7 +4,7 @@ There are some time-saving shortcuts in the MetaModule UI.
 
 ### **Knob Set Shortcut**
 
-A fast way to change Knobs Sets is to __hold down the Back button and turn the encoder__.
+A fast way to change Knob Sets is to __hold down the Back button and turn the encoder__.
 
 A pop-up will tell you the name of the Knob Set that was just made active.
 
@@ -107,7 +107,7 @@ This is a fast way to assign a lot of jacks to the panel.
 
 ### **Remove a mapping shortcut**
 
-You can quickly remove all mappings in the current knobset or panel jack assignments.
+You can quickly remove all mappings in the current Knob Set or panel jack assignments.
 
 <div class="grid cards" markdown>
 

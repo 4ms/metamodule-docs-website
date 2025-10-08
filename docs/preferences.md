@@ -42,7 +42,7 @@
      Optionally, you can enable or disable if turning knobs will wake the
      screen up.
 
-   [![Sceensaver Prefs](./img/prefs-screensaver.png){ .wide-240 }](./img/prefs-screensaver.png)
+   [![Screensaver Prefs](./img/prefs-screensaver.png){ .wide-240 }](./img/prefs-screensaver.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -56,7 +56,7 @@
        - **Track if knob moves:** This jumps the virtual knob's value as soon as you turn the physical knob.
        - **Track when equal:** The virtual knob will start tracking the physical knob when they are equal.
        - **Linear Fade:** The virtual knob will always change in the same direction as you turn the physical knob,
-       but it might by larger or smaller amounts.
+       but it might be larger or smaller amounts.
 
 
 
@@ -71,7 +71,7 @@
    of the min/max range of the current knob set, then checking this option
    will allow the virtual knob to start tracking when the physical knob is
    moved as close as possible. Otherwise if this is not checked, the
-   virtual knob will not be accessible from the current knobset. If you are
+   virtual knob will not be accessible from the current Knob Set. If you are
    unsure, we recommend checking this option.
 <div class="grid cards" markdown>
 
@@ -101,7 +101,7 @@
     Enabling this is usually safe, but if you notice strange behavior from your MIDI controller, try
     disabling this. 
 
-    See [MIDI Feedback](using_metamodule.md#midi-feedback)
+    See [MIDI Feedback](using_metamodule_midi.md#midi-feedback)
 
    [![MIDI Prefs](./img/prefs-midi.png){ .wide-240 }](./img/prefs-midi.png)
 

@@ -16,7 +16,7 @@
 
 -  __[Using Plugins](./plugins.md)__
 
-- __[Module Action menu](action_menu.md)__
+- __[Module Action Menu](action_menu.md)__
 
 - __[Patch/Module Settings](module_patch_settings.md)__
 

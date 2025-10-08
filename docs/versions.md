@@ -1,7 +1,7 @@
 # Versions
 
 There are many different versions associated with the MetaModule, VCV Rack, and third-party plugins. This guide
-explains the different version you may encounter.
+explains the different versions you may encounter.
 
 There are three versions to consider when we talk about using plugins on the MetaModule:
 
@@ -64,7 +64,7 @@ Each of these is discussed in detail below:
  Note that the VCV Rack plugins have their own versioning system.
  The version discussed above is the MetaModule plugin version. You 
  can check which VCV Rack plugin version the MetaModule version
- is based off of, by looking at the [Plugins webpage.](../plugins)
+ is based on by looking at the [Plugins webpage.](../plugins)
 </div>
 
 ## SDK Version
@@ -77,20 +77,20 @@ Each of these is discussed in detail below:
      There's no way to easily see the SDK version of a given plugin file. In general,
      always use the newest version available.
 
-     If there is a currently active developement version of firmware (aka beta version), then it 
-     will be have the tag `-dev-X` in the filename:
+     If there is a currently active development version of firmware (aka beta version), then it 
+     will have the tag `-dev-X` in the filename:
 
          Plugin-v0.1-dev-12.mmplugin
 
-     This indicates the firmware will only run on the developement firmware
+     This indicates the firmware will only run on the development firmware
      version `dev-12.0` or later (up to but not including `dev-13`)
 
 </div>
 
 ## Compatibility between Firmware version and Plugin version
 
-In general if you use the latest version of all plugins work and the latest
-version of firmware, then everything will run. But if you want to understand
+In general, if you use the latest versions of all plugins and the latest
+firmware version, then everything will run. But if you want to understand
 how it all works, then here are the rules for determining compatibility.
 
 First, some terminology:
@@ -165,7 +165,7 @@ Plugins have the SDK version used to compile the plugin in two places:
     there is a function `get_version()`
 
 The `SDK-X.X` file is present so that the plugin loader can abort early if it
-un-tars a plugin with an incompatible version. This file provides a small amount
+untars a plugin with an incompatible version. This file provides a small amount
 of assurance that executing the code in the plugin will not crash. 
 
 The `get_version()` symbol is called only after the the first two checks have passed.
@@ -177,11 +177,10 @@ If you have an unknown plugin and wish to open a plugin up to see what version i
 can extract the contents. 
    - On MacOS, right-click the .mmplugin file and open it with "Archive Utility"
    - On Linux, type the command: `tar -xf PluginFileName.mmplugin`
-   - On Windows, you can use a mingw shell and type the linux command. Or you
+   - On Windows, you can use a MinGW shell and type the Linux command. Or you
      may be able to use 7zip or TarTool if you rename the .mmplugin file to end
      in .tar. 
 
  Once you have it extracted, you will see a file starting with `SDK-`. This
  indicates the version. For instance `SDK-2.0` means the plugin requires
  firmware v2.0 or later (but earlier than the next major release which is 3.0).
-

@@ -10,7 +10,7 @@ The Module Action Menu is found by clicking on a module in a patch and then clic
 ## Actions
 
 ### Auto-map All
-This action attempts to maps all knobs and jacks in the order that they appear in the
+This action attempts to map all knobs and jacks in the order that they appear in the
 module. Existing maps will be preserved, and new Knob Sets will be created if
 needed.
 
@@ -61,10 +61,10 @@ to a plugin file like this:
 
 ### MIDI Assign
 
-This enables MIDI Assign mode, which allows you to quickly map params to MIDI CC or MIDI Note gate on/off
+This enables MIDI Assign mode, which allows you to quickly map parameters to MIDI CC or MIDI Note gate on/off
 events. See [Quick Assign Jacks](using_metamodule_jacks.md#quick-assign-jacks)
 
 ### Delete
 
 Delete the module from the patch, removing all cables and mappings. This cannot
-be undone. (However, you can Revert the patch file it to restore the module).
+be undone. (However, you can Revert the patch file to restore the module.)

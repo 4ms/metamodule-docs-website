@@ -1,4 +1,4 @@
-#MetaButtons Expander
+# MetaButtons Expander
 
 ## Getting Set Up
 
@@ -8,13 +8,16 @@ Read the PDF quick-start guide: [MetaButtons Quick Start](https://4mscompany.com
 
 ### Creating mappings
 
-You can map buttons to virtual parameters just like you map the knobs on the MetaModule:
-Either manually creating maps (see [Creating a New Knob Mapping](using_metamodule.md#creating-a-new-knob-mapping-or-midi-mapping)), or by using the Quick Map shortcut (holding down the rotary encoder and tapping a button, see [Quick Map Shortcut](using_metamodule.md#quick-map-shortcut))
+You can map buttons to virtual parameters just like you map the knobs on the
+MetaModule: either manually creating maps (see [Creating a New Knob
+Mapping](using_metamodule.md#creating-a-new-knob-mapping-or-midi-mapping)), or
+by using the Quick Map shortcut (holding down the rotary encoder and tapping a
+button. See [Quick Map Shortcut](using_metamodule.md#quick-map-shortcut)).
 
 
 ### Button maps and Knob Sets
 
-Like knob maps, button maps belong to a Knob Set. Changing the Knob Set will change the button mappings, just like it changes the knob mappings.
+Like knob maps, button maps belong to a Knob Set. Changing the Knob Set will change the button mappings, just as it changes the knob mappings.
 
 ### Button maps and Catchup-modes
 
@@ -35,7 +38,7 @@ B2-3, etc. (See below for information about the jumper positions)
 ### Editing a button map
 
 <div class="grid cards" markdown>
--  __Select Toggle mode to alternative between two states__ 
+-  __Select Toggle mode to alternate between two states__ 
 
      You can also adjust the Min and Max values to change which two states are
      toggled. For example, you can toggle between the middle and top positions
@@ -80,7 +83,7 @@ Creating patches with button mappings using VCV Rack follows the same process as
 <div class="grid cards" markdown>
 -  __3. Right-click the button to change Toggle mode__
 
-      The Min/Max settings controls the two values that the button toggles between.
+      The Min and Max settings control the two values that the button toggles between.
 
       You can also set an alias name for this mapping
 
@@ -106,7 +109,7 @@ You can daisy-chain up to four MetaButtons using the included cables.
 
   - Connect the first MetaButtons module to the MetaModule as described in the Quick Start guide above.
 
-  - To attach a second MetaButtons module, remove the adaptor board from the second MetaButtons' cable and
+  - To attach a second MetaButtons module, remove the adapter board from the second MetaButtons' cable and
 store the adaptor board in a safe place for future use.
 
   - Attach the cable directly from the "Toward MetaModule" header on the second
@@ -151,5 +154,4 @@ no two modules share the same slot).
 
   [![MetaButtons 4](./img/metabutton-jumper-4.png){ .half }](./img/metabutton-jumper-4.png)
 </div>
-
 

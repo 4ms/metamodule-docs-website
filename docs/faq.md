@@ -20,7 +20,7 @@ The built-ins are all modules from the following brands:
 
  - 4ms
 
- - Befaco (all except Midi Thing2)
+ - Befaco (all except MIDI Thing2)
 
  - HetrickCV
 
@@ -43,15 +43,14 @@ See [the Plugins page](https://metamodule.4ms.info/plugins) for a full up-to-dat
 
 We have a [free SDK](https://github.com/4ms/metamodule-plugin-sdk) to make it
 easy for developers to port their plugins to the MetaModule. You could request
-the developer or maintainer port it. Or make a request on our
+that the developer or maintainer port it. Or make a request on our
 [forum](https://forum.4ms.info).
 
 
 Some modules are not well suited for being controlled by physical knobs and
 jacks. These include modules that require heavy usage of screens or
-mouse-clicks, or modules that perform "magic tricks" like adding and removing
+mouse clicks, or modules that perform "magic tricks" like adding and removing
 controls or remote-controlling other modules. These kinds of modules will need
-to be re-imagined before they can offer a fun and creative user experience on
+to be reimagined before they can offer a fun and creative user experience on
 the MetaModule.
-
 

@@ -2,9 +2,9 @@
 
 ## MIDI Maps to parameters
 
-You can map MIDI CC or Note Gate on/off to paramters such as knobs, switches, and buttons. 
+You can map MIDI CC or Note Gate on/off to parameters such as knobs, switches, and buttons. 
 
-See [Using MetaModule](using_metamodule.md#creating-a-new-knob-mapping-or-midi-mapping) for detailed description
+See [Using MetaModule](using_metamodule.md#creating-a-new-knob-mapping-or-midi-mapping) for a detailed description
 of one method for adding MIDI maps.
 
 ### **Quick MIDI Map Shortcut**
@@ -43,14 +43,14 @@ Turn off MIDI Assign mode when you're done, or it will automatically turn off wh
 
 See more shortcuts on the [Shortcuts](shortcuts.md) page.
 
-### How MIDI param mappings work
+### How MIDI parameter mappings work
 
 You can map MIDI CC or MIDI Note Gates to parameters such as knobs, buttons, switches, etc. 
 
 The parameter value is always updated immediately when a MIDI message is received, regardless
 of the current [Knob Catchup](preferences.md) mode in the preferences page.
 
-On the [Edit Mapping](#editting-the-midi-channel-of-a-midi-mapping)
+On the [Edit Mapping](#editing-the-midi-channel-of-a-midi-mapping)
 page, each MIDI mapping can be set to respond to all MIDI channels, or just a
 particular MIDI channel.
 
@@ -65,11 +65,10 @@ mode](#midi-note-gate-toggle-mode)
 
 
 Note that while you can only map MIDI CC and Note Gates to parameters, you can
-map any MIDI message to input jacks: see [MIDI Input Jacks 
-MIDI](#midi-input).
+map any MIDI message to input jacks: see [MIDI Input Jacks](#midi-input-jacks).
 
 
-### Editting the MIDI Channel of a MIDI Mapping
+### Editing the MIDI Channel of a MIDI Mapping
 
 
 From the Module View page:
@@ -92,8 +91,8 @@ From the Module View page:
 
 -  __3. Adjust the MIDI Channel__
 
-     You may adjust the MIN/MAX sliders and the mapping name in the same way that
-     you do so for normal knob mappings.
+     You may adjust the MIN/MAX sliders and the mapping name in the same way
+     that you do for normal knob mappings.
 
      For MIDI Note Gate mappings, you may also change the Toggle mode (see below).
 
@@ -211,7 +210,7 @@ Note that the MetaModule always acts as a MIDI Host, and never as a MIDI Device.
 
 </div>
 <div class="grid cards" markdown>
--  __2. Patch the CV and gate signals you wish output as MIDI__
+-  __2. Patch the CV and gate signals you wish to output as MIDI__
 
      A log of MIDI events will appear on the module's screen.
 
@@ -240,7 +239,7 @@ Note that the MetaModule always acts as a MIDI Host, and never as a MIDI Device.
 
      The left side shows all MIDI jack mappings (maps to input jacks).
 
-     The right side shows all MIDI param mappings (maps to knobs, switches, buttons, etc).
+     The right side shows all MIDI parameter mappings (maps to knobs, switches, buttons, etc).
 
      Manually created mappings using the RackCore modules are not displayed here, but can be
      seen as normal cables in the patch view.
@@ -289,7 +288,6 @@ playback. This will send the current value of all MIDI-mapped parameters.
    [![MIDI Feedback Enabled](./img/midi-feedback.png){ .half }](./img/midi-feedback.png)
 
 </div>
-
 
 
 

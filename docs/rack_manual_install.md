@@ -1,13 +1,13 @@
 # How to install the VCV Rack plugin manually
 
-There is normally not any reason to install plugins manually. However, if you were asked by Support to 
+There is normally no reason to install plugins manually. However, if you were asked by Support to 
 try a special version, or are beta-testing, then here is the procedure to do a manual installation:
 
 <div class="grid cards" markdown>
 
 -  __1. Download the plugin__ 
 
-      From the [Downloads](../downloads){ target="blank" } page, click to
+      From the [Downloads](../downloads){ target="_blank" } page, click to
       download the plugin for the type of computer you have. If you have a Mac,
       make sure to download the x64 version for an Intel processor, or the arm64
       version for a newer Apple silicon processor.
@@ -40,12 +40,12 @@ try a special version, or are beta-testing, then here is the procedure to do a m
 
 -  __3. Put the downloaded file into the plugin directory__ 
 
-    The folder is named after they type of computer and OS you have, but always starts with `plugins-`
+    The folder is named after the type of computer and OS you have, but always starts with `plugins-`
 
     For example, on a Mac with Apple silicon, it's called `plugins-mac-arm64`, and on an Intel Mac it's `plugins-mac-x64`.
 
 
-   [![Cppying to plugin dir](./img/copy-rack-plugin.png){ .half }](./img/copy-rack-plugin.png)
+   [![Copying to plugin dir](./img/copy-rack-plugin.png){ .half }](./img/copy-rack-plugin.png)
 
 </div>
 <div class="grid cards" markdown>

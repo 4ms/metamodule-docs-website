@@ -16,7 +16,7 @@
       and copy the `.mmplugin` file to the `metamodule-plugins` folder on 
       your USB drive or microSD card.
 
-      You also can put the .mmplugin files in the root directory of the USB
+      You also can put the `.mmplugin` files in the root directory of the USB
       drive or microSD card.
 
       Insert the drive into the MetaModule.
@@ -92,7 +92,7 @@ plugin normally after startup.
       The next time you power on, the MetaModule will search the USB drive and
       microSD card for a plugin with a matching name.
 
-      Note: The wrong version may get loaded if you have different versions of the same plugin on an microSD card and a USB Drive, or different versions in the `metamodule-plugins/` folder and in the root directory.
+      Note: The wrong version may get loaded if you have different versions of the same plugin on a microSD card and a USB drive, or different versions in the `metamodule-plugins/` folder and in the root directory.
 
   [![Plugin Popup: Pre-load switch](./img/plugins-preload.png){ .half }](./img/plugins-preload.png)
 
@@ -134,6 +134,6 @@ plugin normally after startup.
 
     Click a second time to add it to the current patch.
 
-  [![Airwindows Galatic module being added](./img/airwindows-module-list.png){ .half }](./img/airwindows-module-list.png)
+  [![Airwindows Galactic module being added](./img/airwindows-module-list.png){ .half }](./img/airwindows-module-list.png)
 
 </div>
