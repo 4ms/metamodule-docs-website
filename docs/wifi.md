@@ -2,7 +2,7 @@
 
 ## Getting Set Up
 
-Read the PDF version here: [Wi‑Fi Quick Start](https://4mscompany.com/media/MetaModule/Wifi-QSG.pdf)
+Read the PDF version here: [Wi-Fi Quick Start](https://4mscompany.com/media/MetaModule/Wifi-QSG.pdf)
 
 ### Connect to MetaModule
 

@@ -82,8 +82,8 @@ Each of these is discussed in detail below:
 
          Plugin-v0.1-dev-12.mmplugin
 
-     This indicates the firmware will only run on the development firmware
-     version `dev-12.0` or later (up to but not including `dev-13`)
+     This indicates the plugin will only run on development firmware
+     version `dev-12.0` or later (up to but not including `dev-13`).
 
 </div>
 
@@ -131,8 +131,8 @@ version was linked to the firmware version it required.
 
 <div class="grid cards" markdown>
 
--  The VCV Rack plugin of 4ms modules also has a version. This is separate from
-   the version of the firmware of either the firmware or plugins.
+-  The VCV Rack plugin of 4ms modules also has a version, which is unrelated to
+   firmware and plugin SDK versions.
 
      You can see the version of the 4ms plugin for VCV Rack by right-clicking
      any 4ms module and looking in the `Info` sub-menu.
@@ -168,7 +168,7 @@ The `SDK-X.X` file is present so that the plugin loader can abort early if it
 untars a plugin with an incompatible version. This file provides a small amount
 of assurance that executing the code in the plugin will not crash. 
 
-The `get_version()` symbol is called only after the the first two checks have passed.
+The `get_version()` symbol is called only after the first two checks have passed.
 This returns a major, minor, and revision.
 
 #### Extracting contents of a plugin file

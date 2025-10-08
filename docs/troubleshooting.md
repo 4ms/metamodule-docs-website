@@ -56,7 +56,7 @@ It requires an SD Card which will be formatted. The SD Card must be at least
 1. Download the [metamodule restore image zip
    file](https://metamodule.info/dl/metamodule-restore-v1.6.4.img.zip)
 
-2. Unzip the restore image. The resulting file should be should be exactly 2GB and called
+2. Unzip the restore image. The resulting file should be exactly 2GB and called
    `metamodule-restore-v1.6.4.img`.
 
 3. Download [Balena Etcher](https://etcher.balena.io#download-etcher) and

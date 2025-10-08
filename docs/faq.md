@@ -34,7 +34,7 @@ The built-ins are all modules from the following brands:
  - Valley (Plateau, uGraph, Topograph, Feline, Interzone, Amalgam)
 
 
-See [the Plugins page](https://metamodule.4ms.info/plugins) for a full up-to-date list of plugins that are available, and which modules.
+See [the Plugins page](https://metamodule.4ms.info/plugins) for a full up-to-date list of plugins and modules that are available.
 
 
 ---
