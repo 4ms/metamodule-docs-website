@@ -23,12 +23,18 @@
      **Block Size:** 16, 32, 64, 128, 256, 512. Lower values result in less
      latency. Some modules may only work with higher values. Sometimes higher
      values are more efficient, using less CPU (varies per module and patch).
+
+     **Allow patch to override:** (Sample Rate and/or Block Size). Checking this allows patches to change
+     the sample rate and/or block size when the patch is loaded. You can view a patch's suggested audio
+     settings in the Info icon of the Patch View page. If a patch is currently overriding the audio
+     settings, then that will be displayed here in orange text. In that case, turning off the override
+     preference will restore the default audio setting.
   
      **Overrun Retries:** If a patch takes too long to render a block of audio, there will be an
      audio glitch. This setting selects the number of audio glitches you're willing to tolerate
      in a one second period before the patch is stopped.
   
-   [![Audio Settings](./img/prefs-audio-settings.png){ .wide-240 }](./img/prefs-audio-settings.png)
+   [![Audio Settings](./img/settings-patch-audio.png){ .wide-240 }](./img/settings-patch-audio.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -104,5 +110,26 @@
     See [MIDI Feedback](using_metamodule_midi.md#midi-feedback)
 
    [![MIDI Prefs](./img/prefs-midi.png){ .wide-240 }](./img/prefs-midi.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __Missing Plugins__
+
+    **Search for missing plugins**: This determines what happens when you open or reload a patch that uses modules that aren't installed.
+    The selected behavior will happen when a patch is opened, when it's refreshed via Wi-Fi or disk, or when you choose "Reload" or "Revert" from the file menu.
+
+      - Ask: List the missing modules, and ask permission to search all disks for plugins that contain those modules and then load them.
+
+      - Always: Immediately search all disks for plugins that may contain the missing modules, and then load those plugins.
+
+      - Never: Ignore missing modules
+
+    If a search and load happens and there are still missing modules afterwards, the list of missing modules will be displayed.
+
+    See [Auto-loading plugins](plugins.md#auto-loading-plugins)
+
+
+   [![Missing Plugins Prefs](./img/settings-missing-plugins.png){ .wide-240 }](./img/settings-missing-plugins.png) [![Ask Missing Plugins](./img/load-missing-plugin-conf.png){ .wide-240 }](./img/load-missing-plugin-conf.png)
 
 </div>

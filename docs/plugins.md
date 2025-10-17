@@ -110,6 +110,48 @@ plugin normally after startup.
 
 </div>
 
+## Auto-loading Plugins
+
+You can tell the MetaModule to load plugins only when needed. This is also known as "lazy loading".
+In Settings > Prefs > Missing Plugins you can enable this by choosing "Ask" or "Always".
+See [Preferences](preferences.md) for details.
+[![Missing Plugins Prefs](./img/settings-missing-plugins.png){ .wide-240 }](./img/settings-missing-plugins.png)
+
+
+For best results, keep a USB drive or microSD card installed on your
+MetaModule. The drive should contain the latest plugins.
+
+### Usage
+
+Whenever you open or reload a patch file, the MetaModule will scan it to see if
+it uses any modules that aren't currently loaded. If you selected "Ask" mode,
+then it will pop-up a dialog box listing the brands that are missing. Clicking
+Cancel will abort, otherwise it will proceed. Next it will scan the USB drive
+and microSD card for the latest version of the missing plugins. Then the
+MetaModule will load these plugins. 
+
+ [![Ask Missing Plugins](./img/load-missing-plugin-conf.png){ .wide-240 }](./img/load-missing-plugin-conf.png)
+
+ Specifically, the auto-loader will run in any of the following situations:
+ - Clicking on a patch name from the Patch Selector page
+ - Clicking on the "Now Playing" or "Last Viewed" patch name
+ - Selecting "Reload" or "Revert" from the File Menu on the Patch View page
+ - Updating a patch via Wi-Fi or on disk
+
+ The only times the Patch View page is opened but the auto-loader does not run
+ is when you access the Patch View page via the Back button (from the Main Menu
+ or another page).
+
+
+### Missing modules after auto-loading
+After scanning for plugins and loading them, the MetaModule will check if the plugins it
+loaded actually contained the missing modules. If there are still some missing
+modules, it will display these names in a pop-up. This could happen if the
+patch uses a module present in the VCV plugin but not present in the MetaModule
+plugin. Check the Plugins page to see if there are
+any updates to the MetaModule plugin.
+
+
 
 
 ## Viewing the modules in a plugin
