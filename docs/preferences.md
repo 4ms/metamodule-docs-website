@@ -119,11 +119,11 @@
     **Search for missing plugins**: This determines what happens when you open or reload a patch that uses modules that aren't installed.
     The selected behavior will happen when a patch is opened, when it's refreshed via Wi-Fi or disk, or when you choose "Reload" or "Revert" from the file menu.
 
-      - Ask: List the missing modules, and ask permission to search all disks for plugins that contain those modules and then load them.
+      - **Ask:** List the missing modules, and ask permission to search all disks for plugins that contain those modules and then load them.
 
-      - Always: Immediately search all disks for plugins that may contain the missing modules, and then load those plugins.
+      - **Always:** Immediately search all disks for plugins that may contain the missing modules, and then load those plugins.
 
-      - Never: Ignore missing modules
+      - **Never:** Ignore missing modules
 
     If a search and load happens and there are still missing modules afterwards, the list of missing modules will be displayed.
 

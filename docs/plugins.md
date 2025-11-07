@@ -123,34 +123,37 @@ MetaModule. The drive should contain the latest plugins.
 
 ### Usage
 
-Whenever you open or reload a patch file, the MetaModule will scan it to see if
-it uses any modules that aren't currently loaded. If you selected "Ask" mode,
-then it will pop-up a dialog box listing the brands that are missing. Clicking
-Cancel will abort, otherwise it will proceed. Next it will scan the USB drive
-and microSD card for the latest version of the missing plugins. Then the
-MetaModule will load these plugins. 
+Whenever you open or reload a patch file, the MetaModule will check if the
+patch uses any modules from plugins that aren't currently loaded. In "Ask"
+mode, a pop-up will listing the brands that are missing and ask you if you want
+to continue.
+
+The MetaModule will scan the USB drive and microSD card for the latest version
+of the missing plugins and then load them. 
 
  [![Ask Missing Plugins](./img/load-missing-plugin-conf.png){ .wide-240 }](./img/load-missing-plugin-conf.png)
 
- Specifically, the auto-loader will run in any of the following situations:
+
+The auto-loader will run in any of the following situations:
+
  - Clicking on a patch name from the Patch Selector page
  - Clicking on the "Now Playing" or "Last Viewed" patch name
  - Selecting "Reload" or "Revert" from the File Menu on the Patch View page
+ - Clicking on the Play button when a patch is paused or not playing
  - Updating a patch via Wi-Fi or on disk
 
- The only times the Patch View page is opened but the auto-loader does not run
- is when you access the Patch View page via the Back button (from the Main Menu
- or another page).
+ Specifically, the auto-loader will *not* be run if you press the Back button to navigate
+ to the Patch View page.
 
 
 ### Missing modules after auto-loading
-After scanning for plugins and loading them, the MetaModule will check if the plugins it
-loaded actually contained the missing modules. If there are still some missing
-modules, it will display these names in a pop-up. This could happen if the
-patch uses a module present in the VCV plugin but not present in the MetaModule
-plugin. Check the Plugins page to see if there are
-any updates to the MetaModule plugin.
+After scanning for plugins and loading them, if there are still some missing
+modules, these will display in a pop-up. This could happen if the patch uses a
+module present in the VCV plugin but not present in the MetaModule plugin, or
+if the plugin could not be found.
 
+Check the Plugins page to see if there are any updates to the MetaModule
+plugin.
 
 
 
