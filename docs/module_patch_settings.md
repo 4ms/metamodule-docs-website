@@ -25,7 +25,7 @@ These menus control how mappings and cables are drawn when viewing modules and t
 
 </div>
 
-### Graphics
+### GRAPHICS
 
 These options control how graphic screens on modules are displayed. The term
 "graphic screen" is a loose term that refers to any element on the module that's
@@ -44,8 +44,29 @@ graphic screen in the patch will be updated in turn, one graphic screen per 60Hz
 Each click of the slider to the left updates screens half as often (i.e. one
 screen per 30Hz refresh, then 15Hz refresh, etc..)
 
+### STATUS BAR
 
-### Maps
+*Patch View only*
+
+The status bar is visible in the Patch View in the upper-right corner.
+It displays the current CPU usage, and optionally more information.
+
+- __Show Audio Settings__: This option shows the current audio sample rate and blocksize
+in the status bar. For example, `48k/128 33%`
+
+- __Keep Status on top__: When enabled, the status bar will always be on shown in the upper-right corner,
+on top of everything else, even if the page scrolls.
+
+
+---
+
+
+*Patch View only*
+
+- __Show Knob Set Name__: This displays the name of the current Knob Set next to the patch name.
+
+
+### MAPS
 
 These options set how control mappings (knob, switch, and button maps) are displayed:
 
@@ -58,6 +79,10 @@ These options set how control mappings (knob, switch, and button maps) are displ
 - __Flash When Moved__: Whether to flash the colored ring when its panel knob
   is moved. This can be turned on even if Show Control Maps is off.
 
+- __Show Control Aliases__: *(Module View only)* When enabled, the alias name
+  for control mappings will be displayed next to the control name in the
+  element list.
+
 
 These options set how jack mappings to the panel are displayed:
 
@@ -68,6 +93,10 @@ These options set how jack mappings to the panel are displayed:
 - __Opacity__: How opaque or transparent to draw the circles. If Opacity is
   more than about 40%, the number of the jack will be drawn inside the circle.
 
+- __Show Jack Aliases__: *(Module View only)* When enabled, the alias name
+  for jack mappings will be displayed next to the jack name in the
+  element list.
+
 
 This option refers to both control mappings and jack mappings:
 
@@ -76,17 +105,17 @@ This option refers to both control mappings and jack mappings:
   This option is disabled if both Show Control Maps and Show Panel Jack Maps
   are off.
 
-- __Show on All Modules__: (Patch View only) When this option is enabled, maps
+- __Show on All Modules__: *(Patch View only)* When this option is enabled, maps
   will be drawn on all modules in the patch. When this is disabled, maps will
   be drawn on only the module that's currently focused. 
 This option is disabled if both Show Control Maps and Show Panel Jack Maps are off.
 
 ### Cables
 
-- __Show Cables__: (Patch View only)
+- __Show Cables__: *(Patch View only)*
   Toggles whether to draw cables connecting modules.
 
-- __Highlight Patched Jacks__: (Module View only)
+- __Highlight Patched Jacks__: *(Module View only)*
   Toggles whether to draw a colored square on
   jacks that have an internal cable patched to them. Output jacks have a square
   drawn around the outside of the jack, and input jacks have a square drawn on
