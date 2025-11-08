@@ -115,5 +115,39 @@ It requires an SD Card which will be formatted. The SD Card must be at least
     available, you can download it from [MetaModule
     Downloads](https://metamodule.info/downloads) and update normally.
 
+## Settings file backup/restore
+
+<div class="grid cards" markdown>
+   All user preferences are stored internally in a file. This includes 
+   the list of plugins to pre-load, module and patch display settings, all
+   options in the Settings > Prefs page, and the name of the initial patch too
+   load.
+
+   [![Backup Settings](./img/backup-restore-settings.png){ .wide-240 }](./img/backup-restore-settings.png)
+
+</div>
+<div class="grid cards" markdown>
+  - Backup settings to file
+
+    For troubleshooting preferences issues, it can be helpful to view the contents
+    of the settings file. Click this button and then select whether you want to save the 
+    file onto the SD card or USB drive. The file will be called `settings.yml`.
+    Open it as plain text on your computer to inspect the contents, or if requested,
+    send it to customer support.
+
+    If the disk already contains a file with this name, it will be overwritten.
+</div>
+<div class="grid cards" markdown>
+  - Load settings from file
+
+    If you want to load a settings file, click this button and select a disk drive
+    to load from. The disk must contain a file naemd `settings.yml`.
+
+    Loading a settings file will overwrite the current settings and prefernces. Some
+    settings will only take effect after a reboot.
+</div>
+
+
+
 
 

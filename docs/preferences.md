@@ -26,7 +26,7 @@
 
      **Allow patch to override:** (Sample Rate and/or Block Size). Checking this allows patches to change
      the sample rate and/or block size when the patch is loaded. You can view a patch's suggested audio
-     settings in the Info icon of the Patch View page. If a patch is currently overriding the audio
+     settings in the Info icon of the Patch View page. See [Patch Info](module_patch_settings.md#patch-info). If a patch is currently overriding the audio
      settings, then that will be displayed here in orange text. In that case, turning off the override
      preference will restore the default audio setting.
   

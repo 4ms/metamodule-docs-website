@@ -128,26 +128,45 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 
 ---
 
-## Patch Name and Description
+## Patch Info
 
 <div class="grid cards" markdown>
--   __Patch Description__ 
+-   __Patch Info__ 
 
-    The Patch Description page is opened by clicking the (I) info icon when viewing a patch.
+    The Patch Info window is opened by clicking the (I) info icon when viewing a patch.
 
 -   [![Patch View Info icon](./img/patchview-info-icon.png){ .half }](./img/patchview-info-icon.png)
 </div>
 <div class="grid cards" markdown>
--   The patch name, file name, description, MIDI polyphony channels (if MIDI
-    notes are mapped) are shown.
+-   The patch name and file name are shows at the top
 
+    If the patch contains MIDI note mappings, the MIDI polyphony channels is shown below the file name.
     
--   [![Patch View Description](./img/patch-description.png){ .half }](./img/patch-description.png)
+-   [![Patch View Description](./img/patch-info-audio-settings.png){ .half }](./img/patch-info-audio-settings.png)
 </div>
 <div class="grid cards" markdown>
--   Click Edit to edit the description.
+-   Click on the description to edit the text.
    
 -   [![Patch View Description Edit](./img/patch-description-edit.png){ .half }](./img/patch-description-edit.png)
+</div>
+<div class="grid cards" markdown>
+-   __Description__
+     
+    Click on the description to edit the text.
+   
+-   [![Patch View Description Edit](./img/patch-description-edit.png){ .half }](./img/patch-description-edit.png)
+</div>
+<div class="grid cards" markdown>
+-   __Patch Sample Rate and Block Size__
+    
+    You can set the suggested sample rate and block size for each patch. When
+    the "Allow Patch to Override" preference is enabled (see [preferences](preferences.md)),
+    the sample rate and block size will automatically be set to these values
+    when the patch is loaded.
+
+    Changing these values while the patch is playing will immediately change
+    the current sample rate and block size.
+   
 </div>
 
 ---
