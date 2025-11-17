@@ -33,6 +33,7 @@ validation:
 theme:
   name: material
   logo: img/logo.png
+  font: false
   favicon: img/favicon-32x32.png
   features:
     - navigation.instant
@@ -110,5 +111,6 @@ extra:
       link: https://github.com/4ms
       name: 4ms Github
   generator: false
-
+  polyfills:
+    - iframe-worker.js
 
