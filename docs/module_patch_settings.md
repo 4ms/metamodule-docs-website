@@ -46,16 +46,17 @@ screen per 30Hz refresh, then 15Hz refresh, etc..)
 
 ### STATUS BAR
 
-*Patch View only*
 
-The status bar is visible in the Patch View in the upper-right corner.
-It displays the current CPU usage, and optionally more information.
+The status bar is visible in the upper-right corner of the Patch View, and the
+upper-left corner of the Module View. It displays the current CPU usage, and
+optionally the audio sample rate and block size.
 
-- __Show Audio Settings__: This option shows the current audio sample rate and blocksize
-in the status bar. For example, `48k/128 33%`
+- __Show Audio Settings__: This option shows the current audio sample rate and block size
+  in the status bar before the CPU load. For example, `48k/128 33%`
 
-- __Keep Status on top__: When enabled, the status bar will always be on shown in the upper-right corner,
-on top of everything else, even if the page scrolls.
+- __Show Status__ (*Module View*) / __Show Status on Top__ (*Patch View*): When
+  enabled, the status bar will always be on shown in the corner, on
+  top of everything else, even if the page scrolls.
 
 
 ---
@@ -133,24 +134,24 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 <div class="grid cards" markdown>
 -   __Patch Info__ 
 
-    The Patch Info window is opened by clicking the (I) info icon when viewing a patch.
+    The Patch Info window is opened by clicking the `(i)` info icon when viewing a patch.
 
 -   [![Patch View Info icon](./img/patchview-info-icon.png){ .half }](./img/patchview-info-icon.png)
 </div>
 <div class="grid cards" markdown>
--   The patch name and file name are shows at the top
+-   The Patch Info window contains information about the patch:
 
-    If the patch contains MIDI note mappings, the MIDI polyphony channels is shown below the file name.
+     - Patch name 
+     - File name
+     - MIDI polyphony channels (if relevant)
+     - Patch description
+     - Patch's sample rate and block size
+
     
 -   [![Patch View Description](./img/patch-info-audio-settings.png){ .half }](./img/patch-info-audio-settings.png)
 </div>
 <div class="grid cards" markdown>
--   Click on the description to edit the text.
-   
--   [![Patch View Description Edit](./img/patch-description-edit.png){ .half }](./img/patch-description-edit.png)
-</div>
-<div class="grid cards" markdown>
--   __Description__
+-   __Patch Description__
      
     Click on the description to edit the text.
    
