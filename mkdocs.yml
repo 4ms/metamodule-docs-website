@@ -1,4 +1,4 @@
-site_name: MetaModule Manual
+site_name: MetaModule Manual<br>Firmware v2.1.6
 nav:
   - Getting Started: getting_started.md
   - Using Knobs: using_metamodule.md
