@@ -64,6 +64,16 @@ to a plugin file like this:
 This enables MIDI Assign mode, which allows you to quickly map parameters to MIDI CC or MIDI Note gate on/off
 events. See [Quick Assign Jacks](using_metamodule_jacks.md#quick-assign-jacks)
 
+### Bypass
+
+Bypass toggles a module on or off without removing it from the patch. When bypassed,
+the module stops processing audio and CV, but all settings, mappings, and cables are 
+preserved. Bypassed modules appear dimmed. The bypass state is saved with the patch 
+and restored on load.
+
+Use bypass to temporarily disable a module while experimenting, or to compare your patch
+with and without a particular effect.
+
 ### Delete
 
 Delete the module from the patch, removing all cables and mappings. This cannot
