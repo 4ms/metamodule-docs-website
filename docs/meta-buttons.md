@@ -19,6 +19,14 @@ button. See [Quick Map Shortcut](using_metamodule.md#quick-map-shortcut)).
 
 Like knob maps, button maps belong to a Knob Set. Changing the Knob Set will change the button mappings, just as it changes the knob mappings.
 
+When the Hub changes Knob Sets (whether from the MetaModule's encoder shortcut, the MetaModule's
+Knob Sets page, or via MIDI), all connected MetaButtons modules will automatically switch to
+the same Knob Set.
+
+!!! note "Multiple Hubs"
+    If a patch contains more than one Hub, all MetaButtons modules will change Knob Sets whenever
+    *any* Hub changes Knob Sets.
+
 ### Button maps and Catchup-modes
 
 Button maps are not constrained by [Knob Catchup](preferences.md) modes. Pressing a button will always update the mapped parameter.
@@ -65,9 +73,11 @@ Button maps are shown below knob maps.
 ### Creating maps with VCV Rack
 
 Creating patches with button mappings using VCV Rack follows the same process as creating maps to knobs.
+The MetaButtons module in VCV Rack tracks the Hub's active Knob Set; the right-click menu on the
+MetaButtons module shows which Knob Set is currently active.
 
 <div class="grid cards" markdown>
--  __1. Add a MetaButtons module to your patch__ 
+-  __1. Add a MetaButtons module to your patch__
 
      Make sure the number in the bottom corner matches the jumper installed on the back of your module.
      If not, click it until it does.
