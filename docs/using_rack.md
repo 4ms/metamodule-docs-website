@@ -209,7 +209,7 @@ try a special version, or are beta-testing, then [here is the procedure to do a 
 <div class="grid cards" markdown>
 -  __Right-click the MetaModule Hub knob or the virtual module knob__
 
-    Select "Unmap" from the menu.
+    Select `Unmap` from the menu.
 
    [![Unmap Knob menu](./img/vcv-unmap.png){ .half }](./img/vcv-unmap.png)
 
@@ -244,6 +244,26 @@ See [Knob Sets](using_metamodule.md#knob-sets) for more information.
 Select a Knob Set and type a name in the box above the yellow circles.
 
 This name will be displayed on the MetaModule.
+
+
+### Assigning Module Aliases
+
+<div class="grid cards" markdown>
+-  __Right-click the MetaModule Hub and select `Module Aliases`__
+
+    Each module in the patch is listed. Type a name in the text field next to a module
+    to set its alias. To remove an alias, clear the text field.
+
+    In VCV Rack, aliased modules display a colored label at the top of their panels.
+
+   [![Module Aliases submenu](./img/vcv-module-aliases.png){ .half }](./img/vcv-module-aliases.png)
+
+</div>
+
+You can also add aliases using the [GLUE module from stoermelder](https://library.vcvrack.com/Stoermelder-P1/Glue).
+If a module has both an alias set in the Meta Hub and a label set in GLUE, the Hub alias takes precedence. To use
+GLUE _without_ your GLUE labels setting aliases in your MetaModule patch, right-click the Hub and uncheck
+`Use stoermelder GLUE for aliases`.
 
 
 
