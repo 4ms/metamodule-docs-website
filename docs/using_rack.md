@@ -146,8 +146,8 @@ try a special version, or are beta-testing, then [here is the procedure to do a 
 
 </div>
 <div class="grid cards" markdown>
--  __5. Save the Patch__ 
-    
+-  __5. Save the Patch__
+
     Give the patch a name by typing it in the top box.
 
     You can also give it a description or patch notes in the box below.
@@ -183,6 +183,29 @@ try a special version, or are beta-testing, then [here is the procedure to do a 
    <br>
    [![Loaded patch](./img/vcv-play-bouncingscales.png){ .half }](./img/vcv-play-bouncingscales.png)
 </div>
+
+### Choosing which modules to include in the saved patch
+
+By default, all modules in the VCV Rack patch are written into the MetaModule patch file. You
+can limit which modules are included by right-clicking the MetaModule Hub and choosing
+**Include Modules from:**.
+
+<div class="grid cards" markdown>
+-  __Right-click the MetaModule Hub and select `Include Modules from:`__
+
+   [![Hub right-click menu showing Include Modules from submenu](./img/vcv-include-modules-from.png){ .half }](./img/vcv-include-modules-from.png)
+</div>
+
+| Option | What gets included |
+|---|---|
+| **All** *(default)* | Every module in the patch |
+| **Left Only** | Only modules that are physically touching each other in an unbroken chain to the left of the Hub |
+| **Right Only** | Only modules in an unbroken chain to the right of the Hub |
+| **Left & Right Only** | Modules in unbroken chains on either side |
+| **Connected** | Only modules connected to the Hub by cables, directly or through any number of intermediate modules |
+
+This is useful when you have reference modules, utility modules, or work-in-progress modules
+in the same VCV Rack patch that you don't want to include in the MetaModule patch file.
 
 ### How to set the name or min/max range of a knob mapping
 
@@ -246,7 +269,28 @@ Select a Knob Set and type a name in the box above the yellow circles.
 This name will be displayed on the MetaModule.
 
 
-### Assigning Module Aliases
+## Setting Suggested Audio Settings
+
+You can embed a suggested sample rate and block size into a patch from VCV Rack. When the MetaModule
+loads the patch and the **Allow patch to override** preference is enabled, it will automatically
+apply these settings.
+
+<div class="grid cards" markdown>
+-  __Right-click the MetaModule Hub and select `Suggested Audio Settings`__
+
+    Choose the desired sample rate and block size from the submenus.
+
+   [![Hub right-click menu showing Suggested Audio Settings](./img/vcv-suggested-audio-settings.png){ .half }](./img/vcv-suggested-audio-settings.png)
+</div>
+
+To enable the MetaModule to apply these settings on load, see
+[Allow patch to override](preferences.md#audio-settings) in Preferences.
+You can also view and change the suggested audio settings directly on the MetaModule in the
+[Patch Info](module_patch_settings.md#patch-info) window.
+
+---
+
+## Assigning Module Aliases
 
 <div class="grid cards" markdown>
 -  __Right-click the MetaModule Hub and select `Module Aliases`__
