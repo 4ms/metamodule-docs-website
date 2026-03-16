@@ -8,3 +8,4 @@ protected
 metamodule-docs/
 
 pyenv/
+**/settings.local.json
