@@ -182,3 +182,42 @@ plugin.
   [![Airwindows Galactic module being added](./img/airwindows-module-list.png){ .half }](./img/airwindows-module-list.png)
 
 </div>
+
+---
+
+## Browsing Modules by Tag
+
+In addition to browsing by brand, you can browse by **Tag**. Tags group modules by function
+(e.g. *VCO*, *Filter*, *Sequencer*, *Reverb*), making it easier to find a module type.
+
+
+<div class="grid cards" markdown>
+
+-  __Click the sort button at the top of the module list__
+
+    Toggle between **Brand** and **Tag** views.
+
+  [![Module browser sort menu showing Brand and Tag options](./img/module-browser-sort-menu.png){ .half }](./img/module-browser-sort-menu.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __In Tag view, choose a tag__
+
+  [![Module browser in Tag view showing list of tags](./img/module-browser-tag-list.png){ .half }](./img/module-browser-tag-list.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __Click a tag to see all modules with that tag__
+
+  [![Module browser showing Mixer modules](./img/module-browser-tag-mixer.png){ .half }](./img/module-browser-tag-mixer.png)
+
+</div>
+
+Tags follow the VCV Rack standard tag system, which consolidates related terms under one label.
+For example, "VCO", "Oscillator", and "Voltage Controlled Oscillator" all map to the same tag.
+Module tags are set by the plugin developer.
+
+As a difference from the VCV Rack standard tag system, custom tags are allowed to appear in the MetaModule.
+
