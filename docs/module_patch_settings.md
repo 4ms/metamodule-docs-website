@@ -159,7 +159,7 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 </div>
 <div class="grid cards" markdown>
 -   __Patch Sample Rate and Block Size__
-    
+
     You can set the suggested sample rate and block size for each patch. When
     the "Allow Patch to Override" preference is enabled (see [preferences](preferences.md)),
     the sample rate and block size will automatically be set to these values
@@ -167,7 +167,10 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 
     Changing these values while the patch is playing will immediately change
     the current sample rate and block size.
-   
+
+    You can also set these values from VCV Rack when creating the patch: see
+    [Setting Suggested Audio Settings](using_rack.md#setting-suggested-audio-settings).
+
 </div>
 
 ---

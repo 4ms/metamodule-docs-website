@@ -25,10 +25,11 @@
      values are more efficient, using less CPU (varies per module and patch).
 
      **Allow patch to override:** (Sample Rate and/or Block Size). Checking this allows patches to change
-     the sample rate and/or block size when the patch is loaded. You can view a patch's suggested audio
-     settings in the Info icon of the Patch View page. See [Patch Info](module_patch_settings.md#patch-info). If a patch is currently overriding the audio
-     settings, then that will be displayed here in orange text. In that case, turning off the override
-     preference will restore the default audio setting.
+     the sample rate and/or block size when the patch is loaded. You can view or set a patch's suggested audio
+     settings in the Info icon of the Patch View page (see [Patch Info](module_patch_settings.md#patch-info)),
+     or from VCV Rack when creating the patch (see [Setting Suggested Audio Settings](using_rack.md#setting-suggested-audio-settings)).
+     If a patch is currently overriding the audio settings, then that will be displayed here in orange text.
+     In that case, turning off the override preference will restore the default audio setting.
   
      **Overrun Retries:** If a patch takes too long to render a block of audio, there will be an
      audio glitch. This setting selects the number of audio glitches you're willing to tolerate
