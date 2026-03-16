@@ -218,6 +218,28 @@ Note that the MetaModule always acts as a MIDI Host, and never as a MIDI Device.
 
 </div>
 
+### CV to MIDI CC
+
+The **CV to MIDI CC** module converts CV inputs to MIDI CC messages. It has 16 CV input jacks arranged
+in a 4×4 grid, each independently assignable to any MIDI CC number. Use CV to MIDI CC when you want to
+drive external MIDI hardware or software synthesizers with CV signals from your patch.
+
+<div class="grid cards" markdown>
+-  To use, patch CV signals into any of the 16 jacks.
+   By default, Jack 1 → CC 1, Jack 2 → CC 2, and so on.
+
+   [![CV-CC module](./img/cv-cc-module.png){ .half }](./img/cv-cc-module.png)
+</div>
+<div class="grid cards" markdown>
+-  To assign a CC number to a cell:
+
+    Click `Options>>>` at the bottom of the list, select the cell, and choose a CC number from the list. 
+
+    Two cells cannot have the same CC number assigned to them.
+
+   [![CV-CC module CC setup](./img/cv-cc-module-set-cc.png){ .half }](./img/cv-cc-module-set-cc.png)
+</div>
+
 ---
 
 ## Viewing all MIDI mappings
@@ -288,8 +310,5 @@ playback. This will send the current value of all MIDI-mapped parameters.
    [![MIDI Feedback Enabled](./img/midi-feedback.png){ .half }](./img/midi-feedback.png)
 
 </div>
-
-
-
 
 
