@@ -1,4 +1,4 @@
-site_name: MetaModule Manual<br>Firmware v2.1.6
+site_name: MetaModule Manual<br>Firmware v2.1.11
 nav:
   - Getting Started: getting_started.md
   - Using Knobs: using_metamodule.md
@@ -14,6 +14,8 @@ nav:
      - Wifi Expander: wifi.md
      - MetaAIO (Audio/CV Expander): meta-aio.md
      - MetaButtons: meta-buttons.md
+  - Modules:
+     - Basic Wav Player: basic-wav-player.md
   - Help:
      - Troubleshooting: troubleshooting.md
      - FAQ: faq.md
