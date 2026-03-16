@@ -14,8 +14,12 @@ nav:
      - Wifi Expander: wifi.md
      - MetaAIO (Audio/CV Expander): meta-aio.md
      - MetaButtons: meta-buttons.md
-  - Modules:
+  - Special Modules:
      - Basic Wav Player: basic-wav-player.md
+     - Scope: using_metamodule_jacks.html#monitoring-signals-scope-module
+     - MIDI to CV: using_metamodule_midi.html#using-the-midi-to-cv-module
+     - CV to MIDI: using_metamodule_midi.html#cv-to-midi-notes
+     - CV to MIDI CC: using_metamodule_midi.html#cv-to-midi-cc
   - Help:
      - Troubleshooting: troubleshooting.md
      - FAQ: faq.md

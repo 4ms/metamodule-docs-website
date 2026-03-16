@@ -178,9 +178,9 @@ You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or u
    [![MIDI maps](./img/midi-map-pw.png){ .half }](./img/midi-map-pw.png)
 </div>
 
-### Using a MIDI input module
+### Using the MIDI to CV module
 <div class="grid cards" markdown>
--  __1. Add the RackCore MIDIToCVInterface module__
+-  __1. Add the MIDI to CV module from the RackCore brand__
 
    [![MIDI to CV module](./img/rackcore-midi-cv-module.png){ .half }](./img/rackcore-midi-cv-module.png)
 
@@ -196,12 +196,14 @@ You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or u
 
 ## Patching Outputs to MIDI
 
-To support MIDI Output as a MIDI Host, the MetaModule has the CV-MIDI module
-in the RackCore brand.
+To support MIDI Output as a MIDI Host, the MetaModule has the `CV to MIDI` and
+`CV to MIDI CC` modules in the RackCore brand.
 
 Third-party plugin modules that produce MIDI Output should work, as well.
 
 Note that the MetaModule always acts as a MIDI Host, and never as a MIDI Device.
+
+### CV to MIDI (Notes)
 
 <div class="grid cards" markdown>
 -  __1. Add the RackCore CV-MIDI module__

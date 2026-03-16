@@ -37,8 +37,14 @@ large samples.
 
 ### Waveform Display
 
-The module shows the sample waveform while playing. On the MetaModule, clicking on the Display will make it full-screen.
-The Waveform Zoom feature adjusts how much of the sample to display on the screen.
+The module shows the sample waveform while playing. On the MetaModule, clicking on the Waveform Display will make it full-screen.
+<div class="grid cards" markdown>
+   [![Basic Wav Player waveform element](./img/bwavp-waveform-element.png){ .half }](./img/bwavp-waveform-element.png)
+
+   [![Basic Wav Player full-screen waveform](./img/bwavp-waveform-display.png){ .half }](./img/bwavp-waveform-display.png)
+</div>
+
+The [Waveform Zoom](#waveform-zoom) feature adjusts how much of the sample to display on the screen.
 
 The waveform itself is color-coded:
 
