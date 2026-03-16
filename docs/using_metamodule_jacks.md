@@ -187,3 +187,46 @@ You can "follow" a cable to trace the connections between modules.
 
    [![Other end of connecting jack](./img/connecting-jack-end.png){ .half }](./img/connecting-jack-end.png)
 </div>
+
+---
+
+## Monitoring Signals: Scope Module
+
+The built-in **Scope** module lets you visualize CV and audio signals on the MetaModule's display.
+It is found in the **RackCore** brand in the module browser.
+
+<div class="grid cards" markdown>
+   [![Scope module showing waveforms](./img/scope-module.png){ .half }](./img/scope-module.png)
+</div>
+
+The display shows live peak-to-peak, max, and min values for each channel alongside the waveform.
+Clicking the display in the parameter/jack list will show it full-screen:
+
+<div class="grid cards" markdown>
+   [![Scope module full-screen](./img/scope-fullscreen.png){ .half }](./img/scope-fullscreen.png)
+
+   [![Scope module Lissajous](./img/scope-1x2.png){ .half }](./img/scope-1x2.png)
+</div>
+
+**Inputs:**
+
+| Jack | Description |
+|---|---|
+| **Ch 1 (X)** | Primary input signal |
+| **Ch 2 (Y)** | Secondary input signal |
+| **Trig** | Optional external trigger for stable display sync |
+
+**Outputs:** Ch 1 and Ch 2 are passed through unchanged, so patching through the Scope
+does not interrupt signal flow.
+
+**Controls:**
+
+| Control | Description |
+|---|---|
+| **Gain 1 / Gain 2** | Vertical scale for each channel |
+| **Offset 1 / Offset 2** | Vertical position shift for each channel |
+| **Time** | Horizontal time scale (sweep speed) |
+| **Mode** | `1 & 2`: dual stacked view; `1 x 2`: Lissajous (XY) mode |
+| **Trig** | Enable/disable external trigger sync |
+| **Thresh** | Trigger detection threshold |
+
