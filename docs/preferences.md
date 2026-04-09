@@ -99,9 +99,9 @@
 </div>
 <div class="grid cards" markdown>
 
--  __MIDI__
+-  __MIDI Feedback__
 
-    MIDI Feedback is a feature that sends the value of MIDI-mapped knobs back to the MIDI controller.
+    **MIDI Feedback** sends the value of MIDI-mapped knobs back to the MIDI controller.
     This allows the controller to stay in sync with the patch when you load patches, change knob sets,
     and when modules change their own parameter values (for example loading a scale preset on a module).
 
@@ -111,6 +111,18 @@
     See [MIDI Feedback](using_metamodule_midi.md#midi-feedback)
 
    [![MIDI Prefs](./img/prefs-midi.png){ .wide-240 }](./img/prefs-midi.png)
+</div>
+<div class="grid cards" markdown>
+-  __MIDI CC Knob Set Select__
+
+    **MIDI CC Knob Set switching** lets you change the active Knob Set with a
+    single MIDI CC message. When enabled, choose a MIDI Channel and CC# — sending
+    a value of 0–7 on that channel and CC# will immediately switch to the 1st
+    through 8th Knob Set (CC value 0 → Knob Set 1, 1 → Knob Set 2, …, 7 → Knob Set 8).
+
+    See [MIDI CC Knob Set switching](using_metamodule_midi.md#midi-cc-knob-set-switching)
+
+   [![MIDI CC Knob Set Select](./img/settings-midi-knobset-select.png){ .wide-240 }](./img/settings-midi-knobset-select.png)
 
 </div>
 <div class="grid cards" markdown>

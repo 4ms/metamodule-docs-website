@@ -32,8 +32,9 @@ supported on the current version of the MetaModule*
 
      - Then scroll to the jack you want to patch to, and click on it.
 
-     Only valid jacks will be shown. You cannot connect multiple outputs to
-     an input. 
+     Only valid jacks will be shown. If the destination input jack is already
+     connected to another output, the new cable will be summed with the
+     existing one (see [Summed input jacks](#summed-input-jacks)).
 
      If you want to cancel making a cable, click "Cancel Cable" or press the
      Back button from the Patch View page.
@@ -46,9 +47,10 @@ supported on the current version of the MetaModule*
 
      *Note: Keep in mind that the physical panel Input jacks are treated like
      outputs. This makes sense if you consider that they send signals to
-     virtual modules. Therefore, if a panel Input (i.e. In 1-6 or GateIn 1-2)
-     is patched to a virtual input jack, then you cannot patch another output to the
-     same virtual input jack (because only one output can drive an input).*
+     virtual modules. If a panel Input (i.e. In 1-6 or GateIn 1-2) is already
+     patched to a virtual input jack, you can still patch another output to
+     the same virtual input jack — the signals will be summed together (see
+     [Summed input jacks](#summed-input-jacks)).*
 
    [![New Cable done](./img/new-cable-done.png){ .half }](./img/new-cable-done.png)
 
@@ -106,6 +108,25 @@ This is a fast way to assign a lot of jacks to the panel.
 </div>
 
 See more shortcuts on the [Shortcuts](shortcuts.md) page.
+
+### Summed input jacks
+
+The MetaModule supports patching multiple outputs to a single input jack. When
+this happens, the output signals are summed together at unity gain before
+reaching the input — exactly as if they were passed through a simple unity
+mixer. This works for any combination of internal (virtual module) cables and
+panel jack mappings going to the same input.
+
+Summing multiple outputs into one input is more efficient than inserting a
+mixer module when you just need a basic unity mix.
+
+This feature also matches how VCV Rack handles stacked input cables, so
+patches you create in VCV Rack that sum signals into a single input will play
+seamlessly when loaded onto the MetaModule.
+
+To create a summed input on the MetaModule, simply patch a new cable to an
+input jack that is already connected. The `Connected To:` list for that input
+will show every output that is feeding it.
 
 
 ### Creating or editing a Jack Alias

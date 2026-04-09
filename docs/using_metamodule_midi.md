@@ -313,4 +313,31 @@ playback. This will send the current value of all MIDI-mapped parameters.
 
 </div>
 
+---
+
+## MIDI CC Knob Set switching
+
+You can use a single MIDI CC message to instantly switch between the eight
+Knob Sets in the current patch. This is useful for changing performance
+"scenes" using any MIDI device that can send CC values.
+
+When enabled, sending a CC value of 0–7 on the chosen MIDI Channel and CC#
+will immediately make the corresponding Knob Set active:
+
+| CC value | Knob Set |
+|---|---|
+| 0 | Knob Set 1 |
+| 1 | Knob Set 2 |
+| 2 | Knob Set 3 |
+| ... | ... |
+| 7 | Knob Set 8 |
+
+CC values outside the 0–7 range are ignored. The CC# you choose for Knob Set
+switching can still be used as a normal MIDI parameter mapping.
+
+To enable this feature, go to **Settings > Prefs > MIDI** and set the
+MIDI Channel and CC# for Knob Set switching. See [Preferences](preferences.md).
+
+For more information about Knob Sets, see [Knob Sets](using_metamodule.md#knob-sets).
+
 
