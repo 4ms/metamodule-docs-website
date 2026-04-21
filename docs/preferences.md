@@ -127,6 +127,25 @@
 </div>
 <div class="grid cards" markdown>
 
+-  __Notifications__
+
+    Notifications are pop-up messages that appear briefly on the screen to
+    confirm actions, warn about errors, and report status. If you find them
+    distracting, you can reduce how many you see:
+
+    **Show:**
+
+      - **All:** show every notification (default).
+      - **Fewer:** hide routine status notifications. Errors and important messages are still shown.
+      - **Critical:** only show errors and messages that must be acknowledged (for example: a file failed to save, or a patch has unsaved changes and cannot be updated).
+
+    **Animations:** when off, notifications appear and disappear instantly
+    instead of using the dropdown animation. Turn this off if the animation
+    feels slow or distracting.
+
+</div>
+<div class="grid cards" markdown>
+
 -  __Missing Plugins__
 
     **Search for missing plugins**: This determines what happens when you open or reload a patch that uses modules that aren't installed.

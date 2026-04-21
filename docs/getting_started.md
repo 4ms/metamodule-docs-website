@@ -139,6 +139,10 @@
 
       The drive will be automatically detected. 
 
+      The detected firmware's version and contents (main firmware, WiFi
+      firmware, bootloader, assets) are displayed on the Firmware Update tab so
+      you can confirm what is about to be installed before starting.
+
       You must leave the module powered on the entire time it is updating.
 
       It takes about a minute.

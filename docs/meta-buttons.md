@@ -27,6 +27,56 @@ the same Knob Set.
     If a patch contains more than one Hub, all MetaButtons modules will change Knob Sets whenever
     *any* Hub changes Knob Sets.
 
+### Using MetaButtons to change Knob Sets
+
+You can configure a MetaButtons expander so that pressing Button 1 jumps to
+Knob Set 1, Button 2 to Knob Set 2, and so on up to Button 8 → Knob Set 8.
+If the patch doesn't have the requested Knob Set, the button acts normally
+(its press and release events are passed through to the module it's mapped to).
+
+The behavior is set in **Settings > Prefs > MetaButtons**:
+
+  - **Disabled:** buttons never change Knob Sets — the default.
+
+  - **Expander 1 / 2 / 3 / 4:** only the designated MetaButtons expander
+    changes Knob Sets. The other expanders continue to work as normal button
+    mappings.
+
+  - **Any/All expanders:** any MetaButtons expander can change Knob Sets.
+
+<div class="grid cards" markdown>
+
+-  __Back + Expander Button mode__
+
+     Optionally, you can require holding the Back button while pressing an
+     expander button in order to switch Knob Sets. This mirrors the
+     [Back + encoder turn](using_metamodule.md#knob-set-shortcut) shortcut
+     on the MetaModule and lets you use the same buttons for both normal
+     mappings and Knob Set navigation in the same patch.
+
+     When this mode is on, Back events are suppressed on button release so
+     the Back button doesn't also navigate away from the current page.
+
+   [![MetaButtons Knob Set preferences](./img/settings-metabutton-knobset.png){ .wide-240 }](./img/settings-metabutton-knobset.png)
+
+</div>
+
+!!! warning "Mapping buttons alongside Knob Set navigation"
+    If **Back + Expander Button** is *off* and you map a button that is also
+    configured to select a Knob Set, it's unpredictable whether the button
+    event fires against the old or new Knob Set's mappings. Turn on
+    **Back + Expander Button** mode if you want to use button mappings and
+    button-based Knob Set navigation in the same patch.
+
+!!! note "Back button suppresses button events"
+    Regardless of the Knob Set feature settings, holding Back now suppresses
+    all MetaButtons events in the audio stream — modules will not see button
+    press or release events while Back is held.
+
+<div class="grid cards" markdown>
+   [![MetaButtons as Knob Set selector](./img/metabuttons-knobset-sel.png){ .half }](./img/metabuttons-knobset-sel.png)
+</div>
+
 ### Button maps and Catchup-modes
 
 Button maps are not constrained by [Knob Catchup](preferences.md) modes. Pressing a button will always update the mapped parameter.
