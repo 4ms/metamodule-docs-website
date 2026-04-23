@@ -113,9 +113,9 @@
    [![MIDI Prefs](./img/prefs-midi.png){ .wide-240 }](./img/prefs-midi.png)
 </div>
 <div class="grid cards" markdown>
--  __MIDI CC Knob Set Select__
+-  __MIDI Knob Set Select__
 
-    **MIDI CC Knob Set switching** lets you change the active Knob Set with a
+    **MIDI Knob Set Select** lets you change the active Knob Set with a
     single MIDI CC message. When enabled, choose a MIDI Channel and CC# — sending
     a value of 0–7 on that channel and CC# will immediately switch to the 1st
     through 8th Knob Set (CC value 0 → Knob Set 1, 1 → Knob Set 2, …, 7 → Knob Set 8).
@@ -123,6 +123,24 @@
     See [MIDI CC Knob Set switching](using_metamodule_midi.md#midi-cc-knob-set-switching)
 
    [![MIDI CC Knob Set Select](./img/settings-midi-knobset-select.png){ .wide-240 }](./img/settings-midi-knobset-select.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __MetaButton Knob Set Select__
+
+    **MetaButton Knob Set Select** lets you change the active Knob Set by
+    pressing a button on a MetaButtons expander. When enabled, pressing Button
+    1 jumps to Knob Set 1, Button 2 to Knob Set 2, and so on up to Button 8 →
+    Knob Set 8. If the patch doesn't have the requested Knob Set, the button
+    acts normally.
+
+    Optionally you can enable this feature only when the Back button is also
+    held down. This allows you to use all the buttons for mappings, and Knob
+    Sets selection in the same patch.
+
+    See [Using MetaButtons to change Knob Sets](using_metamodule_midi.md#midi-cc-knob-set-switching)
+
+   [![MetaButtons as Knob Set selector](./img/metabuttons-knobset-sel.png){ .half }](./img/metabuttons-knobset-sel.png)
 
 </div>
 <div class="grid cards" markdown>
