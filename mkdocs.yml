@@ -83,9 +83,12 @@ plugins:
   - search
   - offline
 
-extra_css: 
+extra_css:
   - styles.css
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/site-nav.js
 
 markdown_extensions:
   - attr_list

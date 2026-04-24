@@ -86,6 +86,7 @@
 .md-typeset .grid.cards>ol>li:focus-within, .md-typeset .grid.cards>ol>li:hover, .md-typeset .grid.cards>ul>li:focus-within, .md-typeset .grid.cards>ul>li:hover, .md-typeset .grid>.card:focus-within, .md-typeset .grid>.card:hover {
     border-color: #888;
     box-shadow: none;
+}
 
 h2 {
 	border-bottom-width: 0.06rem;
@@ -119,6 +120,61 @@ h3 {
 @media (min-width:125em) {
   .sm-sm {
     font-size:100%
+  }
+}
+
+/* Mobile / small-tablet fix:
+   The in-header site nav is `position: absolute` + Tailwind `md:flex`
+   with `md:space-x-6` spacing. Between ~768px (where `md:flex` turns
+   on) and ~900px, the seven links don't fit next to the logo /
+   hamburger / palette / search and stagger over two rows, bleeding
+   white text onto the page below the header. Hide the in-header nav
+   across this whole range — javascripts/site-nav.js mirrors the
+   links into the top of the mobile drawer, which opens from the
+   existing hamburger button and stays available up to MkDocs
+   Material's own sidebar-as-drawer cutoff (76.1875em). */
+@media (max-width: 899.98px) {
+  .md-header__title [data-mm-site-nav] {
+    display: none !important;
+  }
+}
+
+/* Drawer clone: vertical list at the top of the primary sidebar while
+   it is in drawer mode (MkDocs Material's own breakpoint is 76.1875em).
+   The clone carries the same Tailwind classes as the header copy, so
+   rules below neutralize `absolute` / `flex` / `space-x-6` / `nowrap`
+   and unhide the `sm-hide` items. */
+.mm-site-nav--drawer {
+  display: none;
+}
+
+@media screen and (max-width: 76.1875em) {
+  .mm-site-nav--drawer {
+    display: block;
+    position: static;
+    padding: 0.5rem 0.75rem;
+    margin: 0 0 0.5rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    white-space: normal;
+    font-size: 0.8rem;
+  }
+
+  .mm-site-nav--drawer > span {
+    display: block;
+    padding: 0.5rem 0;
+    /* !important needed to beat Tailwind's `md:space-x-6` utility,
+       which lands margin-left on adjacent children at >=768px. */
+    margin: 0 !important;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .mm-site-nav--drawer .sm-hide {
+    display: block;
+  }
+
+  .mm-site-nav--drawer a {
+    color: var(--md-default-fg-color);
   }
 }
 
