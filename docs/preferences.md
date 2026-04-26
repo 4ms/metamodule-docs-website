@@ -140,26 +140,7 @@
 
     See [Using MetaButtons to change Knob Sets](using_metamodule_midi.md#midi-cc-knob-set-switching)
 
-   [![MetaButtons as Knob Set selector](./img/metabuttons-knobset-sel.png){ .half }](./img/metabuttons-knobset-sel.png)
-
-</div>
-<div class="grid cards" markdown>
-
--  __Notifications__
-
-    Notifications are pop-up messages that appear briefly on the screen to
-    confirm actions, warn about errors, and report status. If you find them
-    distracting, you can reduce how many you see:
-
-    **Show:**
-
-      - **All:** show every notification (default).
-      - **Fewer:** hide routine status notifications. Errors and important messages are still shown.
-      - **Critical:** only show errors and messages that must be acknowledged (for example: a file failed to save, or a patch has unsaved changes and cannot be updated).
-
-    **Animations:** when off, notifications appear and disappear instantly
-    instead of using the dropdown animation. Turn this off if the animation
-    feels slow or distracting.
+   [![MetaButtons as Knob Set selector](./img/metabuttons-knobset-sel.png){ .wide-240 }](./img/metabuttons-knobset-sel.png)
 
 </div>
 <div class="grid cards" markdown>
@@ -181,5 +162,26 @@
 
 
    [![Missing Plugins Prefs](./img/settings-missing-plugins.png){ .wide-240 }](./img/settings-missing-plugins.png) [![Ask Missing Plugins](./img/load-missing-plugin-conf.png){ .wide-240 }](./img/load-missing-plugin-conf.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __Notifications__
+
+    Notifications are pop-up messages that appear briefly on the screen to
+    confirm actions, warn about errors, and report status. If you find them
+    distracting, you can reduce how many you see:
+
+    **Show:**
+
+      - **All:** show every notification (default).
+      - **Fewer:** hide routine status notifications. Errors and important messages are still shown.
+      - **Critical:** only show errors and messages that must be acknowledged (for example: a file failed to save, or a patch has unsaved changes and cannot be updated).
+
+    **Animations:** when off, notifications appear and disappear instantly
+    instead of using the dropdown animation. Turn this off if the animation
+    feels slow or distracting.
+
+   [![Notifications Prefs](./img/settings-notifications.png){ .wide-240 }](./img/settings-notifications.png) 
 
 </div>
