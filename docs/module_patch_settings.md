@@ -198,7 +198,7 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 -   [![Patch View Disk icon](./img/patch-view-file-icon.png){ .half }](./img/patch-view-file-icon.png)
 </div>
 <div class="grid cards" markdown>
--   Save, Duplicate, Move/Rename, Reload (or Revert), Startup Patch, Delete
+-   Save, Duplicate, Move/Rename, Reload (or Revert), Startup Patch, Load on MIDI PC, Delete
 
     
 -   [![File Menu](./img/file-menu-2.1.png){ .half }](./img/file-menu-2.1.png)
@@ -259,6 +259,16 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 
     You can see what patch is the startup patch, and/or disable any patch
     from playing at startup in the [Preferences](preferences.md).
+
+</div>
+<div class="grid cards" markdown>
+-   __Load on MIDI PC__: Assign this patch to a MIDI Program Change number
+  
+    Choose a PC number (0–127) and MIDI channel. When MIDI PC Patch Load is
+    enabled in the preferences, sending that Program Change message from a MIDI
+    controller will load this patch.
+
+    See [Loading patches with MIDI Program Change](using_metamodule_midi.md#loading-patches-with-midi-program-change).
 
 </div>
 <div class="grid cards" markdown>

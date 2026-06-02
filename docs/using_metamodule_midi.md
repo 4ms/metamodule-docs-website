@@ -179,6 +179,7 @@ You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or u
 </div>
 
 ### Using the MIDI to CV module
+
 <div class="grid cards" markdown>
 -  __1. Add the MIDI to CV module from the RackCore brand__
 
@@ -340,4 +341,61 @@ MIDI Channel and CC# for Knob Set switching. See [Preferences](preferences.md).
 
 For more information about Knob Sets, see [Knob Sets](using_metamodule.md#knob-sets).
 
+
+---
+
+## Loading patches with MIDI Program Change
+
+You can load patches by sending MIDI Program Change (PC) messages. This lets you
+recall patches hands-free from a MIDI controller, sequencer, or DAW — useful for
+switching patches during a live performance.
+
+Each patch is assigned to a Program Change number (0–127) on a MIDI channel of
+your choosing. When the MetaModule receives a matching PC message, it loads that
+patch.
+
+<div class="grid cards" markdown>
+
+-  __1. Assign a patch to a PC number__
+
+    Open the patch you want to assign, click the file/disk icon to open the
+    [Patch File Menu](module_patch_settings.md#patch-file-menu), and select
+    **Load on MIDI PC**.
+
+    In the dialog that appears, choose a __PC #__ (0–127) and a __MIDI Channel__.
+    Set the channel to a specific channel (1–16), or to __Any__ to respond on all
+    channels. The dropdown shows which patch (if any) is already assigned to each
+    PC number, so you can avoid collisions.
+
+   [![Load on MIDI PC dialog](./img/midi-pc-assign-dialog.png){ .half }](./img/midi-pc-assign-dialog.png)
+
+</div>
+
+<div class="grid cards" markdown>
+
+-  __2. Enable MIDI PC Patch Load in the preferences__
+
+    Go to **Settings > Prefs ** and check "Enable" under
+    **MIDI PC PATCH LOAD**. This globally enables or disables the MIDI PC Patch
+    Load feature. See [Preferences](preferences.md).
+
+   [![MIDI PC Patch Load preference](./img/prefs-midi-pc-load.png){ .wide-240 }](./img/prefs-midi-pc-load.png)
+
+</div>
+
+Each patch can be assigned to one PC number. Assigning a patch to a PC number that
+is already in use will move the assignment to the new patch. To change a patch's
+assignment, open it and select **Load on MIDI PC** again.
+
+### Viewing PC assignments
+
+<div class="grid cards" markdown>
+- In **Settings > Prefs **, click **Show List** under MIDI PC PATCH LOAD to see
+  all current assignments, sorted by PC number. 
+
+    Clicking an entry views that patch.
+
+   [![MIDI PC Patch Load List](./img/midi-pc-load-list.png){ .half }](./img/midi-pc-load-list.png)
+
+</div>
 

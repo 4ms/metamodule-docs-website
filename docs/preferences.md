@@ -113,6 +113,20 @@
    [![MIDI Prefs](./img/prefs-midi.png){ .wide-240 }](./img/prefs-midi.png)
 </div>
 <div class="grid cards" markdown>
+-  __MIDI PC Patch Load__
+
+    When **Enable** is checked, incoming MIDI Program Change messages will load
+    patches that you've assigned to PC numbers. Assign a patch to a PC number
+    from the patch's File menu (see [Patch File Menu](module_patch_settings.md#patch-file-menu)).
+
+    Click **Show List** to view all current PC-to-patch assignments.
+
+    See [Loading patches with MIDI Program Change](using_metamodule_midi.md#loading-patches-with-midi-program-change).
+
+   [![MIDI PC Patch Load Prefs](./img/prefs-midi-pc-load.png){ .wide-240 }](./img/prefs-midi-pc-load.png)
+
+</div>
+<div class="grid cards" markdown>
 -  __MIDI Knob Set Select__
 
     **MIDI Knob Set Select** lets you change the active Knob Set with a
