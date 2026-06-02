@@ -7,9 +7,9 @@ There are three versions to consider when we talk about using plugins on the Met
 
 - Firmware version: This is the version of the low-level software running on the MetaModule hardware: the MetaModule "engine", if you will.
 
-- Plugin version: This is the version of the third-party plugin that you load onto the MetaModule
+- Plugin version: Plugins that you load onto the MetaModule have their own version. 
 
-- SDK version: Essentially the minimum firmware version required to run this plugin (read on for details)
+- SDK version: This is essentially the minimum firmware version required to run a given plugin (read on for details)
 
 Each of these is discussed in detail below:
 
