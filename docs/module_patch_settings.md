@@ -67,6 +67,17 @@ optionally the audio sample rate and block size.
 - __Show Knob Set Name__: This displays the name of the current Knob Set next to the patch name.
 
 
+### NAVIGATION
+
+*Module View only*
+
+- __Allow Wrapping__: When enabled, navigating in ModuleView with the rotary
+  encoder wraps around. Scrolling past the last item in the control/jack list
+  jumps to the button bar at the top, and scrolling backwards past the buttom
+  bar jumps to the bottom item in the list of controls. When disabled
+  (the default), navigation stops at the ends of the list.
+
+
 ### MAPS
 
 These options set how control mappings (knob, switch, and button maps) are displayed:
