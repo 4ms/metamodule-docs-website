@@ -84,6 +84,36 @@ type a new name. Click the check mark to save your changes, or press the Back bu
 Clear an alias and reset the module to its default name. (Only appears when a custom name 
 is set for the selected module.)
 
+
+### Replace…
+
+`Replace…` swaps the selected module for a different one, without having to delete it and add
+a new module by hand. This works while the patch is playing.
+
+[![Replace Module confirmation](./img/module-action-replace.png){ .half }](./img/module-action-replace.png)
+
+Clicking `Replace…` opens the module browser. Choose the module you want to swap in, and a
+confirmation window appears:
+
+-   __Replace module with *[name]*?__ — Tap `Replace` to confirm, or the Back button to cancel.
+
+-   __Keep cables and maps (experimental!)__ — A toggle in the confirmation window that
+    determines what happens to the old module's connections:
+
+    - __Off (default):__ All cables, knob mappings, and MIDI mappings that were connected to
+      the old module are removed. The new module is added fresh, with no connections.
+
+    - __On:__ Cables, knob mappings, and MIDI mappings stay attached to the same control and
+      jack indexes on the new module. This is only useful works when the replacement module has
+      a similar order for the jacks and controls.
+      For example, swapping one filter of the same brand for another, where
+      both modules have the first output jack as the Audio Out, the first input
+      jack as the Audio In, and the Frequency and Resonance knobs and CV jacks
+      in the same order. If the new module has a different layout, maps and
+      cables will end up connected to the wrong controls, so this option is
+      marked experimental.
+
+
 ### Delete
 
 Delete the module from the patch, removing all cables and mappings. This cannot
