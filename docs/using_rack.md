@@ -219,6 +219,8 @@ in the same VCV Rack patch that you don't want to include in the MetaModule patc
       virtual knob. *Tip: If you make Max less than Min, the knob will turn
       "backwards"*
 
+    - Double click a Min or Max slider to type in a numeric value. *Tip: You can type expressions like `100/7`
+
     - If you have multiple virtual knobs mapped to this knob, then a separate
       Min and Max slider will be shown for each one.
 
@@ -313,33 +315,60 @@ GLUE _without_ your GLUE labels setting aliases in your MetaModule patch, right-
 
 ## MIDI Mapping
 
-When making patches in VCV Rack, it's usually most convenient to use the VCV MIDI modules to 
-create MIDI mappings. You also can make MIDI mappings using the MetaModule itself; see
-[MIDI Input Jacks](using_metamodule_jacks.md#midi-input-jacks) for details.
+When making patches in VCV Rack, you typically will use the Rack Fundamental
+MIDI modules (such as MIDI-CV, MIDI-Gate, and MIDI-CC) to create MIDI mappings.
+All the Fundamental MIDI modules are supported. You can also use MIDI modules
+from other plugins, they typically will work the same on MetaModule hardware
+as they do in VCV Rack.
+
+
+### Built-in MIDI vs. RackCore MIDI
+
+Before you send a patch file over Wi-Fi or save it to disk, you can choose how
+you want the MIDI mappings represented in the patch: as Built-in MIDI mappings,
+or as RackCore modules.
+
+[![Built-in vs. RackCore MIDI](./img/vcv-hub-builtin-vs-rackcore-midi.png){ .half }](./img/vcv-hub-builtin-vs-rackcore-midi.png)
+
+Right-click the Hub and pick one of:
+
+- __Use built-in MIDI__ *(default)*: the MetaModule converts the VCV
+  Fundamental MIDI modules' connections into its own [built-in MIDI
+  mappings](using_metamodule_midi.md#midi-input-jacks).
+  The MIDI modules themselves do **not** appear in the patch on the MetaModule —
+  they only tell the MetaModule where you want MIDI routed. In this
+  mode, the MIDI polyphony number is taken from the MIDI-CV module's context
+  menu (or auto-detected if there is no MIDI-CV module). See
+  [MIDI Polyphony](using_metamodule_midi.md#midi-polyphony). Built-in MIDI is more
+  CPU efficient than using RackCore MIDI, but is less flexible.
+
+- __Use RackCore MIDI__: the VCV MIDI modules are added to the patch as
+  actual [RackCore modules](using_metamodule_midi.md#rackcore-midi-modules) that
+  run on the MetaModule, appearing as normal modules with cables in the patch.
+  The MIDI polyphony number is set by an option in the context menu. The RackCore
+  modules use a little more CPU than built-in MIDI, but they offer more 
+  flexibility via the options in the context menu.
+
+
+The remainder of this section describes the built-in MIDI workflow.
 
 
 ### How to map MIDI notes, gates, velocity, and aftertouch
 
 VCV Rack and MetaModule support polyphonic MIDI notes, gates, velocity, and
-aftertouch. The maximum polyphony number is 16, but often you will 
-limit this to 4 - 8 when creating patches for the MetaModule.
+aftertouch. The maximum polyphony number for built-in MIDI is 8. This means
+that note on/off events will be routed to up to 8 voices. However, each cable
+can only carry 4 voices, and each jack can only "see" or "send" 4 voices. 
+To acheive 8-note polyphont you will need two polyphonic cables and two of each
+module. 
+
+Typically you will want to limit the number of polyphonic channels to 4
+- 8 when creating patches for the MetaModule.
 
 <br>
 
 In addition to polyphonic note information, you can map pitch wheel, mod
 wheel, clock, divided clock, re-trigger, start, stop, and continue.
-
-<br>
-
-Any of these MIDI signals can be mapped to virtual module jacks simply by
-connecting cables, however for MIDI signals you don't connect to the MetaModule
-directly. Instead, you connect to the built-in MIDI and SPLIT modules. The
-MetaModule recognizes these modules and scans their connections, generating
-MIDI mappings for your patch. These modules won't display when you load the
-patch onto the MetaModule, they just are used to tell the MetaModule how you
-want MIDI to be mapped. Also, these modules are fully functional within VCV
-Rack, so you can test how your patch works with MIDI on VCV Rack before
-transferring it to the MetaModule.
 
 
 <div class="grid cards" markdown>
@@ -363,44 +392,23 @@ transferring it to the MetaModule.
 
 </div>
 <div class="grid cards" markdown>
--  __Add a SPLIT module for each polyphonic MIDI parameter you want to map__
+-  __Patch the polyphonic output to a module__
 
-     MetaModule does not support VCV Rack's polyphonic cables, so you must use
-     the SPLIT module to split the signal into monophonic cables.
+     Starting in firmware v2.2.0, the MetaModule supports
+     [polyphonic cables](using_metamodule_jacks.md#polyphonic-cables) (up to 4
+     voices each). For patches of 4 voices or fewer, you can patch the MIDI-CV
+     module's polyphonic outputs directly to your modules' inputs.
 
-     You can verify the polyphony number you chose earlier: it will display on
-     the SPLIT screen.
+     If you need more than 4 voices, or if you want to route the voices individually
+     then you can use a Split module to split the polyphonic cable into mono cables
+     (and optionally combine them into groups of 4 using a Merge module).
 
-   [![SPLIT](./img/vcv-midi-split-4.png){ .half }](./img/vcv-midi-split-4.png)
-
-</div>
-<div class="grid cards" markdown>
--  __Create cables from the SPLIT modules to your modules__
-
-     Connect to whatever jacks you want to be MIDI mapped.
-
-     Finish your patch normally (e.g., mix the outputs and connect the mixer output to the MetaModule)
-
-   [![MIDI mappings](./img/vcv-midi-mapped-4.png){ .half }](./img/vcv-midi-mapped-4.png)
-
-</div>
-<div class="grid cards" markdown>
--  __Finish the patch__
-
-     Finish your patch normally (e.g., mix the outputs and connect the mixer output to the MetaModule)
-
-     Create knob mappings from the MetaModule. Multi-maps are often useful with
-     polyphonic patches (shown in the image).
-
-   [![MIDI patch done](./img/vcv-midi-4-done.png){ .half }](./img/vcv-midi-4-done.png)
+   [![MIDICV](./img/vcv-midicv-poly.png){ }](./img/vcv-midicv-poly.png)
 
 </div>
 
 ### How to map other MIDI signals
 
-The procedure is identical to the above procedure, but since these are not
-polyphonic signals, you don't need to use a SPLIT module. Just patch directly
-from the MIDI module to the jacks you want mapped.
 
 <div class="grid cards" markdown>
  -  You can map Pitch Wheel, Mod Wheel, Clock, Divided Clock, Retrigger,

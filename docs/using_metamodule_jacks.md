@@ -6,8 +6,8 @@ There are two types of cables in the MetaModule: cables between virtual modules
 (also called internal cables), and cables that go to the physical panel jacks
 (also called Jack Mappings)
 
-*Note: While VCV Rack supports polyphonic cables, only monophonic cables are
-supported on the current version of the MetaModule*
+Cables can carry a single (mono) signal or multiple (polyphonic) signals. See
+[Polyphonic Cables](#polyphonic-cables) below.
 
 ### Patching cables between modules
 
@@ -64,9 +64,6 @@ MetaModule to virtual module jacks.
 <div class="grid cards" markdown>
 -  __1. Click on a jack, and click New Panel Cable__
 
-    If the jack is already connected to a panel jack, then this button will not
-    be displayed.
-
    [![New panel cable](./img/new-panel-cable.png){ .half }](./img/new-panel-cable.png)
 </div>
 <div class="grid cards" markdown>
@@ -74,7 +71,7 @@ MetaModule to virtual module jacks.
 
      The drop-down menu will indicate if any panel jacks are already connected:
 
-       - Connecting to a panel Out jack that's already connected to something else will disconnect the existing cable.
+       - Connecting to a panel Out jack that's already connected to something else will sum the existing signal with the signal from the jack you're patching.
 
        - Connecting to a panel In jack that's already connected to something else will stack on top of the existing cable.
 
@@ -128,6 +125,44 @@ To create a summed input on the MetaModule, simply patch a new cable to an
 input jack that is already connected. The `Connected To:` list for that input
 will show every output that is feeding it.
 
+
+### Polyphonic Cables
+
+The MetaModule supports **polyphonic cables**, which carry up to **4 voices**
+on a single cable. This matches how VCV Rack handles polyphony, so patches that
+use poly cables play correctly when loaded onto the MetaModule (as long as each
+cable uses no more than 4 voices).
+
+Polyphony is **fully automatic** — there is nothing extra to do when patching.
+When you connect a polyphonic output to an input, the cable automatically
+carries as many voices as the source module produces (up to the 4-voice
+maximum). Most modules are polyphonic.
+
+Poly cables are easy to spot in the Patch View and Module View:
+
+- Poly cables are drawn thicker than mono cables, with an outline.
+- Poly jacks that are mapped to a panel jacks have a larger square drawn on them.
+
+<div class="grid cards" markdown>
+   [![Polyphonic cable in the Patch View](./img/poly-cable.png){ .half }](./img/poly-cable.png)
+</div>
+
+!!! note
+    A single cable carries a maximum of 4 voices. If a module outputs more than
+    4 voices, only the first 4 are sent down the cable. For MIDI, you can use a
+    second poly cable to reach 8 voices — see
+    [MIDI Polyphony](using_metamodule_midi.md#midi-polyphony).
+
+#### Poly utility modules
+
+The **RackCore** brand includes three utilities for working with poly signals. These behave almost exactly like the VCV Rack "Fundamental" equivalents, except these have only 4 jacks.
+
+
+| Module | Description |
+|---|---|
+| **Merge** | Combines up to 4 mono inputs into one polyphonic output. The voice count is auto-detected from the connected inputs. |
+| **Split** | Splits a polyphonic input into 4 separate mono outputs. |
+| **Sum** | Sums all voices of a polyphonic input down to a single mono output, with a level knob and clipping meter. |
 
 ### Creating or editing a Jack Alias
 

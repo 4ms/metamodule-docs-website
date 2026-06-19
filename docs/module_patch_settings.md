@@ -162,6 +162,22 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 -   [![Patch View Description](./img/patch-info-audio-settings.png){ .half }](./img/patch-info-audio-settings.png)
 </div>
 <div class="grid cards" markdown>
+-   __MIDI Poly Chans__
+
+    If the patch uses MIDI, the Patch Info window includes a __MIDI Poly Chans__
+    setting that controls how many voices of MIDI polyphony the patch uses:
+
+    - __Auto__ (default): the number of voices is detected automatically from
+      the patch's MIDI mappings.
+
+    - __1 – 8__: force a fixed number of voices.
+
+    The __Active poly chans__ line below shows how many voices are currently in
+    use. See [MIDI Polyphony](using_metamodule_midi.md#midi-polyphony).
+
+-   [![Patch Info MIDI Poly Chans](./img/patch-info-midi-poly.png){ .half }](./img/patch-info-midi-poly.png)
+</div>
+<div class="grid cards" markdown>
 -   __Patch Description__
      
     Click on the description to edit the text.

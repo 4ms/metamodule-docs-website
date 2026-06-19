@@ -133,7 +133,7 @@ When you map a MIDI Note Gate to a parameter, you have two options:
 
 ## MIDI Input Jacks
 
-You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or using a MIDI-CV module.
+You can patch MIDI signals to input jacks in two ways: using MIDI mappings (aka "Built-in MIDI"), or by using RackCore modules such as MIDI-CV, MIDI-Gate, MIDICC-CV.
 
 
 ### Patching MIDI Input to jacks
@@ -152,9 +152,13 @@ You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or u
     Choose from:
 
     - Note events (keyboard): select Pitch (key number), Gate (note on/off), Velocity,
-      Aftertouch, or Retrigger (multiple note-on). Also select
-      the polyphony channel. The maximum polyphony channel of all the MIDI
-      mappings in the entire patch determines how MIDI note events are parsed.
+      Aftertouch, or Retrigger (multiple note-on). Also select the polyphony
+      channel (see [MIDI Polyphony](#midi-polyphony)):
+
+         - __#1-4__: a single **polyphonic cable** carrying voices 1–4.
+         - __#5-8__: a second polyphonic cable carrying voices 5–8 (use this in
+           addition to a #1-4 cable to reach 8 voices).
+         - __#1__ … __#8__: a single **mono cable** for one specific voice.
 
     - CC: Continuous CV scaled to 0V to 10V. Select a CC number, or send a CC
       event to "learn" it.
@@ -193,11 +197,58 @@ You can patch MIDI signals to input jacks in two ways: using MIDI mappings, or u
 
 </div>
 
+### Using the MIDI to Gate module
+
+The **MIDI to Gate** module converts incoming MIDI notes into gate/trigger
+outputs (16 jacks). Each cell can be assigned to a note, and can output a held
+gate or a trigger.
+
+<div class="grid cards" markdown>
+-  __1. Add the MIDI to Gate module from the RackCore brand__
+
+       Patch to any of the 16 outputs jacks.
+
+   [![MIDI to Gate module](./img/rackcore-midi-gate-module.png){ .half }](./img/rackcore-midi-gate-module.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __2. Optionally choose custom notes for each jack__
+
+      Select `Options>>` at the bottom and then choose custom notes for each "cell" (jack).
+
+   [![MIDI to Gate module](./img/rackcore-midi-gate-jack.png){ .half }](./img/rackcore-midi-gate-jack.png)
+
+</div>
+
+
+### Using the MIDI CC to CV module
+
+The **MIDI CC to CV** module converts incoming MIDI CC messages into CV 
+(16 outputs), each assignable to a CC number.
+
+<div class="grid cards" markdown>
+
+-  __1. Add the MIDI CC to CV module from the RackCore brand__
+
+       Patch to any of the 16 outputs jacks.
+
+   [![MIDI CC to CV module](./img/rackcore-midicc-cv-module.png){ .half }](./img/rackcore-midicc-cv-module.png)
+
+</div>
+<div class="grid cards" markdown>
+-  __2. Optionally choose custom notes for each jack__
+
+      Select `Options>>` at the bottom and then choose custom notes for each "cell" (jack).
+
+   [![MIDI CC to CV module](./img/rackcore-midicc-cv-jack.png){ .half }](./img/rackcore-midicc-cv-jack.png)
+
+</div>
+
 ---
 
 ## Patching Outputs to MIDI
 
-To support MIDI Output as a MIDI Host, the MetaModule has the `CV to MIDI` and
+To support MIDI Output, the MetaModule has the `CV to MIDI` and
 `CV to MIDI CC` modules in the RackCore brand.
 
 Third-party plugin modules that produce MIDI Output should work, as well.
@@ -243,9 +294,34 @@ drive external MIDI hardware or software synthesizers with CV signals from your 
    [![CV-CC module CC setup](./img/cv-cc-module-set-cc.png){ .half }](./img/cv-cc-module-set-cc.png)
 </div>
 
+### Gate to MIDI
+
+The **Gate to MIDI** module converts gate/trigger inputs into MIDI note on/off
+messages, with optional velocity from the input level.
+
+<div class="grid cards" markdown>
+-  To use, patch gate signals into any of the 16 jacks.
+   By default, Jack 1 → C3, Jack 2 → C#3, and so on.
+
+   [![Gate-MIDI module](./img/gate-midi-module.png){ .half }](./img/gate-midi-module.png)
+</div>
+<div class="grid cards" markdown>
+-  To assign a note to a cell:
+
+    Click `Options>>>` at the bottom of the list, select the cell, and choose a note from the list. 
+
+    Two cells cannot have the same note assigned to them.
+
+   [![Gate-MIDI module note setup](./img/gate-midi-module-setup.png){ .half }](./img/gate-midi-module-setup.png)
+</div>
+
+
 ---
 
+
 ## Viewing all MIDI mappings
+
+You can see all built-in MIDI mappings on one page.
 
 <div class="grid cards" markdown>
 
@@ -272,6 +348,41 @@ drive external MIDI hardware or software synthesizers with CV signals from your 
    [![MIDI list](./img/midi-maps-list.png){ .half }](./img/midi-maps-list.png)
 
 </div>
+
+---
+
+## MIDI Polyphony
+
+The MetaModule has **built-in MIDI polyphony**. MIDI note information (pitch,
+gate, velocity, aftertouch, retrigger) can be carried on
+[polyphonic cables](using_metamodule_jacks.md#polyphonic-cables), with up to
+**4 voices per cable**. By using two poly cables — one for voices **#1-4** and a
+second for voices **#5-8** — you can play up to **8 voices** of polyphony.
+
+When you create a MIDI note mapping from within the MetaModule, the polyphony
+dropdown lets you choose a `#1-4` poly cable, a `#5-8` poly cable, or a single
+mono voice (`#1`–`#8`). See [Patching MIDI Input to
+jacks](#patching-midi-input-to-jacks).
+
+### Setting the polyphony number
+
+The number of active MIDI voices is shown and set in the
+[Patch Info](module_patch_settings.md#patch-info) dialog, under **MIDI Poly
+Chans**:
+
+- **Auto** (the default): the MetaModule automatically detects how many voices
+  the patch needs by scanning its MIDI mappings. If any `#5-8` poly cable is
+  used, 8 voices are allocated; if only a `#1-4` poly cable is used, 4 voices;
+  otherwise it uses the highest mono voice number that's mapped.
+
+- **1 – 8**: force a fixed number of voices, regardless of what's mapped.
+
+The dialog also shows **Active poly chans**, the number of voices currently in
+use.
+
+!!! note
+    When more notes are played than there are available voices, the MetaModule
+    reassigns voices to the new notes (voice "stealing").
 
 ---
 
