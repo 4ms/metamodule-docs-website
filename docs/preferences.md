@@ -113,6 +113,21 @@
    [![MIDI Prefs](./img/prefs-midi.png){ .wide-240 }](./img/prefs-midi.png)
 </div>
 <div class="grid cards" markdown>
+
+-  __MIDI 14-bit CC__
+
+    **14-bit CC** enables receiving 14-bit CC messages. CC 0-31 are used as the
+    MSB and are paired with the CC number 32 higher for the LSB (CC 32-63)
+
+    When enabled, mappings from CC numbers 32-63 will be ignored. Any CC
+    messages received in this range will by combined with the corresponding CC
+    number 32 lower.
+
+    See [14-bit CC](using_metamodule_midi.md#14-bit-cc)
+
+   [![MIDI 14-bit CC](./img/midi-14bit-cc-only.png){ .wide-240 }](./img/midi-14bit-cc-only.png)
+</div>
+<div class="grid cards" markdown>
 -  __MIDI PC Patch Load__
 
     When **Enable** is checked, incoming MIDI Program Change messages will load

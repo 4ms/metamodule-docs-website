@@ -427,6 +427,38 @@ playback. This will send the current value of all MIDI-mapped parameters.
 
 ---
 
+## 14-Bit CC
+
+Normally, CC messages are 7-bit, ranging from 0-127. When controlling certain
+parameters this can cause "stepping" or "zippering" since the difference
+between each CC value is relatively large. For example, if patched to a 1V/oct
+CV jack, each CC value would be about 78mV, which is almost a semitone.
+
+To increase the resolution, some MIDI controllers can send 14-bit CC signals
+by combining two CC values. With 14 bits, the same CV jack would see steps of 0.61mV, which
+is less than 1 cent when patched into a 1V/oct jack.
+
+The standard approach is to use a CC number from 0-31 for the upper bits and
+a CC number that's 32 higher for the lower bits. For example, CC 2 would
+contain the upper 7 bits and CC 34 would contain the lower 7 bits. MIDI
+controllers that support 14-bit CC messages will automatically handle splitting the
+bits and sending out both CC messages whenever the parameter is updated.
+
+When the 14-bit CC feature is enabled on the MetaModule, mappings to CC numbers
+0-31 will be high resolution. CC 32-63 messages will be ignored unless also
+accompanied by a corresponding CC message that's 32 numbers lower.
+
+<div class="grid cards" markdown>
+
+-  __To enable or disable MIDI 14-bit, check the box in Settings > Prefs > MIDI:__
+
+   [![MIDI 14-bit CC](./img/midi-14bit-cc.png){ .half }](./img/midi-14bit-cc.png)
+
+</div>
+
+
+---
+
 ## MIDI CC Knob Set switching
 
 You can use a single MIDI CC message to instantly switch between the eight
