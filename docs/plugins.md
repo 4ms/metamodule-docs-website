@@ -155,7 +155,55 @@ if the plugin could not be found.
 Check the Plugins page to see if there are any updates to the MetaModule
 plugin.
 
+---
 
+## When a plugin crashes or runs out of memory
+
+Firmware v2.3.0 reworked how memory is handed out to plugins, so that problems
+caused by a single plugin don't take down the whole MetaModule.
+
+Previously, a plugin that ran out of memory or misbehaved could freeze the
+MetaModule, and the only way out was to power cycle. Now, in most cases the
+MetaModule stays running and shows a notification telling you which plugin caused
+the problem, so you can try something else.
+
+Messages you might see include:
+
+- `Out of memory loading this patch`
+- `Out of memory loading plugin`
+- `Out of memory: not enough RAM to load plugin`
+- `Out of memory: plugin code needs X MB`
+- `Plugin crashed while initializing`
+- `Module crashed while loading`
+
+If you see one of these:
+
+- **Out of memory:** the patch or plugin needs more RAM than is free. Try 
+  removing plugins you aren't using from the Plugins page, or using fewer or
+  smaller modules in the patch. Modules that allocate large buffers — samplers,
+  long delays, and some reverbs — use the most memory.
+
+- **Crashed:** the plugin has a bug. Check the Plugins page for an update to that
+  plugin, and report it to the plugin's maintainer or on the MetaModule forum.
+
+!!! note "Recovering from a crash"
+    A plugin that runs out of memory can be cleaned up completely, though not
+    all plugins take advantage of this feature. Some crashes on some plugins
+    may leave some memory unavailable until you restart. If you've hit several
+    crashes in one session, a power cycle will reclaim that memory.
+
+### Checking free memory
+
+The `Settings` > `Info` page shows how much RAM is in use. As of v2.3.0 it reports
+the firmware and plugin memory separately:
+
+- **Main:** memory used by the firmware and the running patch.
+- **Plugins:** memory used by loaded plugins, and how much they have claimed.
+
+The boundary between the two moves as needed, so this is the place to look if
+patches are failing to load.
+
+---
 
 ## Viewing the modules in a plugin
 
