@@ -214,3 +214,28 @@
    [![Notifications Prefs](./img/settings-notifications.png){ .wide-240 }](./img/settings-notifications.png) 
 
 </div>
+<div class="grid cards" markdown>
+
+-  __USB__
+
+    **USB Mode:** selects whether the MetaModule acts as a USB host (for MIDI
+    controllers and USB drives), a USB device (for connecting to a computer), or
+    decides automatically.
+
+      - **Auto:** detect what's on the other end of the cable and pick host or device (default).
+      - **Host Only:** always act as a USB host.
+      - **Device Only:** always act as a USB device.
+
+    **Device Mode:** what the MetaModule looks like to a computer when acting as a
+    USB device: a MIDI device named **MetaModule MIDI**, or a webcam named
+    **MetaModule Screen** that mirrors the display. This is greyed out when
+    **USB Mode** is **Host Only**.
+
+    **Video Mirror X:** flips the mirrored screen horizontally, for video software
+    that mirrors a webcam image. Only available when **Device Mode** is **Video**.
+
+    See [USB Device Mode](usb.md)
+
+   [![USB Mode Prefs](./img/prefs-usb-mode.png){ .wide-240 }](./img/prefs-usb-mode.png) [![USB Device Mode Prefs](./img/prefs-usb-device-mode.png){ .wide-240 }](./img/prefs-usb-device-mode.png)
+
+</div>

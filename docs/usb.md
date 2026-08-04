@@ -66,6 +66,13 @@ Changes take effect as soon as you click `Apply` — there's no need to restart 
 MetaModule, but you may need to disconnect and re-connect the USB cable after 
 changing the mode.
 
+!!! note
+    When in **Device Only** mode, you cannot use a USB thumb drive or a MIDI
+    controller, since that requires the MetaModule being a host. However, to
+    avoid confusion, if the MetaModule detects a USB device attached while
+    **Device Only** mode is active, it will show a notification informing you
+    to switch to **Auto** or **Host Only** mode to use the attached device.
+
 ## MIDI Device mode
 
 With **Device Mode** set to **MIDI**, connect a USB-C cable from the MetaModule to
