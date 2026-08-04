@@ -1,5 +1,9 @@
 # Using the MetaModule: MIDI jack mappings 
 
+The MetaModule can host a MIDI controller, or can connect to computer as a USB
+MIDI device. Everything on this page works the same either way. See [USB Device
+Mode](usb.md#midi-device-mode) for more information about USB modes.
+
 ## MIDI Maps to parameters
 
 You can map MIDI CC or Note Gate on/off to parameters such as knobs, switches, and buttons. 
