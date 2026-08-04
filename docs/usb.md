@@ -75,9 +75,14 @@ changing the mode.
 
 ## MIDI Device mode
 
-With **Device Mode** set to **MIDI**, connect a USB-C cable from the MetaModule to
-your computer. The MetaModule will appear in your DAW or MIDI software as a device
-called **MetaModule MIDI**, with both an input and an output port.
+<div class="grid cards" markdown>
+-  
+   With **Device Mode** set to **MIDI**, connect a USB-C cable from the MetaModule to
+   your computer. The MetaModule will appear in your DAW or MIDI software as a device
+   called **MetaModule MIDI**, with both an input and an output port.
+
+   [![USB MIDI Device VCV Rack](./img/vcv-metamodule-midi-device.png){ .img-360 }](./img/vcv-metamodule-midi-device.png)
+</div>
 
 From there it works exactly like a MIDI controller plugged into the MetaModule:
 
@@ -94,14 +99,18 @@ From there it works exactly like a MIDI controller plugged into the MetaModule:
   which lets your DAW stay in sync with mapped knobs.
 
 
+
 ## Mirroring the screen to a computer
 
-With **Device Mode** set to **Video**, the MetaModule appears to the computer as a
-standard USB webcam (a UVC device) named **MetaModule Screen**. Anything that can
-use a webcam can show the MetaModule's display: OBS Studio, QuickTime Player,
-video conferencing apps, and so on.
+<div class="grid cards" markdown>
+-  
+   With **Device Mode** set to **Video**, the MetaModule appears to the computer as a
+   standard USB webcam (a UVC device) named **MetaModule Screen**. Anything that can
+   use a webcam can show the MetaModule's display: OBS Studio, QuickTime Player,
+   video conferencing apps, and so on.
 
-[![USB Video capture OBS Studio](./img/usb-video-capture.png){ .img-360 }](./img/usb-video-capture.png)
+   [![USB Video capture OBS Studio](./img/usb-video-capture.png){ .img-360 }](./img/usb-video-capture.png)
+</div>
 
 This is handy for recording demos, streaming, sending debug reports, and teaching, since you can capture the
 screen without pointing a camera at the module.
