@@ -118,3 +118,20 @@ confirmation window appears:
 
 Delete the module from the patch, removing all cables and mappings. This cannot
 be undone. (However, you can Revert the patch file to restore the module.)
+
+## Module Options menu
+
+Separate from the Action Menu, many modules have their own menu of module-specific
+settings. This is the same menu you get by right-clicking the module in VCV Rack.
+
+To find it, click a module to open Module View, then scroll to the bottom of the
+list of knobs and jacks and click __Options:__.
+
+What's in this menu depends entirely on the module. Typical entries are on/off
+options, lists of modes to choose from, and sliders for advanced parameters.
+
+Starting in firmware v2.3.0, sliders in the options menu can be adjusted. Clicking
+on a slider item will pop-up an adjustment dialog box:
+
+- Turn the encoder to change the value. The value display updates as you turn.
+- Click the encoder or press the Back button to close the pop-up.
