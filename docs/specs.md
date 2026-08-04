@@ -31,6 +31,10 @@
     - Compatible with USB 2.0 and 3.0 speeds
 - USB Host for MIDI devices
     - Supplies up to 500mA of power at +5V
+- USB Device mode (firmware v2.3.0 and later): connect to a computer as a
+  USB MIDI device, or as a UVC webcam that mirrors the screen
+    - Host/device role is auto-detected, or can be forced in the Preferences
+    - See [USB Device Mode](usb.md)
 
 ### microSD Card Slot
 - microSD Card Slot
