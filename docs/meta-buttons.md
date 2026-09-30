@@ -84,15 +84,47 @@ B2-3, etc. (See below for information about the jumper positions)
 
 ### Editing a button map
 
+Each button map has a __Button Behavior__ setting that chooses what happens when
+you press the button. To change it, open the Knob Sets page (see
+[Viewing button maps](#viewing-button-maps)) and click on the button map.
+
 <div class="grid cards" markdown>
--  __Select Toggle mode to alternate between two states__ 
+-  __Choose Normal, Toggle, or Step__
 
-     You can also adjust the Min and Max values to change which two states are
-     toggled. For example, you can toggle between the middle and top positions
-     of a three-position switch by setting Min to 50% and Max to 100%.
+     - __Normal__: The parameter is set to the Max value while the button is held
+       down, and to the Min value when it's released.
 
-  [![Toggle mode](./img/knobmap-toggle.png){ .half }](./img/knobmap-toggle.png)
+     - __Toggle__: Each press alternates the parameter between the Min and Max
+       values.
+
+     - __Step__: Each press moves the parameter to its next position. After
+       the last position, it starts over at the first.
+
+  [![Button Behavior](./img/knobmap-button-behavior.png){ .half }](./img/knobmap-button-behavior.png)
 </div>
+
+__Step__ mode is meant for controls that have more than two positions, such as a
+three-way switch, a rotary selector, or a slider with a fixed number of stops.
+The number of positions is shown next to it in the menu: for example
+`Step (3)` for a three-position switch. Step is the default for a new button
+map on a control like this, so pressing the button walks through all of the
+switch's positions.
+
+The Min and Max values limit the range in all three modes:
+
+- In Toggle mode, they are the two values that the button alternates between.
+  For example, you can toggle between the middle and top positions of a
+  three-position switch by setting Min to 50% and Max to 100%.
+
+- In Step mode, the button only steps through the positions between Min and
+  Max. For example, on a six-position selector you can step through just the
+  first three positions by setting Max to 40%.
+
+- If Max is less than Min, Step mode steps through the positions in the
+  opposite direction.
+
+If a control doesn't have a fixed number of positions (an ordinary knob, for
+example), Step mode does the same thing as Toggle mode.
 
 ### Viewing button maps
 
@@ -130,9 +162,14 @@ MetaButtons module shows which Knob Set is currently active.
   [![MetaButtons VCV](./img/vcv-button-mapped.png){ .half }](./img/vcv-button-mapped.png)
 </div>
 <div class="grid cards" markdown>
--  __3. Right-click the button to change Toggle mode__
+-  __3. Right-click the button to change the Button Behavior__
 
-      The Min and Max settings control the two values that the button toggles between.
+      Choose Normal, Toggle, or Step from the `Button Behavior` menu
+      (Step requires v2.3.0 or later of the 4ms VCV plugin).
+      See [Editing a button map](#editing-a-button-map) for what each one does.
+
+      The Min and Max settings control the range of values that the button
+      toggles or steps through.
 
       You can also set an alias name for this mapping
 

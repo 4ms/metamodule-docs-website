@@ -7,6 +7,11 @@ The Module Action Menu is found by clicking on a module in a patch and then clic
 -   [![Module Action Menu](./img/module-action-menu.png){ .half }](./img/module-action-menu.png)
 </div>
 
+The menu is longer than the screen. Keep turning the encoder to reach the actions
+at the bottom of the list.
+
+[![Bottom of the Module Action Menu](./img/module-action-menu-lower.png){ .half }](./img/module-action-menu-lower.png)
+
 ## Actions
 
 ### Auto-Map All
@@ -113,11 +118,40 @@ confirmation window appears:
       cables will end up connected to the wrong controls, so this option is
       marked experimental.
 
+      The new module also keeps the old module's
+      [expander connections](expander_modules.md). When this option is off,
+      they are removed along with the cables.
+
+
+### Move
+
+`Move` picks the module up so you can put it somewhere else in the patch. You are
+taken to the Patch View in re-arrange mode, with this module already picked up:
+
+- Turn the encoder to move the module left or right along its row.
+- Push and turn the encoder to move it up or down a row.
+- Click to put the module down, then press the Back button when you're done.
+
+Modules can only be moved when the Compact Layout display setting is off. If
+it's on, you'll be asked whether to turn it off.
+
+See [Re-arranging modules](patch_layout.md#re-arranging-modules) for the details.
+
+### Expanders…
+
+`Expanders...` opens a window that shows which modules are attached to the left
+and right sides of this module as VCV expander modules. From this window you can
+attach a module as an expander, jump to an attached module, or detach it.
+
+[![Expanders window](./img/expander-popup.png){ .half }](./img/expander-popup.png)
+
+See [VCV Expander Modules](expander_modules.md) for how to use it.
 
 ### Delete
 
-Delete the module from the patch, removing all cables and mappings. This cannot
-be undone. (However, you can Revert the patch file to restore the module.)
+Delete the module from the patch, removing all cables, mappings, and expander
+connections. This cannot be undone. (However, you can Revert the patch file to
+restore the module.)
 
 ## Module Options menu
 

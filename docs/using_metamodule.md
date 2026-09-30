@@ -137,6 +137,9 @@ From the Patch View page:
 
 -  __1. Open a module and click a control__
 
+    On some modules the controls are organized into groups: see
+    [Groups of controls and jacks](#groups-of-controls-and-jacks).
+
    [![Knob Set](./img/plaits-freq-knob.png){ .half }](./img/plaits-freq-knob.png)
 
 </div>
@@ -329,3 +332,53 @@ If you want to see all the virtual knobs that map to a specific physical knob:
    [![Multi-map](./img/knobset-multimap.png){ .half }](./img/knobset-multimap.png)
 
 </div>
+
+---
+
+## Groups of controls and jacks
+
+When you open a module, all of its knobs, switches, buttons, and jacks are listed
+next to the panel. On a big module this is a long list to scroll through.
+Starting in firmware v2.4.0, a module can organize its list into groups: for
+example, one group for each channel of a multi-channel module.
+
+<div class="grid cards" markdown>
+
+-  __1. Groups are shown in blue, followed by a `>`__
+
+    When a group is highlighted in the list, all of its controls and jacks are
+    highlighted on the panel.
+
+   [![Groups in the Module View](./img/module-view-groups.png){ .half }](./img/module-view-groups.png)
+
+</div>
+<div class="grid cards" markdown>
+
+-  __2. Click a group to open it__
+
+    Only the controls and jacks in the group are listed, and the name of the
+    group is shown at the top in place of the module's name.
+
+    Click `< Back` at the top of the list, or press the Back button, to go back
+    to the full list.
+
+   [![An open group](./img/module-view-group-open.png){ .half }](./img/module-view-group-open.png)
+
+</div>
+
+Inside a group, everything works the same way as it does in the full list:
+click a control to map it, click a jack to patch it, or use any of the
+[shortcuts](shortcuts.md).
+
+Names are shortened inside a group, since the group's name is already shown at
+the top. For example, inside the `Channel B` group, the control named `Rise B
+Switch` is listed as `Rise Switch`.
+
+If you jump to a control from another page, such as by clicking on a mapping in
+the Knob Set page, the group that contains it is opened for you.
+
+Groups are chosen by whoever made the module, so not every module has them.
+Among the built-in 4ms modules, these have groups: Dual EnvVCA, Dual Looping
+Delay, PEG, QCD, QPLFO, Shaped Dual EnvVCA, SISM, and VCAMatrix. Plugin
+developers can add groups to their own modules: see the documentation in the
+[plugin SDK](https://github.com/4ms/metamodule-plugin-sdk).

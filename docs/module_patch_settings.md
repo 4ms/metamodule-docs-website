@@ -12,7 +12,7 @@ These menus control how mappings and cables are drawn when viewing modules and t
 
     [![Patch View Gear icon](./img/patch-view-gear-icon.png){ .half }](./img/patch-view-gear-icon.png)
 
--   [![Patch View Settings Menu](./img/patchview-settings.png){ .img-567 }](./img/patchview-settings.png)
+-   [![Patch View Settings Menu](./img/patchview-settings.png){ .img-630 }](./img/patchview-settings.png)
 </div>
 <div class="grid cards" markdown>
 -   __Module View display settings:__
@@ -21,11 +21,35 @@ These menus control how mappings and cables are drawn when viewing modules and t
 
     [![Module Action Menu icon](./img/mv-settings-icon.png){ .half }](./img/mv-settings-icon.png)
 
--    [![Module View Settings Menu](./img/mv-settings-all.png){ .img-511 }](./img/mv-settings-all.png)
+-    [![Module View Settings Menu](./img/mv-settings-all.png){ .img-630 }](./img/mv-settings-all.png)
 
 </div>
 
 ### GRAPHICS
+
+These options set how the modules are laid out in the Patch View. See
+[Arranging Modules](patch_layout.md) for a full description of each one.
+
+*Patch View only*
+
+- __Module Size__: How big the modules are drawn, from 50% to 100% of the height
+  of the screen. See [Module size](patch_layout.md#module-size-zoom).
+
+- __Compact Layout__: When on (the default), modules are packed together with no
+  gaps. When off, each module is drawn at the position saved in the patch, which
+  for a patch made in VCV Rack is the same place it has in the rack. This must
+  be off in order to move modules around.
+  See [Module positions](patch_layout.md#module-positions).
+
+- __Fit width to screen__: When on (the default), a row of modules is as wide as
+  the screen. Turn this off to choose a width with the Width slider.
+
+- __Width__: The width of a row of modules in HP. The number next to the slider
+  shows the current width. This slider and __Fit width to screen__ are only
+  available when Compact Layout is on. See
+  [Rack width](patch_layout.md#rack-width).
+
+---
 
 These options control how graphic screens on modules are displayed. The term
 "graphic screen" is a loose term that refers to any element on the module that's
@@ -43,6 +67,16 @@ with this option. When set to the maximum value (fully to the right), each
 graphic screen in the patch will be updated in turn, one graphic screen per 60Hz refresh.
 Each click of the slider to the left updates screens half as often (i.e. one
 screen per 30Hz refresh, then 15Hz refresh, etc..)
+
+---
+
+*Module View only*
+
+- __Fit Width in Fullscreen__: The fullscreen button in the Module View shows
+  just the module, as large as possible. A module that is wider than the screen
+  normally runs off the edge, and scrolls sideways as you select its controls.
+  Turn this option on to shrink wide modules so that the whole panel fits on
+  the screen.
 
 ### STATUS BAR
 
@@ -136,6 +170,11 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 
 - __Opacity__: How opaque or transparent to draw the cables or squares.
 
+- __Tension__: *(Patch View only)*
+  How tightly the cables are drawn. All the way to the right, the cables are
+  straight lines. Move the slider to the left to make the cables droop more.
+  See [Cable tension](patch_layout.md#cable-tension).
+
 
 
 ---
@@ -158,6 +197,8 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
      - Patch description
      - Patch's sample rate and block size
 
+    At the bottom of the window are buttons for viewing the patch's CPU load
+    and for re-arranging its modules.
     
 -   [![Patch View Description](./img/patch-info-audio-settings.png){ .half }](./img/patch-info-audio-settings.png)
 </div>
@@ -198,6 +239,28 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
     You can also set these values from VCV Rack when creating the patch: see
     [Setting Suggested Audio Settings](using_rack.md#setting-suggested-audio-settings).
 
+</div>
+<div class="grid cards" markdown>
+-   __CPU Load__
+
+    Click the `CPU Load` button to see how the patch's modules are divided
+    between the two processor cores, and how much CPU each module is using.
+    From here you can also search for a better balance.
+
+    See [CPU Load Balancing](cpu_load.md).
+
+-   [![Patch Info buttons](./img/patch-info-cpu-load.png){ .half }](./img/patch-info-cpu-load.png)
+</div>
+<div class="grid cards" markdown>
+-   __Re-arrange Modules__
+
+    Click the `Re-arrange Modules` button to move modules around in the Patch
+    View. Click a module to pick it up, turn the encoder to move it, and click
+    again to put it down.
+
+    See [Re-arranging modules](patch_layout.md#re-arranging-modules).
+
+-   [![Re-arrange Modules button](./img/patch-info-rearrange.png){ .half }](./img/patch-info-rearrange.png)
 </div>
 
 ---

@@ -63,9 +63,9 @@ they do for panel knob mappings. For MIDI CC mappings, this means a CC value of
 0 will set the parameter to the value set by the MIN slider, and a CC value of
 127 sets it to the MAX slider's value. For MIDI Note Gate mappings, the note can
 only be on or off, so the parameter will be set to the MIN or MAX slider value.
-Additionally, for MIDI Note Gate mappings you can enable Toggle mode to make the
-parameter change value each time a note is played. See [MIDI Note toggle
-mode](#midi-note-gate-toggle-mode)
+Additionally, both kinds of MIDI mapping can be set to Toggle or Step mode, which
+makes the parameter change value each time a note is played or a CC goes high.
+See [Button Behavior](#button-behavior-normal-toggle-and-step).
 
 
 Note that while you can only map MIDI CC and Note Gates to parameters, you can
@@ -98,18 +98,34 @@ From the Module View page:
      You may adjust the MIN/MAX sliders and the mapping name in the same way
      that you do for normal knob mappings.
 
-     For MIDI Note Gate mappings, you may also change the Toggle mode (see below).
+     You may also change the Button Behavior (see below).
 
    [![Edit MIDI Mapping](./img/midi-map-channel.png){ .half }](./img/midi-map-channel.png)
 
 </div>
 
-### MIDI Note Gate Toggle mode
+### Button Behavior: Normal, Toggle, and Step
 
-When you map a MIDI Note Gate to a parameter, you have two options:
+Every MIDI Note Gate mapping and MIDI CC mapping has a __Button Behavior__
+setting on its Edit Mapping page, with three choices:
 
 <div class="grid cards" markdown>
--  __MIDI Note Gate: Toggle Enabled__
+-  __Normal__
+
+     The parameter follows the MIDI message.
+
+     For a MIDI Note Gate mapping: when a Note On message for that note is
+     received, the param's value will be set to the value of the MAX slider.
+     When a Note Off message is received, the param will be set to the MIN
+     slider's value.
+
+     For a MIDI CC mapping: the parameter follows the CC value, from the MIN
+     slider's value at 0 to the MAX slider's value at 127.
+
+   [![MIDI Button Behavior](./img/midi-map-button-behavior.png){ .wide-320 }](./img/midi-map-button-behavior.png)
+</div>
+<div class="grid cards" markdown>
+-  __Toggle__
 
      Each time a matching Note On message is received, the parameter will
      toggle between the values set by the MIN and MAX sliders. Note Off
@@ -117,20 +133,36 @@ When you map a MIDI Note Gate to a parameter, you have two options:
      play the MIDI Note. 
 
      _Technical note:_ In case the param has changed value since the last MIDI
-     Note message, the MetaModule will set the value to MIN or MAX based on
+     message, the MetaModule will set the value to MIN or MAX based on
      which one the current value is __farther__ from.
 
-   [![MIDI Note Toggle On](./img/midi-map-toggle-on.png){ .half }](./img/midi-map-toggle-on.png)
 </div>
 <div class="grid cards" markdown>
--  __MIDI Note Gate: Toggle Disabled__
+-  __Step__
 
-     When a Note On message for that note is received, the param's
-     value will be set to the value of the MAX slider. When a Note Off message
-     is received, the param will be set to the MIN slider's value.
+     Each time a matching Note On message is received, the parameter moves to
+     its next position, and goes back to the first position after the last
+     one. This is meant for parameters with more than two positions, such as a
+     three-way switch. The number of positions is shown in the menu, for
+     example `Step (3)`.
 
-   [![MIDI Note Toggle Off](./img/midi-map-toggle-off.png){ .half }](./img/midi-map-toggle-off.png)
+     The MIN and MAX sliders limit which positions are stepped through. If MAX
+     is less than MIN, the positions are stepped through in the opposite
+     direction.
+
+     When you map a MIDI Note Gate to a parameter that has more than two
+     positions, the new mapping starts out in Step mode.
+
 </div>
+
+Starting in firmware v2.4.0, MIDI CC mappings can also use Toggle and Step. This
+is handy for MIDI controllers whose buttons or pads send CC messages instead of
+notes. A CC counts as a press each time its value goes from the low half of its
+range (0-63) to the high half (64-127). Going back to the low half does not
+change the parameter, in the same way that Note Off messages are ignored.
+
+Button mappings on the [MetaButtons expander](meta-buttons.md#editing-a-button-map)
+have the same three choices.
 
 
 ---

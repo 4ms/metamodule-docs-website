@@ -207,6 +207,54 @@ can limit which modules are included by right-clicking the MetaModule Hub and ch
 This is useful when you have reference modules, utility modules, or work-in-progress modules
 in the same VCV Rack patch that you don't want to include in the MetaModule patch file.
 
+### Module positions
+
+The position of each module in the rack is saved in the patch file (this
+requires v2.3.0 or later of the 4ms VCV plugin). Starting in firmware v2.4.0,
+the MetaModule can draw the modules in the same positions, including any gaps
+you left between modules and any empty rows.
+
+By default, the MetaModule packs the modules of a patch together to save space
+on its screen. To see the modules where you placed them in VCV Rack, turn off
+**Compact Layout** in the Patch View settings menu on the MetaModule. See
+[Module positions](patch_layout.md#module-positions).
+
+The MetaModule Hub, MetaButtons, and MetaAIO modules are not drawn on the
+MetaModule, so the space they take up in your rack appears as a gap. Rack space
+to the left of, or above, all of the other modules is trimmed off.
+
+You can also move modules around on the MetaModule itself: see
+[Re-arranging modules](patch_layout.md#re-arranging-modules).
+
+### Expander modules
+
+Many plugins have expander modules: a module that adds features to another
+module when it's placed right next to it. Starting in firmware v2.4.0, these
+work on the MetaModule. Just build your patch in the usual way, with the
+expander touching the module it expands, and the MetaModule Hub will save the
+connection in the patch file. This requires v2.3.0 or later of the 4ms VCV
+plugin.
+
+A connection between two modules is saved when all of these are true:
+
+- The two modules are touching, side by side.
+- Both modules are from the same plugin.
+- At least one of the two has the "Expander" tag in the VCV Rack module browser.
+
+On the MetaModule the two modules will be connected as expanders, no matter
+where they are drawn on the screen.
+
+Make sure that the plugin you have installed on your MetaModule includes the
+expander module. Many plugins did not include their expander modules before
+firmware v2.4.0, so you may need to download a newer version of the plugin.
+
+See [VCV Expander Modules](expander_modules.md) for how to view, add, and remove
+expander connections on the MetaModule.
+
+!!! note
+    The MetaAIO and MetaButtons modules in VCV Rack represent hardware that
+    connects to your MetaModule. They are not part of this feature.
+
 ### How to set the name or min/max range of a knob mapping
 
 <div class="grid cards" markdown>
