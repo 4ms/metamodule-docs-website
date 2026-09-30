@@ -24,28 +24,25 @@ patch plays, and have the MetaModule search for a better balance.
 [![CPU Load Balancing window](./img/cpu-load-panel.png){ .half }](./img/cpu-load-panel.png)
 
 - __Core 1__ and __Core 2__: Each core has a bar, and a percentage showing how
-  much of its time is spent running its modules.
+  much of the audio frame is spent running its modules and processing the modules'
+  cables.
 
-- __Colored boxes__: Each box in a bar is one module. The wider the box, the more
-  CPU that module is using. While the patch is playing, the boxes grow and
-  shrink to follow the actual load.
+- __Overhead__: There's a third bar to show the time spent on mappings and 
+  other necessary tasks. This happens after *both* cores are done.
+    - *Mappings* is the time spent on knob and jack mappings. 
+    - *MIDI* is the time spent handling MIDI mappings and streams. 
+    - *Sync* is the time one core spends waiting for the other to finish
+    - *Overhead* is everything else. Note that running the CPU load window itself adds 1-2% overhead.
 
-- __Grey box__: The box at the end of each bar is the time that core spends
-  processing cables.
+- __Colored boxes__: Each box in a bar is one module or an overhead task. The
+  wider the box, the more CPU that module or task is using. While the patch is
+  playing, the boxes grow and shrink to follow the actual load.
 
 - __White line__: If a core is asked to do more than it can, the bars are scaled
   down to fit on the screen and a white line marks the 100% point. Anything past
-  the line is an overload.
+  the line is an overload. If there are no overloads, there will be no white line.
 
-- __Total CPU__: The patch's overall load, in the top-right corner. This is the
-  same number that's shown in the status bar, so it's hidden here if the status
-  bar is set to [stay on top](module_patch_settings.md#status-bar).
-
-- __Mappings, MIDI, Sync, Overhead__: This line shows where the rest of the CPU
-  time goes while the patch is playing. *Mappings* is the time spent on knob and
-  jack mappings. *MIDI* is the time spent handling MIDI. *Sync* is the time
-  Core 1 spends waiting for Core 2 to finish, shown as two numbers: the wait for
-  Core 2's modules, then the wait for its cables. *Overhead* is everything else.
+- __Total CPU__: The patch's overall load, in the top-right corner. 
 
 If the window says `Play this patch to calculate its load balance`, the patch
 has never been played, so there is nothing to show yet. Press the Back button
@@ -60,8 +57,6 @@ and play the patch first.
     has more than one of the same module, the name also tells you which one it
     is, for example `Ensemble Oscillator #2/4`.
 
-    Highlight a grey box to see the cable load for that core.
-
     Click on a module's box to jump to that module.
 
    [![A module selected in the CPU Load window](./img/cpu-load-module.png){ .half }](./img/cpu-load-module.png)
@@ -74,9 +69,9 @@ calculated.
 ## Re-balancing
 
 The automatic balance is a good first guess: it measures each module on its own
-and then divides them up evenly. But modules don't always use the same amount of
-CPU when they run together as they do when measured alone, so there is often a
-better balance to be found.
+and then divides them up evenly between cores. But modules don't always use the
+same amount of CPU when they run together as parameters and signals change, so
+there is often a better balance to be found.
 
 <div class="grid cards" markdown>
 -  __Click `Re-balance`__
@@ -90,23 +85,22 @@ better balance to be found.
 
 </div>
 
-The balance the patch already had is included in the comparison, so
-re-balancing keeps what you had if nothing better turns up.
-
 Large patches often see their CPU load drop by 2% or more, and sometimes by as
-much as 10%. Small patches usually have little to gain.
+much as 10%. Small patches usually don't change much, if at all.
 
 The other buttons are:
 
 - __Save__: Save the patch, including its new balance. This is greyed out for a
   new patch that has never been saved: use the
   [Patch File Menu](module_patch_settings.md#patch-file-menu) instead.
-- __Undo__: Go back to the balance the patch had when you opened the window.
-- __Close__: Close the window. You can also press the Back button.
+- __Undo__: Revert all changes and use the balance the patch had when you
+  opened the window.
+- __Close__: Close the window, keeping all changes but not saving anything to
+  disk. You can also press the Back button.
 
 `Re-balance` is greyed out if the patch isn't loaded for playing, or if it has
-fewer than two modules. It does work on a patch that was stopped for
-overloading the CPU: re-balancing starts the patch playing again.
+fewer than two modules. If a patch was stopped for overloading the CPU, then
+re-balancing starts the patch playing again.
 
 ## The balance is saved in the patch
 
@@ -115,7 +109,7 @@ next time you load the patch, the saved balance is used.
 
 A patch that doesn't have a balance saved in it, such as a patch that just came
 from VCV Rack, gets one calculated the first time it's played. The balance is
-also calculated again whenever you add, remove, or replace a module.
+also re-calculated whenever you add, remove, or replace a module.
 
 ## Automatic re-balancing
 

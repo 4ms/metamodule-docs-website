@@ -105,22 +105,19 @@ confirmation window appears:
 -   __Keep cables and maps (experimental!)__ — A toggle in the confirmation window that
     determines what happens to the old module's connections:
 
-    - __Off (default):__ All cables, knob mappings, and MIDI mappings that were connected to
-      the old module are removed. The new module is added fresh, with no connections.
+    - __Off (default):__ All cables, knob mappings, MIDI mappings and expanders
+      that were connected to the old module are removed. The new module is
+      added fresh, with no connections.
 
-    - __On:__ Cables, knob mappings, and MIDI mappings stay attached to the same control and
-      jack indexes on the new module. This is only useful works when the replacement module has
-      a similar order for the jacks and controls.
-      For example, swapping one filter of the same brand for another, where
-      both modules have the first output jack as the Audio Out, the first input
-      jack as the Audio In, and the Frequency and Resonance knobs and CV jacks
-      in the same order. If the new module has a different layout, maps and
-      cables will end up connected to the wrong controls, so this option is
-      marked experimental.
-
-      The new module also keeps the old module's
-      [expander connections](expander_modules.md). When this option is off,
-      they are removed along with the cables.
+    - __On:__ Cables, knob mappings, and MIDI mappings stay attached to the
+      same control and jack indexes on the new module. Expanders are disconnected.
+      This is only useful when the replacement module has a similar order for
+      the jacks and controls. For example, swapping one filter of the same
+      brand for another, where both modules have the first output jack as the
+      Audio Out, the first input jack as the Audio In, and the Frequency and
+      Resonance knobs and CV jacks in the same order. If the new module has a
+      different layout, maps and cables will end up connected to the wrong
+      controls, so this option is marked experimental.
 
 
 ### Move
