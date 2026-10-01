@@ -1,9 +1,9 @@
 # VCV expander modules
 
-Many VCV Rack plugins include *expander* modules: modules that add features to
+Many VCV Rack plugins include expander modules: modules that add features to
 another module when the two are placed side by side in the rack. Typical
-examples are extra steps for a sequencer, extra channels or sends for a mixer,
-or CV inputs for parameters that don't fit on the main module's panel.
+examples might be extra channels or controls for a mixer, or CV inputs for
+parameters that don't fit on the main module's panel.
 
 Starting in firmware v2.4.0, expander modules are fully supported. A patch made
 in VCV Rack opens and runs on the MetaModule with the same expander connections,
@@ -16,29 +16,24 @@ itself.
     [Wi-Fi Expander](wifi.md), [MetaAIO](meta-aio.md), and
     [MetaButtons](meta-buttons.md).
 
-## What you need
-
-- MetaModule firmware v2.4.0 or later.
-- The 4ms plugin for VCV Rack, v2.3.0 or later (only needed when creating
-  patches in VCV Rack). Older versions don't save expander connections into the
-  patch file.
-- A version of the MetaModule plugin that includes the expander modules. Before
-  firmware v2.4.0, expander modules couldn't do anything on the MetaModule, so
-  most plugins left them out. Download the latest version of the plugin from the
-  [Plugins page](../plugins). See [Using Plugins](plugins.md) for how to
-  install it.
+Make sure you are using MetaModule firmware v2.4.0 or later, and the 4ms VCV plugin 
+v2.3.0 or later. Also, older versions of plugins may not have included the expander
+modules, so make sure to update those as well.
 
 ## Expanders in a VCV Rack patch
 
 Build the patch in VCV Rack as you normally would, with each expander touching
 the module it expands. When you save or send the patch from the MetaModule Hub,
-the expander connections are stored in the patch file. See
-[Expander modules](using_rack.md#expander-modules) on the VCV Rack page for the
-details.
+the expander connections are stored in the patch file if the following are all true:
 
-On the MetaModule, an expander connection is a link between two modules that is
-saved in the patch. Unlike VCV Rack, the two modules do **not** have to be next
-to each other on the screen: they stay connected however the modules are
+- The two modules are touching, side by side.
+- Both modules are from the same plugin brand.
+- At least one of the two has the "Expander" tag (as seen in the VCV Rack module browser).
+
+When you load the patch on the MetaModule, the two modules will be connected as
+expanders. An expander connection is a link between two modules that is saved
+in the patch. Unlike VCV Rack, the two modules do not have to be next to
+each other on the screen: they stay connected wherever the modules are
 [arranged](patch_layout.md).
 
 ## Viewing a module's expanders
@@ -67,35 +62,34 @@ to each other on the screen: they stay connected however the modules are
 While the patch is playing, a note after the module name tells you about the
 connection:
 
-- __(active)__: the two modules are exchanging data, which means the expander is
+- __active__: the two modules are exchanging data, which means the expander is
   working.
-- __(no link)__: the connection is in the patch, but the two modules are not
+- __no link__: the connection is in the patch, but the two modules are not
   linked. This happens if one of the modules is not a module ported from VCV
   Rack. It can also appear for a moment right after you attach an expander.
-- No note: the modules are linked, but have not sent each other anything. Many
-  pairs only talk to each other while they're running, so you may see this
-  until the patch has played for a moment.
+- No note: the modules are linked, but they have not sent each other anything
+  that the MetaModule was able to see. Some expanders communicate directly with
+  each other, and the MetaModule firmware won't be able to verify the link in
+  this case, even though everything is working normally.
 
 ## Attaching an expander
 
 You can attach an expander to a module at any time, even while the patch is
-playing. Both modules must already be in the patch. If the expander isn't in
-the patch yet, add it first with the `+` button in the Patch View.
+playing. Both modules must already be in the patch.
 
 <div class="grid cards" markdown>
 -  __1. Click an empty side in the Expanders window__
 
     Pick the side that the expander goes on. This is the same side you would
-    place it on in VCV Rack. Most expanders go on the right side of the module
-    they expand.
+    place it on in VCV Rack. Some expanders require being on one side or the
+    other, so read the documentation for the modules you're using to find out.
 
    [![Empty Expanders window](./img/expander-popup-empty.png){ .half }](./img/expander-popup-empty.png)
 </div>
 <div class="grid cards" markdown>
 -  __2. Select the module to attach__
 
-    The Patch View opens, with a message reminding you which side you are
-    attaching to. Turn the encoder to highlight the expander module, and click.
+    Turn the encoder to highlight the expander module, and click on it.
 
     To cancel, press the Back button.
 
@@ -104,7 +98,7 @@ the patch yet, add it first with the `+` button in the Patch View.
 <div class="grid cards" markdown>
 -  __3. The expander is attached__
 
-    You are returned to the first module, with the Expanders window showing
+    The Expanders window of the first module will be displayed, showing
     the new connection.
 
    [![Expanders window](./img/expander-popup.png){ .half }](./img/expander-popup.png)
@@ -112,8 +106,6 @@ the patch yet, add it first with the `+` button in the Patch View.
 
 Some things to know:
 
-- Each side of a module holds one expander. Some expanders can be chained: to
-  do this, attach the second expander to the free side of the first expander.
 - The MetaModule does not check that the two modules were designed to work
   together. You can attach any two modules, but only a real expander pair will
   do anything.
@@ -135,6 +127,4 @@ Some things to know:
 </div>
 
 Deleting a module from the patch also removes its expander connections. The same
-is true when you [replace](action_menu.md#replace) a module, unless you turn on
-`Keep cables and maps`: in that case the new module takes over the old module's
-expander connections.
+is true when you [replace](action_menu.md#replace) a module.
