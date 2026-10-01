@@ -338,13 +338,12 @@ If you want to see all the virtual knobs that map to a specific physical knob:
 ## Groups of controls and jacks
 
 When you open a module, all of its knobs, switches, buttons, and jacks are listed
-next to the panel. On a big module this is a long list to scroll through.
-Starting in firmware v2.4.0, a module can organize its list into groups: for
+next to the panel. A module can also organize its list into groups: for
 example, one group for each channel of a multi-channel module.
 
 <div class="grid cards" markdown>
 
--  __1. Groups are shown in blue, followed by a `>`__
+-  __1. Groups are shown in blue__
 
     When a group is highlighted in the list, all of its controls and jacks are
     highlighted on the panel.
@@ -374,11 +373,8 @@ Names are shortened inside a group, since the group's name is already shown at
 the top. For example, inside the `Channel B` group, the control named `Rise B
 Switch` is listed as `Rise Switch`.
 
-If you jump to a control from another page, such as by clicking on a mapping in
-the Knob Set page, the group that contains it is opened for you.
-
 Groups are chosen by whoever made the module, so not every module has them.
-Among the built-in 4ms modules, these have groups: Dual EnvVCA, Dual Looping
-Delay, PEG, QCD, QPLFO, Shaped Dual EnvVCA, SISM, and VCAMatrix. Plugin
+Among the built-in 4ms modules, these have groups: Dual EnvVCA, DLD,
+PEG, QCD, QPLFO, Shaped Dual EnvVCA, SISM, and VCAMatrix. Plugin
 developers can add groups to their own modules: see the documentation in the
 [plugin SDK](https://github.com/4ms/metamodule-plugin-sdk).
