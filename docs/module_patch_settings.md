@@ -27,19 +27,15 @@ These menus control how mappings and cables are drawn when viewing modules and t
 
 ### GRAPHICS
 
-These options set how the modules are laid out in the Patch View. See
-[Arranging Modules](patch_layout.md) for a full description of each one.
-
-*Patch View only*
+*Patch View only*:
 
 - __Module Size__: How big the modules are drawn, from 50% to 100% of the height
   of the screen. See [Module size](patch_layout.md#module-size-zoom).
 
 - __Compact Layout__: When on (the default), modules are packed together with no
-  gaps. When off, each module is drawn at the position saved in the patch, which
-  for a patch made in VCV Rack is the same place it has in the rack. This must
-  be off in order to move modules around.
-  See [Module positions](patch_layout.md#module-positions).
+  gaps. When off, each module is drawn at the position saved in the patch. This
+  must be off in order to move modules around. See [Module
+  positions](patch_layout.md#module-positions).
 
 - __Fit width to screen__: When on (the default), a row of modules is as wide as
   the screen. Turn this off to choose a width with the Width slider.
