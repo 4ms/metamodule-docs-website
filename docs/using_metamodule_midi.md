@@ -459,7 +459,7 @@ playback. This will send the current value of all MIDI-mapped parameters.
 
 -  __To enable or disable MIDI Feedback, check the box in Settings > Prefs > MIDI:__
 
-     By default, MIDI Feedback is enabled starting in firmware v2.0.9.
+     By default, MIDI Feedback is enabled.
 
    [![MIDI Feedback Enabled](./img/midi-feedback.png){ .half }](./img/midi-feedback.png)
 

@@ -423,7 +423,7 @@ wheel, clock, divided clock, re-trigger, start, stop, and continue.
 <div class="grid cards" markdown>
 -  __Patch the polyphonic output to a module__
 
-     Starting in firmware v2.2.0, the MetaModule supports
+     The MetaModule supports
      [polyphonic cables](using_metamodule_jacks.md#polyphonic-cables) (up to 4
      voices each). For patches of 4 voices or fewer, you can patch the MIDI-CV
      module's polyphonic outputs directly to your modules' inputs.

@@ -1,7 +1,7 @@
 # Arranging modules
 
-Starting in firmware v2.4.0, you control how a patch is laid out on the screen:
-how big the modules are drawn, where each module sits, and how the cables hang.
+You control how a patch is laid out on the screen:
+how big the modules are drawn and where each module sits.
 
 This page describes:
 
@@ -10,7 +10,6 @@ This page describes:
   same positions as in your VCV Rack patch.
 - [Re-arranging modules](#re-arranging-modules): move modules around on the
   MetaModule, even while the patch is playing.
-- [Cable tension](#cable-tension): how much the cables droop.
 
 Most of these options live in the Patch View display settings menu, which you
 open by clicking the gear icon when viewing a patch. They are display settings,
@@ -29,8 +28,8 @@ There are five sizes, from 50% to 100% of the height of the screen. The default
 is 75%.
 
 At smaller sizes more of the patch fits on the screen at once, which makes it
-easier to get around a big patch. At 100% a module fills the height of the
-screen.
+easier to see the shape of a big patch. At 100% a module fills the height of the
+screen, so it's easier to see module details.
 
 <div class="grid cards" markdown>
    [![Patch View at 50% module size](./img/patchview-zoom-50.png){ .half }](./img/patchview-zoom-50.png)
@@ -54,7 +53,7 @@ The __Compact Layout__ setting chooses between two ways of placing modules.
     Modules are packed together from left to right with no gaps, and wrap to a
     new row when a row is full. The positions saved in the patch are ignored.
 
-    This is how all previous firmware versions displayed a patch.
+    This is how all early firmware versions displayed a patch.
 
    [![Patch View with Compact Layout on](./img/patchview-zoom-50.png){ .half }](./img/patchview-zoom-50.png)
 </div>
@@ -67,37 +66,33 @@ The __Compact Layout__ setting chooses between two ways of placing modules.
 
    [![Patch View with Compact Layout off](./img/patchview-layout-vcv.png){ .half }](./img/patchview-layout-vcv.png)
 </div>
-<div class="grid cards" markdown>
--  __Patches wider than the screen__
 
-    If the patch is wider than the screen, the Patch View scrolls sideways as
-    you move from module to module. An orange bar at the bottom of the screen
-    shows where you are.
-
-   [![Patch View scrolled sideways](./img/patchview-hscroll.png){ .half }](./img/patchview-hscroll.png)
-</div>
+If the patch is wider than the screen, the Patch View scrolls sideways as
+you move from module to module. An orange bar at the bottom of the screen
+shows where you are.
 
 Positions are saved in the patch file by the 4ms VCV Rack plugin v2.3.0 or
-later. A module that has no saved position, such as one in a patch saved by an
-older plugin version, or a module you just added, is put into the first free
-space.
+later, so opening patches saved with an older version of the 4ms VCV plugin
+will be shown in a compact format. You can still move modules around, or 
+re-save the patch from the updated 4ms VCV plugin.
 
-With either setting, turning the encoder steps through the modules in reading
-order: left to right, then down to the next row.
+With either setting, turning the encoder steps through the modules left to
+right, then down to the next row.
 
 !!! note
-    The module area has a maximum size. If a patch is laid out too large to
-    fit, a message tells you how many modules are not being displayed. Choose a
-    smaller Module Size or turn on Compact Layout to see them. Modules that
-    aren't displayed are still part of the patch and still run.
+    The rack area has a maximum size which depends on the module zoom. If a
+    patch is laid out too large to fit, a message tells you how many modules
+    are not being displayed. Choose a smaller Module Size or turn on Compact
+    Layout to see them. Modules that aren't displayed are still part of the
+    patch and still run, but you cannot see or edit them.
 
 ### Rack width
 
-When Compact Layout is on, two more settings choose where a row of modules
-wraps:
+When Compact Layout is on, two additional settings choose where each row of
+modules wraps:
 
 - __Fit width to screen__: When on (the default), a row is as wide as the screen,
-  so you only ever scroll up and down.
+  so you never scroll horizontally. When this is off, the width is set by the **Width** slider.
 
 - __Width__: When __Fit width to screen__ is off, this slider sets the width of a
   row in HP, from 28HP to 128HP. If a row is wider than the screen, the Patch
@@ -107,10 +102,14 @@ wraps:
 These two settings are greyed out when Compact Layout is off, because then the
 patch's own positions decide how wide the patch is.
 
+Turning **Fit width to screen** off means that as change the Module Size, the
+patch will effectively zoom in and out without changing the placement of
+modules. The downside is that you may have to scroll horizontally and vertically.
+
 ## Re-arranging modules
 
-You can move modules around on the MetaModule. This works while the patch is
-playing, and the cables follow the modules as they move.
+You can move modules around on the MetaModule. This works whether the patch is
+playing or stopped, and the cables follow the modules as they move.
 
 Re-arranging changes the positions saved in the patch, so it needs
 __Compact Layout__ to be off. If it's on, you'll be asked to turn it off first.
@@ -122,7 +121,7 @@ __Compact Layout__ to be off. If it's on, you'll be asked to turn it off first.
 
     Alternatively, open a module's [Action menu](action_menu.md#move) and
     click `Move`. This starts re-arranging with that module already picked up,
-    so you can skip step 3.
+    so you can skip over step 3.
 
    [![Re-arrange Modules button](./img/patch-info-rearrange.png){ .half }](./img/patch-info-rearrange.png)
 </div>
@@ -144,7 +143,9 @@ __Compact Layout__ to be off. If it's on, you'll be asked to turn it off first.
 <div class="grid cards" markdown>
 -  __4. Move the module__
 
-    - __Turn the encoder__ to move the module left or right along its row.
+    - __Turn the encoder__ to move the module left or right along its row. If
+      you go past the start or end of a row, it'll jump to the previous/next
+      row.
     - __Push and turn the encoder__ to move the module up or down a row.
 
    [![A module being moved](./img/rearrange-moved.png){ .half }](./img/rearrange-moved.png)
@@ -175,20 +176,6 @@ How modules move:
 
 The new positions are part of the patch, so save the patch to keep them.
 Moving modules does not change the sound of a patch, its cables, its mappings,
-or its [expander connections](expander_modules.md).
+its CPU load, or its [expander connections](expander_modules.md).
 
-## Cable tension
 
-The __Tension__ slider, under __CABLES__ in the Patch View settings menu, sets how
-tightly the cables are drawn. All the way to the right, the cables are straight
-lines. Moving the slider to the left makes the cables droop more.
-
-<div class="grid cards" markdown>
-   [![Cables with low tension](./img/cable-tension-low.png){ .half }](./img/cable-tension-low.png)
-
-   [![Cables with high tension](./img/cable-tension-high.png){ .half }](./img/cable-tension-high.png)
-</div>
-
-Tighter cables cover less of the panels, which can make a busy patch easier to
-read. You can also adjust the cable __Opacity__, or hide the cables, in the same
-section of the menu: see [Patch/Module Settings](module_patch_settings.md#cables).

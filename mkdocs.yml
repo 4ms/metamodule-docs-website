@@ -9,9 +9,9 @@ nav:
   - Using VCV Rack: using_rack.md
   - Using Plugins: plugins.md
   - VCV Expander Modules: expander_modules.md
-  - Module Action menu: action_menu.md
   - Arranging Modules: patch_layout.md
   - CPU Load Balancing: cpu_load.md
+  - Module Action menu: action_menu.md
   - Patch/Module Settings: module_patch_settings.md
   - Preferences: preferences.md
   - Expanders:

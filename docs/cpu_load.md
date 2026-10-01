@@ -5,9 +5,15 @@ divided between the two cores so that they share the work. The way the modules
 are divided up is called the patch's *load balance*. A patch uses the least CPU
 when both cores have about the same amount of work to do.
 
-The MetaModule has always balanced patches automatically. Starting in firmware
-v2.4.0 you can see the balance, see how much CPU each module is using while the
-patch plays, and have the MetaModule search for a better balance.
+The MetaModule always balances patches when they are first opened, but it does so
+using a quick method so the patch opens with minimal latency. A more extensive 
+balancing procedure can be done that takes a little under a second, and often results
+in a more efficient load balance. Also, as a patch is played and parameters and
+signals change, re-balancing can sometimes make it use less total CPU load.
+
+In the CPU Load window, you can see the current load balance, see how much CPU
+each module is using while the patch plays, and have the MetaModule search for
+a better balance.
 
 ## Opening the CPU Load window
 

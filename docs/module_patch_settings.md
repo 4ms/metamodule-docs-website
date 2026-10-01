@@ -169,7 +169,12 @@ This option is disabled if both Show Control Maps and Show Panel Jack Maps are o
 - __Tension__: *(Patch View only)*
   How tightly the cables are drawn. All the way to the right, the cables are
   straight lines. Move the slider to the left to make the cables droop more.
-  See [Cable tension](patch_layout.md#cable-tension).
+
+<div class="grid cards" markdown>
+   [![Cables with low tension](./img/cable-tension-low.png){ .half }](./img/cable-tension-low.png)
+
+   [![Cables with high tension](./img/cable-tension-high.png){ .half }](./img/cable-tension-high.png)
+</div>
 
 
 
