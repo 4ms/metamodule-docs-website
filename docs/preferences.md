@@ -35,8 +35,8 @@
      audio glitch. This setting selects the number of audio glitches you're willing to tolerate
      in a one second period before the patch is stopped.
 
-     **Auto Re-balance:** Selects when the MetaModule automatically searches for a better way to
-     divide a patch's modules between its two processor cores. **Off** never does this.
+     **Auto Re-balance:** Selects if the MetaModule automatically searches for a better way to
+     divide a patch's modules between its two processor cores. **Off** never does this automatically.
      **After Overload** (the default) does it when you re-start a patch that was stopped for
      overloading the CPU. **Every Patch Load** does it each time a patch is loaded and played.
      The audio is silent for about a second while the search runs.
