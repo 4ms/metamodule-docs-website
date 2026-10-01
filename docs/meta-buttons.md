@@ -143,9 +143,10 @@ Button maps are shown below knob maps.
 
 ### Creating maps with VCV Rack
 
-Creating patches with button mappings using VCV Rack follows the same process as creating maps to knobs.
-The MetaButtons module in VCV Rack tracks the Hub's active Knob Set; the right-click menu on the
-MetaButtons module shows which Knob Set is currently active.
+Creating patches with button mappings using VCV Rack follows the same process
+as creating maps to knobs. The MetaButtons module in VCV Rack tracks the Hub's
+active Knob Set. The right-click menu on the MetaButtons module shows which
+Knob Set is currently active.
 
 <div class="grid cards" markdown>
 -  __1. Add a MetaButtons module to your patch__
@@ -164,8 +165,7 @@ MetaButtons module shows which Knob Set is currently active.
 <div class="grid cards" markdown>
 -  __3. Right-click the button to change the Button Behavior__
 
-      Choose Normal, Toggle, or Step from the `Button Behavior` menu
-      (Step requires v2.3.0 or later of the 4ms VCV plugin).
+      Choose Normal, Toggle, or Step from the `Button Behavior` menu.
       See [Editing a button map](#editing-a-button-map) for what each one does.
 
       The Min and Max settings control the range of values that the button
