@@ -40,9 +40,9 @@
      **After Overload** (the default) does it when you re-start a patch that was stopped for
      overloading the CPU. **Every Patch Load** does it each time a patch is loaded and played.
      The audio is silent for about a second while the search runs.
-     See [CPU Load Balancing](cpu_load.md#automatic-re-balancing).
+     See [CPU Load Balancing](cpu_load.md).
   
-   [![Audio Settings](./img/settings-patch-audio.png){ .wide-240 }](./img/settings-patch-audio.png) [![Auto Re-balance](./img/prefs-auto-rebalance.png){ .wide-240 }](./img/prefs-auto-rebalance.png)
+   [![Audio Settings](./img/settings-patch-audio.png){ .wide-240 }](./img/settings-patch-audio.png)
 
 </div>
 <div class="grid cards" markdown>
